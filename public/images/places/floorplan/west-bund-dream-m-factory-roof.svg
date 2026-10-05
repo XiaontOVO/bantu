@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">西岸梦中心 M Factory 屋顶平面图</title>
+  <desc id="desc">依据 MVRDV 公开屋顶平面重绘。长向屋面上成组排列采光天窗，东南附属体量与主屋面相连。</desc>
+  <defs><filter id="shadow" x="-8%" y="-8%" width="116%" height="120%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#263b35" flood-opacity=".12"/></filter><pattern id="roof" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M8 0V16" stroke="#c4cdc6" stroke-width="1.5"/></pattern></defs>
+  <style>
+    .bg{fill:#f4f5f2}.title{font:700 32px 'Microsoft YaHei',sans-serif;fill:#263c38}.sub{font:16px 'Microsoft YaHei',sans-serif;fill:#687871}.shell{fill:#e6ebe6;stroke:#465a52;stroke-width:5;stroke-linejoin:round;filter:url(#shadow)}.roof{fill:url(#roof);stroke:#66766f;stroke-width:2}.window{fill:#d8e3df;stroke:#8c9d93;stroke-width:2}.wall{fill:none;stroke:#66766f;stroke-width:2}.label{font:700 19px 'Microsoft YaHei',sans-serif;fill:#364b43;text-anchor:middle;dominant-baseline:central}.small{font:14px 'Microsoft YaHei',sans-serif;fill:#677770;text-anchor:middle}.panel{fill:#fff;stroke:#d9e0da;stroke-width:2}.panel-title{font:700 18px 'Microsoft YaHei',sans-serif;fill:#31473d}.panel-text{font:14px 'Microsoft YaHei',sans-serif;fill:#586960}.note{font:12px 'Microsoft YaHei',sans-serif;fill:#74817a}.orange{fill:#d47a36;stroke:#fff;stroke-width:2}.north{font:700 14px 'Microsoft YaHei',sans-serif;fill:#43584f;text-anchor:middle}
+  </style>
+  <rect class="bg" width="1200" height="760"/><text class="title" x="48" y="52">西岸梦中心 · M Factory · 屋顶</text><text class="sub" x="50" y="80">采光天窗阵列与南侧附属屋面 · 设计屋顶图重绘</text>
+  <g transform="translate(824 94)"><text class="north" y="0">北</text><path d="M0 10v29m-6-13 6-16 6 16" fill="none" stroke="#43584f" stroke-width="2.5"/></g>
+  <path class="shell" d="M94 185H799V421H646V500H799V574H431V421H94Z"/><path class="roof" d="M111 201H781V407H646V481H449V407H111Z"/>
+  <path class="window" d="M150 291h54v78h-54zM218 291h54v78h-54zM286 291h54v78h-54zM376 238h54v78h-54zM444 238h54v78h-54zM512 291h54v78h-54zM580 291h54v78h-54zM648 291h54v78h-54zM716 291h40v78h-40z"/>
+  <path class="wall" d="M111 247H781M111 386H781M638 421H788M449 493H788"/><rect class="orange" x="795" y="304" width="20" height="124" rx="3"/>
+  <text class="label" x="425" y="340">采光天窗阵列</text><text class="small" x="540" y="455">附属体量屋面</text><text class="small" x="805" y="454">楼梯塔</text>
+  <rect class="panel" x="866" y="126" width="292" height="468" rx="18"/><text class="panel-title" x="892" y="166">屋面构成</text><text class="panel-text" x="892" y="202">主体为长向金属屋面</text><text class="panel-text" x="892" y="232">采光构件按公开图排列</text><text class="panel-text" x="892" y="262">东南连接低层附属屋面</text><path d="M892 284H1132" stroke="#e2e7e1" stroke-width="2"/><text class="panel-title" x="892" y="324">开放提示</text><text class="panel-text" x="892" y="360">设计屋面图不代表游客可进入</text><text class="panel-text" x="892" y="390">请以现场开放信息为准</text><text class="note" x="892" y="544">MVRDV 公开屋顶平面</text><text class="note" x="892" y="567">伴途本地重绘 · 非测绘图</text>
+  <text class="note" x="48" y="718">以 MVRDV 屋顶平面为依据重绘 · 不表示所有屋面均对公众开放</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

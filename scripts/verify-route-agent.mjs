@@ -1,0 +1,76 @@
+// Uses actual configured model and route provider; business data stays in memory.
+import assert from 'node:assert/strict';
+import { existsSync } from 'node:fs';
+import { loadEnvFile } from 'node:process';
+import { ModelSettings } from '../dist/src/services/model-settings.js';
+import { createProviderBundle } from '../dist/src/providers/factory.js';
+import { createServerContext } from '../dist/src/server/http/bootstrap.js';
+import { MemoryStateStore } from '../dist/src/persistence/state-store.js';
+import { runPersonalAgent } from '../dist/src/services/personal-agent-runtime.js';
+import { planAgentRoutes } from '../dist/src/services/personal-agent-routes.js';
+
+if (existsSync('.env')) loadEnvFile('.env');
+const providers = createProviderBundle();
+const model = new ModelSettings('data/model-settings.json', providers.modelProvider).provider;
+assert.ok(model, '需要配置实际模型');
+let calls = 0;
+const routeRequests = [];
+const ctx = createServerContext({ seedDemo: false, stateStore: new MemoryStateStore(), routeProvider: { providerName: providers.routeProvider.providerName, async plan(input) {
+  const result = await providers.routeProvider.plan(input);
+  routeRequests.push({ input, result }); return result;
+} },
+  modelProvider: { providerName: model.providerName, modelName: model.modelName, async generateTurn(input) {
+    const turn = await model.generateTurn(input);
+    console.log(JSON.stringify({ turn: ++calls, tools: turn.toolCalls.map(t => t.name) }));
+    return turn;
+  } },
+});
+const actor = 'route-acceptance';
+ctx.accounts.register('route_acceptance', 'route-acceptance-12345', actor);
+const response = await runPersonalAgent(ctx, actor, '创建一个叫“徐汇步行路线验收”的一天方案，从下午两点开始，先游览武康大楼60分钟，再游览徐家汇书院60分钟。请查询实际步行路线，把路线和交通时间保存到这份方案，必要时顺延第二站。', []);
+const plan = ctx.planLibrary.list(actor).find(p => p.name === '徐汇步行路线验收');
+assert.ok(plan, response.reply);
+assert.equal(plan.kind, 'scheme');
+const day = plan.days[0];
+assert.equal(day.stops.length, 2);
+assert.equal(day.stops[0].place.name, '武康大楼');
+assert.equal(day.stops[1].place.name, '徐家汇书院');
+assert.equal(day.stops[0].startMinutes, 840);
+assert.equal(day.routeLegs.length, 1, response.reply);
+const route = day.routeLegs[0];
+assert.equal(route.transportMode, 'walking');
+assert.ok(route.geometry?.length > 2);
+assert.ok(route.distanceMeters > 0);
+assert.notEqual(route.departureSupport, 'demo');
+const travel = Math.ceil(route.durationSeconds / 60) + (route.bufferMinutes || 0);
+assert.ok(day.stops[1].startMinutes >= day.stops[0].endMinutes + travel);
+assert.equal(day.stops[1].endMinutes - day.stops[1].startMinutes, 60);
+assert.ok(response.steps.some(s => s.tool === 'plans.route' && s.ok));
+const fix = { lat: 31.2, lng: 121.43, accuracyMeters: 20, measuredAt: Date.now() };
+const directions = await runPersonalAgent(ctx, actor, '从我的当前位置步行去徐家汇书院，查询实际路线和步行时间。只查询，不修改方案。', [], [], fix);
+assert.ok(directions.steps.some(s => s.tool === 'routes.from_current' && s.ok), directions.reply);
+const currentRoute = routeRequests.at(-1);
+assert.deepEqual(currentRoute.input.origin, { lat: fix.lat, lng: fix.lng });
+assert.ok(currentRoute.result.leg.geometry.length > 2);
+assert.ok(currentRoute.result.leg.distanceMeters > 0);
+assert.equal(currentRoute.result.error, undefined);
+assert.deepEqual(ctx.planLibrary.list(actor).find(p => p.id === plan.id), plan);
+console.log(JSON.stringify({ currentLocationRouteVerified: true, distanceMeters: currentRoute.result.leg.distanceMeters }));
+const park = (await ctx.options.placeProvider.search({ cityCode: '310100', query: '徐家汇公园' })).places.find(p => p.name === '徐家汇公园');
+assert.ok(park);
+const nextDays = structuredClone(plan.days);
+nextDays[0].stops.push({ stopId: 'park', placeId: park.placeId, place: park, status: 'planned', startMinutes: 1140, endMinutes: 1200 });
+const expanded = ctx.planLibrary.update(actor, plan.id, { name: plan.name, days: nextDays });
+const baseline = await planAgentRoutes(ctx, actor, { planId: plan.id, expectedRevision: expanded.revision, dayIndex: 0, toStopId: 'park', mode: 'walking' });
+const firstLeg = structuredClone(baseline.days[0].routeLegs.find(l => l.toStopId !== 'park'));
+const requestCount = routeRequests.length;
+const changed = await runPersonalAgent(ctx, actor, '把“徐汇步行路线验收”方案第一天从徐家汇书院前往徐家汇公园的这一段改为驾车，保存实际路线。其他路段保持不变。', []);
+assert.ok(changed.steps.some(s => s.tool === 'plans.route_segment' && s.ok), changed.reply);
+const routed = ctx.planLibrary.list(actor).find(p => p.id === plan.id).days[0];
+assert.deepEqual(routed.routeLegs.find(l => l.toStopId !== 'park'), firstLeg);
+const changedLeg = routed.routeLegs.find(l => l.toStopId === 'park');
+assert.equal(changedLeg.transportMode, 'driving');
+assert.ok(changedLeg.geometry.length > 2);
+assert.equal(routeRequests.length - requestCount, 1, 'single-segment change must only query one route');
+console.log(JSON.stringify({ segmentVerified: true, mode: changedLeg.transportMode, distanceMeters: changedLeg.distanceMeters }));
+console.log(JSON.stringify({ verified: true, model: model.modelName, routes: providers.routeProvider.providerName, calls, distanceMeters: route.distanceMeters, travelMinutes: travel }));

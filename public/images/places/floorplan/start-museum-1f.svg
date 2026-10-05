@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">星美术馆首层平面图</title>
+  <desc id="desc">依据让·努维尔事务所公开的首层设计发展平面重绘，呈现南浦铁路仓库的长向结构、连续展览空间、服务核心和外侧廊道；非测绘图。</desc>
+  <defs>
+    <pattern id="grid" width="58" height="58" patternUnits="userSpaceOnUse"><path d="M58 0H0V58" fill="none" stroke="#e8e9e4" stroke-width="1"/></pattern>
+    <pattern id="staff-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V9" stroke="#c3cbc5" stroke-width="2"/></pattern>
+    <filter id="shadow" x="-8%" y="-12%" width="116%" height="130%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#273c38" flood-opacity=".12"/></filter>
+  </defs>
+  <style>
+    .bg{fill:#f5f6f2}.title{font:700 32px 'Microsoft YaHei',sans-serif;fill:#243a36}.sub{font:16px 'Microsoft YaHei',sans-serif;fill:#687771}.small{font:14px 'Microsoft YaHei',sans-serif;fill:#62716b}.wall{fill:#fffefa;stroke:#3e534d;stroke-width:4}.wall2{fill:none;stroke:#687970;stroke-width:2}.gridline{stroke:#d7ddd7;stroke-width:1.4}.support{fill:#e9e9e1;stroke:#77847d;stroke-width:2}.gallery{fill:#e9efe7;stroke:#718178;stroke-width:2}.gallery2{fill:#eef0e9;stroke:#718178;stroke-width:2}.covered{fill:#eee3cf;stroke:#b19a70;stroke-width:2}.label{font:600 15px 'Microsoft YaHei',sans-serif;fill:#30453e;text-anchor:middle;dominant-baseline:central}.label2{font:600 12px 'Microsoft YaHei',sans-serif;fill:#4b5b54;text-anchor:middle;dominant-baseline:central}.panel{fill:#fff;stroke:#d9e0d9;stroke-width:2}.pt{font:700 18px 'Microsoft YaHei',sans-serif;fill:#30453e}.copy{font:14px 'Microsoft YaHei',sans-serif;fill:#52635b}.note{font:12px 'Microsoft YaHei',sans-serif;fill:#75827a}.north{font:700 13px 'Microsoft YaHei',sans-serif;fill:#53655b}.dim{stroke:#8a9890;stroke-width:1.5;fill:none}.dimtext{font:12px 'Microsoft YaHei',sans-serif;fill:#748078}.door{stroke:#c57442;stroke-width:5;stroke-linecap:round}
+  </style>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="title" x="48" y="54">星美术馆 · 1F</text>
+  <text class="sub" x="50" y="82">南浦铁路仓库改造 · 首层展览空间与公共配套</text>
+  <rect x="48" y="118" width="832" height="490" rx="8" fill="url(#grid)"/>
+  <g filter="url(#shadow)">
+    <path class="wall" d="M92 286H846V344H870V448H846V492H92Z"/>
+    <path class="wall2" d="M92 277H846V286M92 501H846V492"/>
+    <path class="gridline" d="M146 286V492M204 286V492M262 286V492M320 286V492M378 286V492M436 286V492M494 286V492M552 286V492M610 286V492M668 286V492M726 286V492M784 286V492M842 286V492"/>
+    <path class="support" d="M105 300H196V474H105Z"/>
+    <path d="M112 306H190V468H112Z" fill="url(#staff-hatch)" opacity=".45"/>
+    <path class="wall2" d="M151 300V474M105 354H196M105 414H196"/>
+    <rect class="support" x="205" y="300" width="54" height="80"/>
+    <rect class="support" x="205" y="386" width="54" height="88"/>
+    <path class="wall2" d="M213 316h38M213 325h38M213 334h38M213 342h38M213 402h38M213 411h38M213 420h38"/>
+    <path class="gallery" d="M270 300H635V392H613V474H270Z"/>
+    <path class="wall2" d="M270 392H458M470 392H635M458 392V433M470 392V433M458 433H470"/>
+    <rect class="gallery2" x="645" y="300" width="185" height="174"/>
+    <path class="wall2" d="M645 357H830M645 416H830"/>
+    <rect class="support" x="481" y="402" width="119" height="27" rx="2"/>
+    <path class="wall2" d="M490 409H591M490 416H591M490 423H591"/>
+    <path class="covered" d="M118 516H820V552H118Z"/>
+    <path class="door" d="M118 492v20M820 492v20"/>
+  </g>
+  <text class="label2" x="151" y="326">后勤与办公室</text>
+  <text class="label2" x="151" y="386">服务空间</text>
+  <text class="label2" x="232" y="337">楼梯 / 核心</text>
+  <text class="label2" x="232" y="430">设备与储藏</text>
+  <text class="label" x="450" y="348">连续展览空间</text>
+  <text class="label2" x="553" y="414">多功能空间</text>
+  <text class="label" x="737" y="330">展览 / 活动</text>
+  <text class="label2" x="737" y="386">开放配套空间</text>
+  <text class="label2" x="470" y="537">外侧有顶廊道</text>
+  <path class="dim" d="M92 252V230M846 252V230M92 238H846"/><path class="dim" d="M92 233l8 5-8 5M846 233l-8 5 8 5"/>
+  <text class="dimtext" x="469" y="224" text-anchor="middle">长向原仓库结构 · 设计图网格关系重绘</text>
+  <g transform="translate(862 156)"><text class="north" x="0" y="0">北</text><path d="M8 10L27 38M21 22l6 16 10-10" fill="none" stroke="#64766c" stroke-width="2"/><path d="M27 38l-1-10 9 5Z" fill="#64766c"/></g>
+  <rect class="panel" x="916" y="126" width="236" height="458" rx="18"/>
+  <text class="pt" x="940" y="166">空间索引</text>
+  <rect x="940" y="190" width="18" height="18" rx="3" fill="#809bc5" stroke="#718178"/><text class="copy" x="970" y="204">长向主展厅</text>
+  <rect x="940" y="226" width="18" height="18" rx="3" fill="#e9e9e1" stroke="#77847d"/><text class="copy" x="970" y="240">服务与后勤核心</text>
+  <rect x="940" y="262" width="18" height="18" rx="3" fill="#eee3cf" stroke="#b19a70"/><text class="copy" x="970" y="276">建筑外沿雨廊</text>
+  <path d="M940 302H1128" stroke="#e2e7e1" stroke-width="2"/>
+  <text class="pt" x="940" y="342">图纸说明</text>
+  <text class="copy" x="940" y="382">依据建筑师公布的首层平面，</text>
+  <text class="copy" x="940" y="408">保留长向主体、服务核心、</text>
+  <text class="copy" x="940" y="434">展厅与外侧廊道的相邻关系。</text>
+  <text class="note" x="940" y="498">2022 设计发展图 · 非测绘</text>
+  <text class="note" x="940" y="522">入口与展墙以现场为准</text>
+  <text class="small" x="48" y="704">Ateliers Jean Nouvel · Ground Floor Plan · 伴途本地重绘；图示为建筑空间关系，不代表当前展陈和开放边界</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

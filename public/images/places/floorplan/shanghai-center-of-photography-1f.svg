@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">上海摄影艺术中心单层空间平面图</title>
+  <desc id="desc">依据建筑师公开的空间关系重绘：六个椭圆体量围绕三角形玻璃庭院，三处朝向庭院，三处朝向室外。</desc>
+  <defs>
+    <linearGradient id="page" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8f7f2"/>
+      <stop offset="1" stop-color="#eeeae1"/>
+    </linearGradient>
+    <linearGradient id="glass" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8eeeb"/>
+      <stop offset="1" stop-color="#b5d9d8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#35443f" flood-opacity=".12"/>
+    </filter>
+    <marker id="north" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto">
+      <path d="M4.5 0 9 9 4.5 7 0 9Z" fill="#5c6c67"/>
+    </marker>
+    <style>
+      text{font-family:"Microsoft YaHei","PingFang SC",sans-serif;fill:#293b37}
+      .title{font-size:31px;font-weight:700;letter-spacing:1px}
+      .subtitle{font-size:15px;fill:#65736d;letter-spacing:.4px}
+      .outer{fill:#fffefa;stroke:#354640;stroke-width:7;stroke-linejoin:round}
+      .partition{fill:none;stroke:#68746e;stroke-width:3.5;stroke-linecap:round}
+      .gallery{fill:#f4f0e7;stroke:none}
+      .courtyard{fill:url(#glass);stroke:#547974;stroke-width:5}
+      .glassmark{fill:none;stroke:#8dbcb7;stroke-width:3;stroke-linecap:round}
+      .door{fill:#fffefa;stroke:#a95842;stroke-width:4}
+      .doorleaf{fill:none;stroke:#a95842;stroke-width:2.5;stroke-linecap:round}
+      .small{font-size:14px;fill:#586761}
+      .label{font-size:17px;font-weight:650}
+      .caps{font-size:13px;letter-spacing:1.3px;fill:#68766e}
+      .rule{stroke:#d4d1c8;stroke-width:1.5}
+      .tag{fill:#e6ebe4;stroke:#d4ddd5;stroke-width:1}
+    </style>
+  </defs>
+
+  <rect width="1200" height="820" fill="url(#page)"/>
+  <path d="M0 111H1200" class="rule"/>
+  <text x="58" y="59" class="title">上海摄影艺术中心 · 单层</text>
+  <text x="60" y="88" class="subtitle">六个曲面展厅围绕玻璃庭院展开　·　建筑空间关系本地重绘</text>
+
+  <g transform="translate(0 4)" filter="url(#shadow)">
+    <!-- Six equal elliptical gallery volumes form the interlocking footprint. -->
+    <g aria-label="六个相连的椭圆形展厅体量">
+      <ellipse class="outer" cx="600" cy="245" rx="103" ry="66" transform="rotate(0 600 245)"/>
+      <ellipse class="outer" cx="743" cy="327.5" rx="103" ry="66" transform="rotate(60 743 327.5)"/>
+      <ellipse class="outer" cx="743" cy="492.5" rx="103" ry="66" transform="rotate(120 743 492.5)"/>
+      <ellipse class="outer" cx="600" cy="575" rx="103" ry="66" transform="rotate(0 600 575)"/>
+      <ellipse class="outer" cx="457" cy="492.5" rx="103" ry="66" transform="rotate(60 457 492.5)"/>
+      <ellipse class="outer" cx="457" cy="327.5" rx="103" ry="66" transform="rotate(120 457 327.5)"/>
+    </g>
+
+    <!-- Three volumes face the courtyard; three face the surrounding landscape. -->
+    <path class="glassmark" d="M582 353C591 348 609 348 618 353"/>
+    <path class="glassmark" d="M666 471C670 461 681 451 691 448"/>
+    <path class="glassmark" d="M516 448C527 451 538 461 542 471"/>
+    <path class="glassmark" d="M582 659C594 663 606 663 618 659"/>
+    <path class="glassmark" d="M837 285C844 294 848 305 849 317"/>
+    <path class="glassmark" d="M366 272C373 263 382 255 392 250"/>
+
+    <!-- The triangular glazed court masks the inward edges of the room volumes. -->
+    <path class="courtyard" d="M600 329 682 455 518 455Z"/>
+    <path class="glassmark" d="M600 345V432M577 419H647M548 440H652"/>
+    <path d="M600 344 663 441H537Z" fill="#ffffff" opacity=".23"/>
+    <text x="600" y="402" text-anchor="middle" class="label">玻璃庭院</text>
+    <text x="600" y="426" text-anchor="middle" class="small">三角形中庭</text>
+
+    <!-- Hinge markers indicate design connections; current public access may vary. -->
+    <g aria-label="体量连接处入口位置示意">
+      <path class="door" d="M676 236a14 14 0 0 1 19 2l-18 18Z"/>
+      <path class="doorleaf" d="M679 239 694 256"/>
+      <path class="door" d="M796 393a14 14 0 0 1 0 20l-16-20Z"/>
+      <path class="doorleaf" d="M795 397 777 411"/>
+      <path class="door" d="M676 564a14 14 0 0 1-19 2l18-18Z"/>
+      <path class="doorleaf" d="M673 562 658 545"/>
+      <path class="door" d="M524 564a14 14 0 0 1-19-2l18-18Z"/>
+      <path class="doorleaf" d="M527 562 542 545"/>
+      <path class="door" d="M404 413a14 14 0 0 1 0-20l16 20Z"/>
+      <path class="doorleaf" d="M405 409 423 395"/>
+      <path class="door" d="M524 236a14 14 0 0 1 19-2l-18 20Z"/>
+      <path class="doorleaf" d="M521 239 506 256"/>
+    </g>
+
+    <g aria-label="六个体量位置编号">
+      <circle class="tag" cx="600" cy="217" r="19"/><text x="600" y="222" text-anchor="middle" class="small">01</text>
+      <circle class="tag" cx="782" cy="313" r="19"/><text x="782" y="318" text-anchor="middle" class="small">02</text>
+      <circle class="tag" cx="782" cy="507" r="19"/><text x="782" y="512" text-anchor="middle" class="small">03</text>
+      <circle class="tag" cx="600" cy="603" r="19"/><text x="600" y="608" text-anchor="middle" class="small">04</text>
+      <circle class="tag" cx="418" cy="507" r="19"/><text x="418" y="512" text-anchor="middle" class="small">05</text>
+      <circle class="tag" cx="418" cy="313" r="19"/><text x="418" y="318" text-anchor="middle" class="small">06</text>
+    </g>
+
+    <text x="600" y="139" text-anchor="middle" class="caps">三个体量朝向庭院 · 三个体量面向外部景观</text>
+  </g>
+
+  <g transform="translate(58 700)">
+    <rect class="tag" x="0" y="0" width="1084" height="72" rx="15"/>
+    <path class="door" d="M24 25a13 13 0 0 1 18-3L27 41Z"/>
+    <path class="doorleaf" d="M27 24 41 40"/>
+    <text x="55" y="34" class="small">体量连接处入口（设计关系）</text>
+    <path d="M360 22 388 22" class="glassmark"/>
+    <text x="400" y="34" class="small">外向景观开窗</text>
+    <path d="M607 14 622 38 592 38Z" class="courtyard"/>
+    <text x="639" y="34" class="small">三角形玻璃庭院</text>
+    <text x="24" y="58" class="caps">依据 Johnston Marklee 与西岸官方公开资料重绘　·　非测绘图；编号仅供辨位，尺寸、临展墙与当前开放入口未标示</text>
+  </g>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

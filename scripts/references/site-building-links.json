@@ -1,0 +1,344 @@
+{
+  "武康大楼": {
+    "type": "urban",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "武康大楼",
+        "shortLabel": "武康大楼"
+      }
+    ]
+  },
+  "徐家汇书院": {
+    "type": "urban",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "徐家汇书院",
+        "shortLabel": "书院主体"
+      }
+    ]
+  },
+  "上海图书馆": {
+    "type": "urban",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "上海图书馆",
+        "shortLabel": "主馆"
+      }
+    ]
+  },
+  "徐家汇藏书楼": {
+    "type": "heritage",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "徐家汇藏书楼",
+        "shortLabel": "藏书楼"
+      }
+    ]
+  },
+  "龙华寺": {
+    "type": "heritage",
+    "buildings": [
+      {
+        "id": "shanmen",
+        "name": "山门"
+      },
+      {
+        "id": "mile",
+        "name": "弥勒殿"
+      },
+      {
+        "id": "heaven",
+        "name": "天王殿"
+      },
+      {
+        "id": "daxiong",
+        "name": "大雄宝殿"
+      },
+      {
+        "id": "sansheng",
+        "name": "三圣殿"
+      }
+    ]
+  },
+  "西岸美术馆": {
+    "type": "waterfront",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "西岸美术馆",
+        "shortLabel": "展馆"
+      }
+    ]
+  },
+  "徐家汇公园": {
+    "type": "park",
+    "buildings": []
+  },
+  "桂林公园": {
+    "type": "garden",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "九曲长廊"
+      },
+      {
+        "id": "pavilion",
+        "name": "湖心亭",
+        "shortLabel": "湖心"
+      },
+      {
+        "id": "teahouse",
+        "name": "茶室"
+      }
+    ]
+  },
+  "宋庆龄故居纪念馆": {
+    "type": "heritage",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "故居主楼"
+      }
+    ]
+  },
+  "上海气象博物馆（徐家汇观象台）": {
+    "type": "heritage",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "气象博物馆"
+      }
+    ]
+  },
+  "上海电影博物馆": {
+    "type": "urban",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "上海电影博物馆",
+        "shortLabel": "主馆"
+      }
+    ]
+  },
+  "龙美术馆（西岸馆）": {
+    "type": "waterfront",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "龙美术馆"
+      }
+    ]
+  },
+  "上海公安博物馆": {
+    "type": "urban",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "上海公安博物馆",
+        "shortLabel": "主馆"
+      }
+    ]
+  },
+  "上海摄影艺术中心": {
+    "type": "urban",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "上海摄影艺术中心",
+        "shortLabel": "主馆"
+      }
+    ]
+  },
+  "星美术馆": {
+    "type": "waterfront",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "星美术馆",
+        "shortLabel": "展馆"
+      }
+    ]
+  },
+  "巴金故居": {
+    "type": "heritage",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "巴金故居",
+        "shortLabel": "故居主楼"
+      }
+    ]
+  },
+  "西岸梦中心": {
+    "type": "waterfront",
+    "buildings": [
+      {
+        "id": "factory",
+        "name": "夢工場"
+      },
+      {
+        "id": "silo",
+        "name": "筒倉组团"
+      }
+    ]
+  },
+  "上海工艺美术博物馆": {
+    "type": "heritage",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "上海工艺美术博物馆",
+        "shortLabel": "主楼"
+      }
+    ]
+  },
+  "上海体育场": {
+    "type": "park",
+    "buildings": [
+      {
+        "id": "stadium",
+        "name": "上海体育场",
+        "shortLabel": "主场"
+      }
+    ]
+  },
+  "上海体育馆": {
+    "type": "park",
+    "buildings": [
+      {
+        "id": "gymnasium",
+        "name": "上海体育馆",
+        "shortLabel": "主场"
+      }
+    ]
+  },
+  "上海植物园": {
+    "type": "garden",
+    "buildings": [
+      {
+        "id": "greenhouse-1",
+        "name": "展览温室（一）",
+        "shortLabel": "一号温室"
+      },
+      {
+        "id": "greenhouse-2",
+        "name": "展览温室（二）",
+        "shortLabel": "二号温室"
+      }
+    ]
+  },
+  "龙华烈士陵园": {
+    "type": "park",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "龙华烈士纪念馆"
+      }
+    ]
+  },
+  "油罐艺术中心": {
+    "type": "waterfront",
+    "buildings": [
+      {
+        "id": "tank-1",
+        "name": "油罐一号"
+      },
+      {
+        "id": "tank-2",
+        "name": "油罐二号"
+      },
+      {
+        "id": "tank-3",
+        "name": "油罐三号"
+      },
+      {
+        "id": "tank-4",
+        "name": "油罐四号"
+      },
+      {
+        "id": "tank-5",
+        "name": "油罐五号"
+      }
+    ]
+  },
+  "上海交通大学徐汇校区": {
+    "type": "campus",
+    "buildings": [
+      {
+        "id": "campus",
+        "name": "老图书馆"
+      }
+    ]
+  },
+  "光启公园": {
+    "type": "park",
+    "buildings": [
+      {
+        "id": "museum",
+        "name": "徐光启纪念馆",
+        "shortLabel": "纪念馆"
+      },
+      {
+        "id": "pavilion",
+        "name": "六角亭"
+      }
+    ]
+  },
+  "土山湾博物馆": {
+    "type": "heritage",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "土山湾博物馆旧址展厅"
+      },
+      {
+        "id": "glass-hall",
+        "name": "幕墙玻璃展厅",
+        "shortLabel": "玻璃厅"
+      }
+    ]
+  },
+  "徐汇艺术馆": {
+    "type": "urban",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "徐汇艺术馆",
+        "shortLabel": "展馆"
+      }
+    ]
+  },
+  "上海博物馆东馆": {
+    "type": "campus",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "上海博物馆东馆",
+        "shortLabel": "东馆主体"
+      }
+    ]
+  },
+  "上海自然博物馆": {
+    "type": "park",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "上海自然博物馆",
+        "shortLabel": "自然馆"
+      }
+    ]
+  },
+  "上海儿童博物馆": {
+    "type": "campus",
+    "buildings": [
+      {
+        "id": "main",
+        "name": "上海儿童博物馆主展馆"
+      }
+    ]
+  }
+}

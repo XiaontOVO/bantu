@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-10-01",
+  "tool": "built-in image_gen",
+  "style": "panoramic 2:1 painterly realism",
+  "note": "Artistic interpretation; imagery and juxtaposition are not floor plans or verified real adjacency.",
+  "assets": [
+    {
+      "id": "wukang-building",
+      "prompt": "Use case: stylized-concept. Create a NEW exquisite panoramic 2:1 (2048x1024) background illustration for Bantu's mobile landscape immersive travel scene at Shanghai's Wukang Building. The supplied photos are architectural reference only, not edit targets. Preserve recognisable authentic curved corner, red-brown brick upper facade, cream stone arcade base, narrow iron balconies and the long receding facade. Beautiful premium animated-film environment painting, painterly realism, richly detailed brick and stone textures, warm late-afternoon sunlight, soft blue sky, fresh plane-tree leaves, lived-in but calm streets, refined inviting travel atmosphere. Camera from pedestrian eye height across the junction, building dominates central-left 70%, curved prow centered around x60%, facade recedes towards left around x20-45%; road and crosswalk across bottom 22%; leafy canopy on sides, restrained everyday pedestrians small in scale. Entire building and roof remain within frame. Thoughtfully composed immersive environment, not a poster or schematic. No text, no labels, no UI controls, no icon pins, no watermark, no fantasy additions, no invented entrance arrows. Output one polished wide landscape artwork.",
+      "references": [
+        "wukang-2.jpg",
+        "wukang-3.jpg"
+      ],
+      "asset": "wukang-building-v2.jpg"
+    },
+    {
+      "id": "xujiahui-library",
+      "prompt": "Use case: stylized-concept. NEW premium panoramic 2:1 landscape background artwork (2048x1024) for a mobile immersive travel scene, same beautifully detailed painterly-realism animated-film environment style as warm refined travel concept art, rich material textures, subtle depth, natural sunlight, inviting atmosphere. This is artwork, not a navigation map. No text, no captions, no UI, no pins, no watermark. Keep all key objects fully inside frame. An artistic interpretation of Shanghai Xujiahui Library reading atmosphere using supplied photographs as wood-and-bookshelf material reference, not a measured floor layout. Massive warmly illuminated honey-oak wall of orderly books along left third (x5-39%), a low children's reading table with open illustrated books and small seats in center foreground x45-62% y60-88%, calm mezzanine reading desks and balustrade on right third x69-96% y25-75%. Sunlight entering tall windows, gentle paper glow and soft dappled shadows, serene elegant lived-in library. Continuous cinematic environment, not divided panels; do not create signage or claim actual room adjacency.",
+      "references": [
+        "xujiahui-library-2.jpg",
+        "xujiahui-library-3.jpg"
+      ],
+      "asset": "xujiahui-library-v2.jpg"
+    },
+    {
+      "id": "xujiahui-park",
+      "prompt": "Use case: stylized-concept. NEW premium panoramic 2:1 landscape background artwork (2048x1024) for a mobile immersive travel scene, same beautifully detailed painterly-realism animated-film environment style as warm refined travel concept art, rich material textures, subtle depth, natural sunlight, inviting atmosphere. This is artwork, not a navigation map. No text, no captions, no UI, no pins, no watermark. Keep all key objects fully inside frame. Shanghai Xujiahui Park atmosphere. Supplied photos are references for chimney form and park walk, not a measured location plan. Artfully combine three characteristic features: tall slim red-brick chimney with narrow grey metal top rising on left third x24-32% from y10-72%; lush plane trees over a stone ground-level walkway sweeping from distant center to bottom center; green-railed elevated pedestrian structure clearly visible across right third x67-98%, its stairs and slender supports. Detailed green canopy, sunbeams, tiny ordinary strolling visitors, grass and small garden borders. Fresh morning green with warm highlights. Imagined visual juxtaposition, not real adjacency. Make the elevated bridge distinct from the central ground path.",
+      "references": [
+        "xujiahui-park-2.jpg",
+        "xujiahui-park-3.jpg"
+      ],
+      "asset": "xujiahui-park-v2.jpg"
+    },
+    {
+      "id": "longhua-temple",
+      "prompt": "Use case: stylized-concept. NEW premium panoramic 2:1 landscape background artwork (2048x1024) for a mobile immersive travel scene, same beautifully detailed painterly-realism animated-film environment style as warm refined travel concept art, rich material textures, subtle depth, natural sunlight, inviting atmosphere. This is artwork, not a navigation map. No text, no captions, no UI, no pins, no watermark. Keep all key objects fully inside frame. Shanghai Longhua Temple-inspired outdoor courtyard environment. Supplied photos reference the pagoda silhouette and courtyard materials. Artistic juxtaposition: multi-tier octagonal historic pagoda with layered dark upward-curved eaves rising on left third x18-33% y8-75%; large ornate bronze incense vessel centered foreground x46-60% y50-87%, detailed patinated surface, delicate translucent wisps; ochre temple hall and dark tiled sweeping eaves filling right third x65-98% y32-74%; sunlit stone courtyard and mature trees. Respectful tranquil early-morning golden atmosphere, few small visitors, beautiful wood/bronze/tile textures. Not measured geometry or real adjacency. Avoid readable inscriptions.",
+      "references": [
+        "longhua-2.jpg",
+        "longhua-3.jpg"
+      ],
+      "asset": "longhua-temple-v2.jpg"
+    },
+    {
+      "id": "guilin-park",
+      "prompt": "Use case: stylized-concept. NEW premium panoramic 2:1 landscape background artwork (2048x1024) for a mobile immersive travel scene, same beautifully detailed painterly-realism animated-film environment style as warm refined travel concept art, rich material textures, subtle depth, natural sunlight, inviting atmosphere. This is artwork, not a navigation map. No text, no captions, no UI, no pins, no watermark. Keep all key objects fully inside frame. Shanghai Guilin Park artistic garden interpretation, supplied photos as references for bamboo, white garden wall and carved wooden covered walk, not a measured layout. Dense vivid bamboo grove left third x0-27%, white garden wall with an elegant round moon gate centered x37-60% y29-77%, inviting filtered garden light through it; traditional dark carved wooden covered corridor right third x70-100% y30-86%, visibly slatted bench and pillars, grey tile roof. Foreground fine gravel/stone paving, delicate bamboo shadows. Luminous gentle late-spring sunlight, lush green/ivory/warm aged wood. No giant mountains, no fantasy temple, no invented lake. Preserve distinct clickable silhouettes.",
+      "references": [
+        "guilin-park-2.jpg",
+        "guilin-park-3.jpg"
+      ],
+      "asset": "guilin-park-v2.jpg"
+    },
+    {
+      "id": "shanghai-natural-history",
+      "prompt": "Use case: stylized-concept. NEW premium panoramic 2:1 landscape background artwork (2048x1024) for a mobile immersive travel scene, same beautifully detailed painterly-realism animated-film environment style as warm refined travel concept art, rich material textures, subtle depth, natural sunlight, inviting atmosphere. This is artwork, not a navigation map. No text, no captions, no UI, no pins, no watermark. Keep all key objects fully inside frame. A poetic artistic interpretation of the Shanghai Natural History Museum's nature-themed exhibition atmosphere, explicitly an imagined museum space rather than an actual floor plan. Vast softly sunlit contemporary atrium; large organic honeycomb glass facade architectural structure on left third x2-35% y5-75%, elegant curved glass roof; center broad dinosaur skeleton specimen display x37-70% y25-87%, long neck and ribcage rendered gracefully, low rock-and-fern diorama base; right third x77-98% y45-85% an attractive fossil slab and illuminated natural-history specimen vitrine. Dramatic but friendly airy museum environment, warm ivory stone, fresh green planting, cyan daylight, subtle honey-gold illumination. A few tiny respectful visitors for scale. No floor labels, no explanatory text, no invented real exhibit claims.",
+      "references": [],
+      "asset": "shanghai-natural-history-v2.jpg"
+    },
+    {
+      "id": "westbund-museum",
+      "generatedAt": "2026-10-01",
+      "prompt": "Use case: stylized-concept.\nAsset type: a production panoramic painting for the mobile travel app 伴途, an interactive place scene.\nCreate a NEW polished 2:1 landscape illustration of the West Bund Museum exterior in Shanghai.\nInput image 1 (westbund-2.jpg) is the ONLY subject/architecture reference. Preserve its recognizable pale rectangular metal-panel facade with fine regular grid seams, its sharp square corner and right-hand receding side, slender leafy trees, square low grey planters/benches, and pale paved foreground. Input image 2 (wukang-building-v2.jpg) is STYLE ONLY: match its refined painterly-realistic detail, attractive warm light, airy youthful travel mood and rich natural textures; do not copy any of its buildings, roads, cars or streets.\nComposition: wide 2:1 panorama, eye-level view of the photographed building, the facade dominating the middle, the sharp building corner clearly readable to the right of center, and a distinct foreground tree/planter/shadow area on the left. Make all three subjects large enough to identify and touch on a phone in landscape. Keep the grid, corner and leafy foreground visually distinct. Respect the plain rectangular architectural silhouette in the photograph; do not turn it into a curved, brick, glass-palace or historic building.\nLighting: clear bright blue sky, soft warm afternoon light with gentle tree shadows on the pale plaza and facade, pleasant restrained colors, elegant small variations in panel surfaces. Detailed beautifully composed travel painting, crisp enough to study the architectural lines, painterly rather than a photomontage.\nConstraints: exactly 2:1 width:height, full-bleed artwork, no UI, no buttons, no target circles, no labels, no writing, no captions, no logos, no watermarks. Omit the photographed historic exhibition banners and all lettering; keep the building's panel-grid character. No invented exhibitions, indoor galleries, artworks, rivers, location dots, floorplans, entrances or arrows. Do not add crowds or conspicuous invented objects. The scene is an artistic interpretation of the photographed exterior, not a measured navigation map.",
+      "references": ["photos/westbund-2.jpg", "scene/wukang-building-v2.jpg (style only)"],
+      "asset": "westbund-museum-v1.jpg",
+      "encoding": "Original generated 1774x887 pixels, JPEG quality 90; no cropping or resizing."
+    }
+  ]
+}

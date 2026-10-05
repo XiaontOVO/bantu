@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">伴途</string>
+    <color name="bantu_blue">#4B6FF2</color>
+    <color name="bantu_background">#F4F7FC</color>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/bantu_blue</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:statusBarColor">@color/bantu_background</item>
+        <item name="android:navigationBarColor">@color/bantu_background</item>
+        <item name="android:windowBackground">@color/bantu_background</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+</resources>

@@ -1,0 +1,160 @@
+{
+  "date": "2026-09-29",
+  "mode": "built-in image_gen",
+  "useCase": "style-transfer",
+  "nativeAspectRatio": "2:1",
+  "styleReference": "public/images/places/impression/wukang-1.jpg",
+  "commonPrompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n",
+  "assets": [
+    {
+      "key": "longhua-martyrs-park",
+      "name": "龙华烈士陵园",
+      "title": "龙华烈士陵园",
+      "english": "LONGHUA MARTYRS MEMORIAL",
+      "caption": "在静谧中，铭记与致敬",
+      "previousFile": "public/images/places/impression/longhua-martyrs-park-1.jpg",
+      "file": "public/images/places/impression/longhua-martyrs-park-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Respectful quiet memorial garden: broad axial plaza with low horizontal pale stone memorial wall, evergreen cypresses, symmetrical steps and restrained low-rise memorial architecture. Do not copy image 2's unverified tall triple-column monument or skyline. Use image 2 for greenery and memorial mood only.\nText (verbatim): Chinese title \"龙华烈士陵园\"; English \"LONGHUA MARTYRS MEMORIAL\"; Chinese description \"在静谧中，铭记与致敬\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "原印象图仅作主体参考；武康大楼印象图作风格参考"
+    },
+    {
+      "key": "long-museum-west-bund",
+      "name": "龙美术馆（西岸馆）",
+      "title": "龙美术馆 · 西岸馆",
+      "english": "LONG MUSEUM WEST BUND",
+      "caption": "在混凝土的光影里，遇见艺术",
+      "previousFile": "public/images/places/impression/long-museum-west-bund-1.jpg",
+      "file": "public/images/places/impression/long-museum-west-bund-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Museum exterior with distinctive repeated exposed concrete vaulted umbrella-shaped structures, large dark glass facades, retained industrial material, quiet riverside pavement and greenery. Avoid the Shanghai skyline as a literal vista; subtle abstract silhouette only.\nText (verbatim): Chinese title \"龙美术馆 · 西岸馆\"; English \"LONG MUSEUM WEST BUND\"; Chinese description \"在混凝土的光影里，遇见艺术\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "原印象图仅作主体参考；武康大楼印象图作风格参考"
+    },
+    {
+      "key": "shanghai-center-of-photography",
+      "name": "上海摄影艺术中心",
+      "title": "上海摄影艺术中心",
+      "english": "SHANGHAI CENTER OF PHOTOGRAPHY",
+      "caption": "以镜头为窗，看见城市的另一面",
+      "previousFile": "public/images/places/impression/shanghai-center-of-photography-1.jpg",
+      "file": "public/images/places/impression/shanghai-center-of-photography-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Shanghai Center of Photography's Pavilion of Six Views: small single-storey nested white concrete curved/elliptical volumes, tall flat walls with vertical ribbed texture at the base and smooth white upper walls, openings at hinged junctions; intimate grassy forecourt. Image 2 is a REAL exterior photo for the building's shape only. Never copy the old erroneous long arched glass gallery.\nText (verbatim): Chinese title \"上海摄影艺术中心\"; English \"SHANGHAI CENTER OF PHOTOGRAPHY\"; Chinese description \"以镜头为窗，看见城市的另一面\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "公开建筑照片仅作造型参考，原照片不作为产品素材"
+    },
+    {
+      "key": "tank-art-center",
+      "name": "油罐艺术中心",
+      "title": "油罐艺术中心",
+      "english": "TANK SHANGHAI",
+      "caption": "旧油罐里，装着新的想象",
+      "previousFile": "public/images/places/impression/tank-art-center-1.jpg",
+      "file": "public/images/places/impression/tank-art-center-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Several large white industrial cylindrical oil tanks converted to an art center, grassy riverside landscape and curving walkway. Preserve recognizable cylinder shapes, emphasize architecture without invented towers.\nText (verbatim): Chinese title \"油罐艺术中心\"; English \"TANK SHANGHAI\"; Chinese description \"旧油罐里，装着新的想象\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "原印象图仅作主体参考；武康大楼印象图作风格参考"
+    },
+    {
+      "key": "west-bund-dream-center",
+      "name": "西岸梦中心",
+      "title": "西岸梦中心",
+      "english": "WEST BUND DREAM CENTER",
+      "caption": "沿着江风，走进城市的新日常",
+      "previousFile": "public/images/places/impression/west-bund-dream-center-1.jpg",
+      "file": "public/images/places/impression/west-bund-dream-center-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Former cement-factory waterfront redevelopment: pale concrete clustered cylindrical cement silos, retained rust-coloured industrial gantries and a low glazed waterfront pavilion, a calm riverside pedestrian promenade. Match these silhouettes in image 2, without invented downtown skyline.\nText (verbatim): Chinese title \"西岸梦中心\"; English \"WEST BUND DREAM CENTER\"; Chinese description \"沿着江风，走进城市的新日常\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "原印象图仅作主体参考；武康大楼印象图作风格参考"
+    },
+    {
+      "key": "shanghai-botanical-garden",
+      "name": "上海植物园",
+      "title": "上海植物园",
+      "english": "SHANGHAI BOTANICAL GARDEN",
+      "caption": "慢下来，与草木一起呼吸",
+      "previousFile": "public/images/places/impression/shanghai-botanical-garden-1.jpg",
+      "file": "public/images/places/impression/shanghai-botanical-garden-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Lush botanical garden landscape with glass greenhouse, layered foliage, a calm winding path. Respect architecture and botanical subject in image 2, no literal financial district skyline behind the garden.\nText (verbatim): Chinese title \"上海植物园\"; English \"SHANGHAI BOTANICAL GARDEN\"; Chinese description \"慢下来，与草木一起呼吸\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "原印象图仅作主体参考；武康大楼印象图作风格参考"
+    },
+    {
+      "key": "shanghai-stadium",
+      "name": "上海体育场",
+      "title": "上海体育场",
+      "english": "SHANGHAI STADIUM",
+      "caption": "把热爱，交给每一次欢呼",
+      "previousFile": "public/images/places/impression/shanghai-stadium-1.jpg",
+      "file": "public/images/places/impression/shanghai-stadium-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Large open-air elliptical sports stadium, white tensioned roof ring, central green football pitch and warm red seating. Use image 2 as architectural silhouette reference, do not merge with the indoor stadium.\nText (verbatim): Chinese title \"上海体育场\"; English \"SHANGHAI STADIUM\"; Chinese description \"把热爱，交给每一次欢呼\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "原印象图仅作主体参考；武康大楼印象图作风格参考"
+    },
+    {
+      "key": "shanghai-indoor-stadium",
+      "name": "上海体育馆",
+      "title": "上海体育馆",
+      "english": "SHANGHAI INDOOR STADIUM",
+      "caption": "一座场馆，盛满城市的热爱",
+      "previousFile": "public/images/places/impression/shanghai-indoor-stadium-1.jpg",
+      "file": "public/images/places/impression/shanghai-indoor-stadium-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Distinctive circular enclosed indoor sports arena with broad shallow curved roof and radial exterior structure, plaza and trees, based on image 2. Different from open-air Shanghai Stadium; no visible open football pitch.\nText (verbatim): Chinese title \"上海体育馆\"; English \"SHANGHAI INDOOR STADIUM\"; Chinese description \"一座场馆，盛满城市的热爱\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "原印象图仅作主体参考；武康大楼印象图作风格参考"
+    },
+    {
+      "key": "tushanwan-museum",
+      "name": "土山湾博物馆",
+      "title": "土山湾博物馆",
+      "english": "TUSHANWAN MUSEUM",
+      "caption": "循着匠心，读懂海派的来处",
+      "previousFile": "public/images/places/impression/tushanwan-museum-1.jpg",
+      "file": "public/images/places/impression/tushanwan-museum-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: Museum entrance and facade matching image 2, intimate streetscape with old brick and workshop heritage atmosphere, crafted timber-inspired details only as abstract design accents.\nText (verbatim): Chinese title \"土山湾博物馆\"; English \"TUSHANWAN MUSEUM\"; Chinese description \"循着匠心，读懂海派的来处\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "原印象图仅作主体参考；武康大楼印象图作风格参考"
+    },
+    {
+      "key": "start-museum",
+      "name": "星美术馆",
+      "title": "星美术馆",
+      "english": "START MUSEUM",
+      "caption": "让艺术，点亮一次城市漫步",
+      "previousFile": "public/images/places/impression/start-museum-1.jpg",
+      "file": "public/images/places/impression/start-museum-ai-2x1.png",
+      "prompt": "Use case: style-transfer\nAsset type: final local illustration for a Chinese travel app's place card and enlarged impression viewer.\nPrimary request: redraw ONE travel impression illustration, exact 2:1 horizontal canvas, ideally 2048 by 1024 pixels. This is a complete standalone image asset.\nInput images: Image 1 is STYLE reference only (the established Wukang travel poster), never copy its building or its text. Image 2 is the SUBJECT/architectural silhouette reference for this destination, not the desired painting style or typography.\nStyle/medium: Match image 1's refined architectural travel-poster illustration: warm ivory textured paper, terracotta orange geometric sun disk, deep forest-green stylized trees, charcoal architectural outlines, layered flat painted planes with fine grain and sophisticated editorial spacing. Less photorealistic detail than image 2; more sculpted clean geometric illustration like image 1.\nComposition/framing: Beautiful coherent wide 2:1 panorama. Full subject occupies approximately right two thirds, integrated clear typography on open ivory upper-left area, not a separate blank panel. Keep all title/English/description within 6% safe margin, never overlap architecture, readable text hierarchy. Main Chinese title large elegant dark charcoal Songti serif; English small letter-spaced sans-serif below; Chinese descriptive line comfortably readable below English. Original's asymmetry and paper warmth; no border or letterboxing.\nConstraints: Render only the three specified text lines exactly once. No additional slogans, fake labels, watermark, logos or repeated text. No Wukang building, no random literal skyline. This is an artistic impression, never a geographic floor plan. Native 2:1 image, not a 16:9 scene cut down; build whole composition for 2:1.\n\nSubject: START Museum, Shanghai: long low converted industrial warehouse beside the river, grey corrugated shallow pitched roof with THREE distinct raised rectangular open flat display platforms on slender columns on top, glazed gable/end facade, retained industrial crane frame nearby. Match the real building in Image 2. Make an elegant close 3/4 architectural perspective for the right two thirds; simplify surroundings, no literal skyline or entire distant bridge. Never the old invented angular concrete museum.\nText (verbatim): Chinese title \"星美术馆\"; English \"START MUSEUM\"; Chinese description \"让艺术，点亮一次城市漫步\".",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "referenceRole": "公开建筑照片仅作造型参考，原照片不作为产品素材"
+    }
+  ]
+}

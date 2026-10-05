@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">上海植物园展览温室（二）平面图</title>
+  <desc id="desc">按专业测绘导览图重绘，标出西侧食虫植物区、中部奇花异卉和多肉展区、中心展示区、东侧珍稀濒危植物区及连廊。</desc>
+  <defs>
+    <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fbfcf4"/><stop offset="1" stop-color="#f1f5e8"/></linearGradient>
+    <pattern id="leafBed" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M3 13q3-9 8-8-1 6-8 8Zm7 4q2-7 7-7-1 5-7 7Z" fill="#a9c99a" opacity=".45"/></pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#566c4c" flood-opacity=".12"/></filter>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#33493d}
+      .title{font-size:25px;font-weight:700;letter-spacing:1px}.sub{font-size:12px;fill:#748477}.zone{stroke:#8ba687;stroke-width:2}.label{font-size:17px;font-weight:700}.detail{font-size:12px;fill:#617466}.path{fill:none;stroke:#fffdf5;stroke-width:14;stroke-linecap:round;stroke-linejoin:round}.path-edge{fill:none;stroke:#c2d2ae;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.tiny{font-size:11px;fill:#65796a}
+    </style>
+  </defs>
+  <rect width="900" height="620" rx="24" fill="url(#paper)"/>
+  <text x="44" y="52" class="title">展览温室（二） · 一层</text>
+  <text x="44" y="76" class="sub">四座主题温室与连廊｜馆方专业测绘导览图重绘</text>
+  <g transform="translate(824 54)" aria-label="北"><text x="0" y="0" text-anchor="middle" class="tiny">北</text><path d="M0 8v30m-7-10 7-20 7 20" fill="none" stroke="#506b57" stroke-width="2"/></g>
+  <g filter="url(#shadow)">
+    <path class="plan-shell" d="M73 166 114 117 337 117 337 93 566 93 566 208 620 208 620 242 737 242 786 300 777 393 704 427 640 408 588 429 498 429 498 476 378 476 378 429 300 429 300 385 224 385 224 414 113 414 113 351 80 351Z" fill="#e8f0de" stroke="#718a70" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M98 177 126 138H317V166H330V337H283V367H130V344H99Z" class="zone" fill="#d8ebd7"/>
+    <path d="M344 113H551V255H512V328H344Z" class="zone" fill="#edf0d5"/>
+    <path d="M355 124H539V245H355Z" fill="url(#leafBed)" opacity=".7"/>
+    <path d="M344 344H512V415H344Z" class="zone" fill="#e2edcc"/>
+    <path d="M357 356H499V402H357Z" fill="url(#leafBed)" opacity=".65"/>
+    <path d="M533 231H609V326H533Z" fill="#e4efd9" stroke="#8ba687" stroke-width="2"/>
+    <path d="M622 258 739 258 765 301 756 369 700 404 642 386 615 342Z" class="zone" fill="#d8ebd6"/>
+    <path d="M635 273 729 273 748 307 741 355 696 383 651 367 631 337Z" fill="url(#leafBed)"/>
+    <path d="M113 192q32-24 62-2t45 32q-24 30-12 68 10 26-10 52" fill="none" stroke="#8cc8cf" stroke-width="16" stroke-linecap="round" opacity=".82"/>
+    <path d="M321 218H342M321 369H342M512 289H532M610 326H627" class="path" stroke-width="12"/>
+    <path d="M321 218H342M321 369H342M512 289H532M610 326H627" class="path-edge"/>
+    <path d="M439 476V449Q439 427 418 416M439 449Q439 427 460 416" class="path" stroke-width="14"/>
+    <path d="M439 476V449Q439 427 418 416M439 449Q439 427 460 416" class="path-edge"/>
+    <path d="M134 201c31 18 39 49 23 78m29-110v142m-60-84h99" fill="none" stroke="#7fb9a5" stroke-width="2" opacity=".6"/>
+    <path d="M385 152h53v71h-53zM451 152h69v71h-69z" fill="#e1edcf" stroke="#a2b696" stroke-width="1.5"/>
+    <path d="M385 362h54v32h-54zM451 362h39v32h-39z" fill="#e5edcf" stroke="#a2b696" stroke-width="1.5"/>
+  </g>
+  <text x="211" y="234" text-anchor="middle" class="label">食虫植物区</text>
+  <text x="211" y="255" text-anchor="middle" class="detail">湿生植物与水景</text>
+  <text x="447" y="143" text-anchor="middle" class="label">奇花异卉区</text>
+  <text x="447" y="241" text-anchor="middle" class="detail">温室展区</text>
+  <text x="428" y="337" text-anchor="middle" class="label">多肉植物区</text>
+  <text x="428" y="389" text-anchor="middle" class="detail">旱生植物展区</text>
+  <text x="571" y="284" text-anchor="middle" class="detail">连廊</text>
+  <text x="691" y="316" text-anchor="middle" class="label">中心展示区</text>
+  <text x="691" y="339" text-anchor="middle" class="detail">主题花卉展览</text>
+  <text x="694" y="365" text-anchor="middle" class="tiny">热带珍稀濒危植物区</text>
+  <path d="M439 476v18" stroke="#b65c3e" stroke-width="4"/><circle cx="439" cy="476" r="7" fill="#fff" stroke="#b65c3e" stroke-width="3"/>
+  <text x="439" y="520" text-anchor="middle" class="tiny">主入口</text>
+  <g transform="translate(44 579)"><rect width="258" height="22" rx="11" fill="#e8eee2"/><text x="129" y="15" text-anchor="middle" class="tiny">轮廓与分区依馆方测绘图重绘 · 非比例图</text></g>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:1.875px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:1.875px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:0.9750000000000001px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" fill="none">
+  <title>伴途 · 出去走走</title>
+  <desc>原创城市旅行插画：晴空下的街区、绿树、咖啡馆和骑车的人。品牌装饰画，不代表具体景点或真实路线。</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#b9ddff"/><stop offset="1" stop-color="#edf7ff"/></linearGradient>
+    <pattern id="windows" width="38" height="42" patternUnits="userSpaceOnUse"><rect x="12" y="10" width="12" height="21" rx="5" fill="#526783"/><path d="M18 10v21M12 20h12" stroke="#eee3d1" stroke-width="2"/></pattern>
+    <g id="tree"><path d="M0 3v82m0-55-16-11M0 46l18-15" stroke="#347064" stroke-width="6" stroke-linecap="round"/><path d="M-35-5c-5-26 16-47 35-47S41-30 36-8C60 7 38 40 15 38-8 52-43 28-35-5Z" fill="#75be88"/><path d="M-21-20c2-13 16-20 25-17" stroke="#b4de9e" stroke-width="7" stroke-linecap="round"/></g>
+    <g id="shrub"><path d="M-32 0c-5-19 10-30 21-20C-11-46 23-44 23-20 40-30 54-13 45 0Z" fill="#85be87"/></g>
+    <g id="cloud"><path d="M0 27c0-14 16-24 29-16C33-10 69-3 70 17c13-5 25 1 28 10Z" fill="#fff" opacity=".86"/></g>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h800v520H0z"/>
+  <circle cx="627" cy="93" r="46" fill="#ffd368"/><circle cx="627" cy="93" r="60" stroke="#ffe4a6" stroke-width="2"/>
+  <use href="#cloud" transform="translate(84 51) scale(1.2)"/><use href="#cloud" transform="translate(394 40) scale(.7)"/>
+  <path d="m442 99 11-5 11 5m28 10 8-4 8 4" stroke="#7d9dbc" stroke-width="3" stroke-linecap="round"/>
+  <!-- A quiet skyline behind the walkable neighbourhood. -->
+  <path d="M0 285V160h42v-18h36v143h39V117h50v168h65V147h35v-25h43v163h36V185h43v100h52V168h38v-16h50v133h91V155h55v130h51V184h58v101h81V140h62v145Z" fill="#a4c9df" opacity=".52"/>
+  <path d="M145 123v122m103-85v85m204-72v72m163-79v79m117-42v42" stroke="#cce2ef" stroke-width="9" stroke-dasharray="13 11"/>
+  <path d="M0 310c86-35 119-9 204-18s161-52 229-15 99 10 182-6 126-3 185 17v130H0Z" fill="#bed7a1"/>
+  <!-- Terracotta corner house, drawn with facade and balcony detail. -->
+  <path d="m120 179 60-64 61 64v167H120Z" fill="#f5e3c4"/>
+  <path d="m113 181 67-72 68 72" stroke="#d9765d" stroke-width="14" stroke-linejoin="round"/>
+  <path d="m240 180 59-18v184h-59Z" fill="#dfc7a6"/>
+  <path d="m246 182 54-17v-11l-69 10Z" fill="#b05e4c"/>
+  <rect x="135" y="193" width="93" height="114" fill="url(#windows)"/>
+  <path d="M126 236h111m-111 46h111" stroke="#dac6a6" stroke-width="5"/>
+  <rect x="166" y="145" width="27" height="29" rx="13" fill="#63819a"/><path d="M180 145v29" stroke="#f5e3c4" stroke-width="3"/>
+  <path d="M261 200v15m17-22v15m-17 32v15m17-22v15m-17 32v15m17-22v15" stroke="#657b8b" stroke-width="10"/>
+  <path d="M160 346v-34a19 19 0 0 1 38 0v34" fill="#467974"/>
+  <!-- Gallery with long, shaded archways. -->
+  <rect x="412" y="228" width="251" height="118" rx="4" fill="#fff0d3"/><path d="m396 229 146-57 137 57Z" fill="#ecad75"/>
+  <path d="m414 219 128-38 117 38Z" fill="#fbd3a4"/>
+  <path d="M430 345v-66a22 22 0 0 1 44 0v66m24 0v-66a22 22 0 0 1 44 0v66m24 0v-66a22 22 0 0 1 44 0v66m24 0v-66a14 14 0 0 1 28 0v66" fill="#7fabb2"/>
+  <path d="M452 263v76m68-76v76m68-76v76" stroke="#a7cbd1" stroke-width="4"/>
+  <path d="M416 250h244M406 346h269" stroke="#e7c6a1" stroke-width="8"/>
+  <!-- A small café with a striped awning. -->
+  <rect x="298" y="268" width="107" height="89" fill="#f9ba89"/><rect x="309" y="294" width="34" height="59" rx="2" fill="#457d88"/><rect x="354" y="294" width="38" height="31" rx="2" fill="#457d88"/>
+  <path d="M310 287h80" stroke="#fbf3df" stroke-width="7"/>
+  <path d="m291 288 10-26h102l10 26Z" fill="#fff5e5"/><path d="m306 288 5-26m17 26 2-26m19 26v-26m20 26-2-26m23 26-5-26m23 26-10-26" stroke="#e57e69" stroke-width="10"/>
+  <rect x="338" y="230" width="52" height="26" rx="6" fill="#fff8e8"/><path d="M350 237h15v9a5 5 0 0 1-5 5h-5a5 5 0 0 1-5-5Zm16 1h4a4 4 0 0 1 0 8h-4" stroke="#b36c55" stroke-width="2"/>
+  <!-- Trees, lamps, paving and riverside details. -->
+  <use href="#tree" transform="translate(71 254) scale(1.35)"/><use href="#tree" transform="translate(704 257) scale(1.45)"/><use href="#tree" transform="translate(255 302) scale(.66)"/>
+  <path d="M0 356h800v86H0Z" fill="#fff0d2"/><path d="M0 364h800M0 414h800" stroke="#e1caa5" stroke-width="2"/>
+  <path d="M0 441c131-23 249-5 390 9s272-26 410-17v87H0Z" fill="#83c6d5"/>
+  <path d="M0 457c160-15 277 14 414 11s235-24 386-18M57 493h102m96 9h77m161-17h105m88 16h69" stroke="#c2e4ea" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 427h800M33 406v38m64-38v34m64-34v35m64-35v38m64-38v41m64-41v44m64-44v44m64-44v40m64-40v36m64-36v32m64-32v31m64-31v34m64-34v35" stroke="#f9fbf0" stroke-width="5"/>
+  <path d="M115 358v-90m0 0c0-17 16-27 30-22" stroke="#4b7580" stroke-width="4" stroke-linecap="round"/><path d="M137 240h17l4 13h-25Z" fill="#ffcf75"/>
+  <path d="M664 356v-90m0 0c0-17-16-27-30-22" stroke="#4b7580" stroke-width="4" stroke-linecap="round"/><path d="M626 240h17l4 13h-25Z" fill="#ffcf75"/>
+  <use href="#shrub" transform="translate(20 361)"/><use href="#shrub" transform="translate(749 361) scale(1.4)"/>
+  <rect x="486" y="356" width="62" height="9" rx="3" fill="#ba8965"/><path d="M493 364v15m48-15v15" stroke="#61746a" stroke-width="4"/>
+  <path d="M488 339h58v11h-58Z" fill="#d2a279"/>
+  <!-- A cyclist and a walker give the illustration a human scale. -->
+  <g stroke="#396481" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="334" cy="390" r="15"/><circle cx="389" cy="390" r="15"/>
+    <path d="m334 390 14-28 18 28h-32m14-28h30l11 28m-23 0 12-28-5-12h-9m-17 12-3-8h-8"/>
+  </g>
+  <circle cx="363" cy="326" r="7" fill="#d79571"/><path d="m363 335-10 16 17 13" stroke="#ef8c64" stroke-width="12" stroke-linecap="round"/>
+  <path d="m362 337 17 13 9-3m-34 3-8 17 15 15" stroke="#305d88" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="588" cy="338" r="7" fill="#c78d70"/><path d="M588 349v20" stroke="#f4ce61" stroke-width="13" stroke-linecap="round"/>
+  <path d="m583 369-5 18m15-18 8 17m-18-31-8 11m20-12 9 7" stroke="#496974" stroke-width="5" stroke-linecap="round"/>
+  <path d="m600 355 8-7 9 12-8 6Z" fill="#ecad82"/>
+  <path d="M183 386h23m-17 5h34m221 8h16m233-16h25" stroke="#e2c7a1" stroke-width="2" stroke-linecap="round"/>
+</svg>

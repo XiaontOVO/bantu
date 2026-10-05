@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">上海儿童博物馆 3F 自绘平面图</title>
+  <desc id="desc">依据上海儿童博物馆官网三层彩色平面图重绘，保留特展区、贵宾室、办公区、洗手间和楼梯间的位置关系；未标注空间不推断用途。</desc>
+  <defs><style>
+    text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#20384b}.canvas{fill:#f8f9f7}.shell{fill:#e4f3f7;stroke:#167fb0;stroke-width:8;stroke-linejoin:round}.zone{stroke:#fff;stroke-width:7;stroke-linejoin:round}.blue{fill:#c4e2ef}.green{fill:#c8e5b0}.yellow{fill:#ffe08c}.pink{fill:#f7cbd8}.lobby{fill:#d9edf4}.label{font-size:28px;font-weight:650;text-anchor:middle;dominant-baseline:middle}.minor{font-size:18px;font-weight:600;text-anchor:middle;dominant-baseline:middle}.sub{font-size:15px;fill:#416275;text-anchor:middle}.floor{font-size:86px;font-weight:800;fill:#167fb0;text-anchor:end}.legend{font-size:15px;fill:#678092}
+  </style></defs>
+  <rect class="canvas" width="1200" height="700"/><text class="floor" x="1150" y="100">3F</text>
+  <path class="shell" d="M92 188L144 127H450V136H556V127H721V156H893V134H1039V313L1081 349V531L1044 574H859V588H286V569H112V538L78 509V284Z"/>
+  <path class="zone pink" d="M110 202H255V330H110Z"/><text class="minor" x="182" y="260">贵宾室</text>
+  <path class="zone yellow" d="M265 145H443V331H265Z"/><text class="minor" x="354" y="236">办公区</text>
+  <path class="zone lobby" d="M452 145H542V330H452Z"/><text class="sub" x="497" y="242">楼梯间</text>
+  <path class="zone lobby" d="M550 145H712V330H550Z"/>
+  <path class="zone lobby" d="M723 163H880V330H723Z"/>
+  <path class="zone lobby" d="M890 151H1027V330H890Z"/>
+  <path class="zone green" d="M110 342H1018V544H110Z"/>
+  <path class="zone" fill="#d6edbf" d="M145 376H979V523H145Z"/>
+  <path class="zone" fill="#fff" d="M1000 356H1039V526H1000Z"/>
+  <path class="zone blue" d="M112 526H277V558H112Z"/><text class="sub" x="194" y="544">公共通道</text>
+  <path class="zone yellow" d="M756 526H938V573H756Z"/><g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(847 550) scale(1)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g>
+  <text class="label" x="552" y="448">特展区</text>
+  <text class="sub" x="552" y="489">临展布置可能调整</text>
+  <path d="M235 358V528M714 342V525" fill="none" stroke="#167fb0" stroke-width="5"/>
+  <text class="legend" x="42" y="674">伴途依据上海儿童博物馆官网楼层图重绘 · 临展及办公区域以现场为准 · 非测绘比例</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

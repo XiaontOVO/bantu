@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">西岸美术馆 2F 二层平面图</title>
+  <desc id="desc">依据 David Chipperfield Architects 公布的一层展厅设计平面重绘。展厅1、展厅2和展厅3以旋转翼状体量围绕中央挑空，酒吧连接在东侧展厅上方。</desc>
+  <defs><filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#243940" flood-opacity=".12"/></filter><pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#9eaaa3" stroke-width="1.4" opacity=".65"/></pattern></defs>
+  <style>
+    .bg{fill:#f4f4ef}.title{font:700 34px 'Microsoft YaHei',sans-serif;fill:#253b43}.sub{font:18px 'Microsoft YaHei',sans-serif;fill:#6b7b78}.shell{fill:#fff;stroke:#33464b;stroke-width:7;stroke-linejoin:round;filter:url(#shadow)}.room{stroke:#fff;stroke-width:7;stroke-linejoin:round}.gallery{fill:#e7d7c8}.gallery2{fill:#dcc4b1}.public{fill:#dce9e3}.service{fill:#e8eceb}.food{fill:#f0e1c6}.atrium{fill:#edf1e8;stroke:#9aaa93;stroke-width:3}.label{font:700 22px 'Microsoft YaHei',sans-serif;fill:#263b42;text-anchor:middle;dominant-baseline:central}.small{font:16px 'Microsoft YaHei',sans-serif;fill:#677873;text-anchor:middle}.tag{font:700 15px system-ui,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:central}.dot{fill:#8c624d}.note{font:15px 'Microsoft YaHei',sans-serif;fill:#64726e}.north{font:700 15px system-ui,sans-serif;fill:#40575a;text-anchor:middle}.stair{fill:#eff1ec;stroke:#87938e;stroke-width:2}
+  </style>
+  <rect class="bg" width="1200" height="760"/><text class="title" x="52" y="58">西岸美术馆 · 2F</text><text class="sub" x="54" y="91">三组展厅围绕中央挑空展开 · 建筑师设计平面重绘</text>
+  <g transform="translate(1116 58)"><text class="north" y="0">北</text><path d="M0 10v31m-7-12 7-19 7 19" fill="none" stroke="#40575a" stroke-width="2.5"/></g>
+  <path class="shell" d="M251 236 760 124V168h138v250l-43 117-36 113-267-123-46-57-255-78Z"/>
+  <path class="room gallery" d="M251 236 760 124v43L718 382 592 470 251 390Z"/>
+  <path class="room gallery2" d="m560 389 81 1 214 145-36 113-267-123-45-47Z"/>
+  <path class="room gallery" d="M730 168h168v250H730Z"/>
+  <path class="room food" d="M730 124h168v50H730Z"/>
+  <path class="room public" d="m572 333 143-31 43 89-109 68-87-46Z"/>
+  <path class="atrium" d="M610 250h82v91h-82Z"/><path fill="url(#grid)" d="M615 255h72v81h-72Z"/>
+  <path class="room service" d="m700 383 43-26 48 35-47 29Z"/>
+  <g><circle class="dot" cx="408" cy="314" r="16"/><text class="tag" x="408" y="314">01</text><text class="label" x="427" y="350">展厅 1</text></g>
+  <g><circle class="dot" cx="678" cy="503" r="16"/><text class="tag" x="678" y="503">02</text><text class="label" x="683" y="548">展厅 2</text></g>
+  <g><circle class="dot" cx="817" cy="275" r="16"/><text class="tag" x="817" y="275">03</text><text class="label" x="814" y="326">展厅 3</text></g>
+  <g><circle class="dot" cx="812" cy="147" r="14"/><text class="tag" x="812" y="147">04</text><text class="small" x="814" y="190">酒吧</text></g>
+  <text class="small" x="651" y="295">中部挑空 / 光庭</text>
+  <g class="stair"><rect x="721" y="345" width="20" height="50" rx="2"/><path d="M724 352h14m-14 8h14m-14 8h14m-14 8h14m-14 8h14"/></g>
+  <text class="note" x="52" y="718">依据 David Chipperfield Architects 上层设计平面重绘 · 展墙与房间尺寸非测绘值 · 展陈以现场为准</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

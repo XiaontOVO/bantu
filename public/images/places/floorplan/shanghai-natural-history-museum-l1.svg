@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">上海自然博物馆 L1 楼层平面图</title>
+  <desc id="desc">伴途依据上海自然博物馆官方楼层导览重绘。生命长河与体验自然位于西侧展翼，主展厅沿中央穹顶东侧展开。</desc>
+  <defs><filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#293e4a" flood-opacity=".13"/></filter></defs>
+  <style>
+    .bg{fill:#f4f6f5}.shell{fill:#fff;stroke:#334750;stroke-width:8;stroke-linejoin:round;filter:url(#shadow)}.zone{stroke:#fff;stroke-width:8;stroke-linejoin:round}.gallery{fill:#e8a17a}.deep{fill:#ce7654}.service{fill:#dce5e6}.public{fill:#e3ece9}.dome{fill:#f6f4ed;stroke:#b8c7c6;stroke-width:4}.ring{fill:none;stroke:#dce4df;stroke-width:34}.title{font:700 34px 'Microsoft YaHei',sans-serif;fill:#263e49}.sub{font:18px 'Microsoft YaHei',sans-serif;fill:#74817e}.label{font:650 22px 'Microsoft YaHei',sans-serif;fill:#3a453f;text-anchor:middle;dominant-baseline:central}.small{font:16px 'Microsoft YaHei',sans-serif;fill:#665f56;text-anchor:middle}.num{font:700 15px system-ui,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:central}.dot{fill:#a65339}.north{font:700 16px system-ui,sans-serif;fill:#455b60;text-anchor:middle}.note{font:15px 'Microsoft YaHei',sans-serif;fill:#78837d}.core{fill:#fff;stroke:#b7c9c3;stroke-width:2}
+  </style>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="title" x="54" y="62">上海自然博物馆 · L1</text><text class="sub" x="55" y="93">生命长河　/　体验自然</text>
+  <g transform="translate(1118 56)"><text class="north" y="0">N</text><path d="M0 9v32m-7-11 7-21 7 21" fill="none" stroke="#455b60" stroke-width="2.5"/></g>
+  <path class="shell" d="M167 232C218 146 357 126 478 170C544 112 698 122 795 163C916 183 1032 275 1056 390C1085 522 1002 608 895 641C791 673 704 614 618 606C524 596 460 665 354 646C235 626 142 548 133 432C127 349 127 295 167 232Z"/>
+  <path class="zone deep" d="M186 248C235 177 345 157 435 191L493 302C455 342 426 382 412 433L252 438C194 385 162 315 186 248Z"/>
+  <path class="zone gallery" d="M231 448L411 439C423 492 469 535 522 553L483 612C390 624 295 579 231 514Z"/>
+  <path class="zone public" d="M743 188C844 182 944 240 997 326L866 363C837 311 791 277 719 263Z"/>
+  <path class="zone gallery" d="M847 386L1004 356C1038 449 1001 533 928 583L817 533C851 496 864 443 847 386Z"/>
+  <ellipse class="ring" cx="641" cy="408" rx="182" ry="144"/><ellipse class="dome" cx="641" cy="408" rx="143" ry="108"/>
+  <path d="M465 320C503 284 555 263 608 260M463 496C502 540 553 560 606 562M814 322C845 357 855 410 840 455" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+  <path d="M235 326C285 279 356 280 391 330C423 374 384 412 332 403C289 397 277 367 299 350C317 336 341 340 349 357" fill="none" stroke="#f8d8c6" stroke-width="20" stroke-linecap="round"/>
+  <g><circle class="dot" cx="246" cy="266" r="15"/><text class="num" x="246" y="266">01</text><text class="label" x="331" y="315">生命长河</text><text class="small" x="331" y="347">西侧蜿蜒展区</text></g>
+  <g><circle class="dot" cx="325" cy="500" r="15"/><text class="num" x="325" y="500">02</text><text class="label" x="365" y="545">体验自然</text></g>
+  <g><text class="label" x="906" y="278">主展厅</text><text class="small" x="906" y="310">围绕穹顶展开</text></g>
+  <g><rect class="core" x="589" y="384" width="104" height="48" rx="14"/><text class="small" x="641" y="413">中央穹顶</text><rect class="core" x="515" y="180" width="80" height="38" rx="10"/><text class="small" x="555" y="204">楼梯 · 电梯</text></g>
+  <text class="note" x="55" y="733">馆方楼层导览的展区关系本地重绘 · 展陈与房间尺寸以现场为准</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

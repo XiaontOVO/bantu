@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">上海工艺美术博物馆三层平面图</title>
+  <desc id="desc">依据 2019 年公开主楼平面图重绘，标明顾绣、缂丝、织绣、戏服展示、砚刻、面塑与楼梯。</desc>
+  <defs><filter id="shadow" x="-8%" y="-8%" width="116%" height="120%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#263b35" flood-opacity=".12"/></filter></defs>
+  <style>.bg{fill:#f4f5f2}.title{font:700 32px 'Microsoft YaHei',sans-serif;fill:#263c38}.sub{font:16px 'Microsoft YaHei',sans-serif;fill:#687871}.shell{fill:#fffefa;stroke:#465a52;stroke-width:2.7;filter:url(#shadow)}.room{stroke:#78857c;stroke-width:1.6}.gallery{fill:#e4e9df}.gallery2{fill:#e8e3d8}.service{fill:#eee9df}.label{font:600 8px 'Microsoft YaHei',sans-serif;fill:#34483f;text-anchor:middle;dominant-baseline:central}.label-small{font:600 7px 'Microsoft YaHei',sans-serif;fill:#34483f;text-anchor:middle;dominant-baseline:central}.small{font:15px 'Microsoft YaHei',sans-serif;fill:#687871}.panel{fill:#fff;stroke:#d9e0da;stroke-width:2}.pt{font:700 18px 'Microsoft YaHei',sans-serif;fill:#31473d}.copy{font:14px 'Microsoft YaHei',sans-serif;fill:#586960}.note{font:12px 'Microsoft YaHei',sans-serif;fill:#74817a}.door{stroke:#c4783d;stroke-width:4;stroke-linecap:round}</style>
+  <rect class="bg" width="1200" height="760"/><text class="title" x="48" y="54">上海工艺美术博物馆 · 3F</text><text class="sub" x="50" y="82">织绣、戏服与砚刻 · 按公开主楼平面重绘</text>
+  <g transform="translate(53 122) scale(2.3)">
+    <path class="shell" d="M54 100H112V76H149V63H259V76H325V180H257V213H198L179 198V180H110V207H52L35 190V128H54Z"/>
+    <rect class="room service" x="54" y="80" width="58" height="26"/><text class="label-small" x="83" y="93">建筑展示</text>
+    <rect class="room service" x="119" y="69" width="70" height="24"/><path d="M124 72v17m8-17v17m8-17v17m8-17v17m8-17v17m8-17v17m8-17v17m8-17v17" stroke="#77847b" stroke-width="1.5"/><text class="label-small" x="154" y="81">楼梯</text>
+    <rect class="room gallery2" x="215" y="72" width="38" height="40"/><text class="label" x="234" y="92">面塑</text>
+    <rect class="room gallery" x="65" y="132" width="43" height="51"/><text class="label" x="86.5" y="157.5">顾绣</text>
+    <rect class="room gallery" x="112" y="132" width="49" height="51"/><text class="label-small" x="136.5" y="157.5">缂丝</text>
+    <path class="room gallery" d="M164 132H228V180H198V199H179V180H164Z"/><text class="label" x="194" y="160">织绣</text>
+    <rect class="room gallery2" x="230" y="132" width="60" height="51"/><text class="label-small" x="260" y="157.5">戏服展示</text>
+    <rect class="room gallery2" x="292" y="132" width="31" height="51"/><text class="label-small" x="307.5" y="157.5">砚刻</text>
+  </g>
+  <rect class="panel" x="930" y="126" width="230" height="466" rx="18"/><text class="pt" x="954" y="165">展区索引</text><rect x="954" y="187" width="18" height="18" rx="3" fill="#809bc5" stroke="#78857c"/><text class="copy" x="984" y="201">织绣工艺</text><rect x="954" y="222" width="18" height="18" rx="3" fill="#b7c9dc" stroke="#78857c"/><text class="copy" x="984" y="236">面塑与戏服</text><rect x="954" y="257" width="18" height="18" rx="3" fill="#eaf1f3" stroke="#78857c"/><text class="copy" x="984" y="271">楼梯与建筑展示</text><path d="M954 294H1136" stroke="#e2e7e1" stroke-width="2"/><text class="pt" x="954" y="333">楼层关系</text><text class="copy" x="954" y="372">楼梯与建筑展示位于</text><text class="copy" x="954" y="397">北侧，顾绣、缂丝、</text><text class="copy" x="954" y="422">戏服和砚刻展区沿南侧</text><text class="copy" x="954" y="447">及东翼展开。</text><text class="note" x="954" y="520">依据 2019 年公开平面图</text><text class="note" x="954" y="542">工作室开放情况以现场为准</text>
+  <text class="small" x="48" y="714">上海工艺美术博物馆主楼平面图（2019）· 伴途本地重绘 · 非当前测绘图</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

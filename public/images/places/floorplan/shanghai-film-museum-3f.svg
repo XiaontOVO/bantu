@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">上海电影博物馆 3F 楼层平面图</title>
+  <desc id="desc">伴途根据 COORDINATION ASIA 公布的楼层导览重绘，包含影海溯源、梦幻工厂、光影长河、大开眼界、译制经典、动画长廊和漫乐园。</desc>
+  <defs><filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#233b45" flood-opacity=".13"/></filter></defs>
+  <style>
+    .bg{fill:#f5f5f1}.shell{fill:#fff;stroke:#263e48;stroke-width:8;stroke-linejoin:round;filter:url(#shadow)}.zone{stroke:#fff;stroke-width:8;stroke-linejoin:round}.warm{fill:#e8d4c7}.deep{fill:#d6b09d}.public{fill:#d9ebea}.service{fill:#e4e9e5}.void{fill:#f5f5f1;stroke:#cad6d3;stroke-width:3;stroke-dasharray:10 10}.title{font:700 34px 'Microsoft YaHei',sans-serif;fill:#253c46}.sub{font:18px 'Microsoft YaHei',sans-serif;fill:#73817e}.number{font:700 15px system-ui,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:central}.numdot{fill:#9b624b}.label{font:650 22px 'Microsoft YaHei',sans-serif;fill:#263c45;text-anchor:middle;dominant-baseline:central}.small{font:16px 'Microsoft YaHei',sans-serif;fill:#637570;text-anchor:middle}.route{fill:none;stroke:#4c9290;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4 14}.badge{fill:#fff;stroke:#b8cbc7;stroke-width:2}.mark{font:700 16px 'Microsoft YaHei',sans-serif;fill:#365c5c;text-anchor:middle}.north{font:700 16px system-ui,sans-serif;fill:#455b60;text-anchor:middle}.note{font:15px 'Microsoft YaHei',sans-serif;fill:#77827c}
+  </style>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="title" x="54" y="62">上海电影博物馆 · 三层</text><text class="sub" x="55" y="93">影史长河　/　展厅围绕中部交通核心展开</text>
+  <g transform="translate(1118 56)"><text class="north" y="0">N</text><path d="M0 9v32m-7-11 7-21 7 21" fill="none" stroke="#455b60" stroke-width="2.5"/></g>
+  <path class="shell" d="M155 158H1045V554H836V644H364V554H155Z"/>
+  <path class="zone deep" d="M180 190H400V343H180Z"/><path class="zone warm" d="M800 190H1020V343H800Z"/>
+  <path class="zone warm" d="M180 362H445V528H180Z"/><path class="zone deep" d="M463 362H736V528H463Z"/><path class="zone warm" d="M754 362H1020V528H754Z"/>
+  <path class="zone public" d="M382 555H818V615H382Z"/><path class="zone warm" d="M180 548H354V615H180Z"/>
+  <path class="void" d="M428 190H772V330H428Z"/>
+  <g><circle class="numdot" cx="222" cy="220" r="15"/><text class="number" x="222" y="220">01</text><text class="label" x="291" y="260">影海溯源</text><text class="small" x="291" y="291">Land, Ahoi!</text></g>
+  <g><circle class="numdot" cx="842" cy="220" r="15"/><text class="number" x="842" y="220">06</text><text class="label" x="916" y="260">动画长廊</text><text class="small" x="916" y="291">孙悟空主题展</text></g>
+  <g><circle class="numdot" cx="222" cy="394" r="15"/><text class="number" x="222" y="394">02</text><text class="label" x="309" y="434">梦幻工厂</text><text class="small" x="309" y="466">电影制作与片场</text></g>
+  <g><circle class="numdot" cx="507" cy="394" r="15"/><text class="number" x="507" y="394">04</text><text class="label" x="600" y="437">大开眼界</text><text class="small" x="600" y="469">科教电影工作室</text></g>
+  <g><circle class="numdot" cx="798" cy="394" r="15"/><text class="number" x="798" y="394">05</text><text class="label" x="890" y="437">译制经典</text><text class="small" x="890" y="469">“我为人人”录音展区</text></g>
+  <g><circle class="numdot" cx="442" cy="572" r="15"/><text class="number" x="442" y="572">07</text><text class="label" x="510" y="592">漫乐园</text><circle class="numdot" cx="628" cy="572" r="15"/><text class="number" x="628" y="572">03</text><text class="label" x="715" y="592">光影长河</text></g>
+  <g><rect class="badge" x="563" y="241" width="74" height="38" rx="8"/><text class="mark" x="600" y="266">楼梯 · 电梯</text><g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(973 499) scale(0.9)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g></g>
+  <text class="label" x="600" y="307">中部挑空</text>
+  <text class="note" x="55" y="733">展区相邻关系按公开楼层图重绘 · 非测绘比例 · 展陈以现场为准</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

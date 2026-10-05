@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">上海博物馆东馆 5F 平面示意图</title><desc id="desc">依据官方折页屋顶花园附图重绘。户外区域开放状态以现场为准。</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#223a50" flood-opacity=".08"/></filter></defs>
+<style>.label{font-weight:600}.small{font-size:13px}.shell{filter:url(#shadow)}.wall{fill:none;stroke-width:1.6}.panel-title{font-size:18px}.panel-text{font-size:14px}.note{font-size:12px}.detail{fill:none;stroke:#748aa8;stroke-width:1;opacity:.45}.exit-label{fill:#287c57;font-size:14px;font-weight:600}</style>
+<rect class="canvas" width="1200" height="760"/>
+<text class="title" x="48" y="59" font-size="30">上海博物馆东馆</text><text class="sub" x="50" y="89" font-size="15">依据官方折页屋顶花园附图重绘</text>
+<g><rect x="1066" y="35" width="86" height="44" rx="12" fill="#eaf0f2"/><text class="floor" x="1109" y="58" font-size="25" text-anchor="middle" dominant-baseline="central">5F</text></g>
+<g transform="translate(80 230)"><path class="shell" d="M0 30H710V260H0Z"/><rect class="service" x="0" y="30" width="270" height="230"/><rect class="garden" x="270" y="30" width="280" height="230"/><rect class="cutout" x="330" y="80" width="120" height="110"/><path class="wall" d="M570 120a78 78 0 1 1 15 105"/><rect class="service" x="350" y="0" width="155" height="50"/><g class="stairs"><rect class="service" x="380" y="12" width="95" height="28"/><path d="M385 20h85 M385 22h85 M385 24h85 M385 26h85 M385 28h85 M385 30h85 M385 32h85" fill="none" stroke="#748aa8" stroke-width="1.1"/><path d="M451.25 34V18l-4 7m4-7 4 7" fill="none" stroke="#748aa8" stroke-width="1.3"/></g><text class="label" x="135" y="150" font-size="22" text-anchor="middle" dominant-baseline="central">平台</text><text class="label" x="425" y="226" font-size="22" text-anchor="middle" dominant-baseline="central">屋顶花园</text><text class="small" x="420" y="135" font-size="16" text-anchor="middle" dominant-baseline="central">挑空</text><text class="small" x="634" y="142" font-size="15" text-anchor="middle" dominant-baseline="central">环形屋面步道</text><text class="small" x="427" y="69" font-size="13" text-anchor="middle" dominant-baseline="central">江南造物馆上空</text></g>
+<rect class="panel" x="875" y="140" width="277" height="505" rx="16"/>
+<text class="panel-title" x="901" y="181">图面识别</text>
+<rect class="room" x="901" y="207" width="18" height="18"/><text class="panel-text" x="931" y="222">展厅 / 阅览空间</text><rect class="public" x="901" y="245" width="18" height="18"/><text class="panel-text" x="931" y="260">公共通道</text><rect class="service" x="901" y="283" width="18" height="18"/><text class="panel-text" x="931" y="298">交通与服务区</text>
+<g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(944 344) scale(1)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g><text class="panel-text" x="901" y="385">蓝色标记为卫生间</text>
+<path d="M901 410H1126" stroke="#d8e0e4"/>
+<text class="panel-title" x="901" y="448">读图说明</text>
+<text class="panel-text" x="901" y="480">平台、花园与环形步道</text><text class="panel-text" x="901" y="506">4F 上行连接位于北侧</text><text class="panel-text" x="901" y="532">此层未核实卫生间位置</text>
+<text class="note" x="48" y="729">伴途本地重绘 · 保留公开原图的空间关系 · 非测绘比例 · 静态图不显示实时位置</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

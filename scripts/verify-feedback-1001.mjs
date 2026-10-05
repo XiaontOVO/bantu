@@ -1,0 +1,44 @@
+// Independent browser: provider, GPS and clock fixtures; no real user data or model requests.
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+import {createHttpServer} from '../dist/src/server/http-server.js';
+import {MemoryStateStore} from '../dist/src/persistence/state-store.js';
+import {DEMO_SHANGHAI_PLACES} from '../dist/src/demo/demo-data.js';
+import {launchMobileBrowser,browserPause} from './lib/mobile-browser.mjs';
+const now='2026-10-01T15:20:00Z';let roadCalls=0,checks=0;
+const places=DEMO_SHANGHAI_PLACES;
+const provider={providerName:'feedback-fixture',async search(input){return {places:input.query?.trim()?places.slice(0,3).map((p,i)=>({...p,placeId:'search-'+i,name:'图书馆搜索结果'+i})):places,empty:false}},async detail(id){return places.find(p=>p.placeId===id)||null}};
+const route={providerName:'feedback-road-fixture',supportedModes:['walking','driving'],async plan(input){roadCalls++;return {departureSupport:'current_only',leg:{legId:'review-road',fromStopId:'',toStopId:'',transportMode:input.transportMode,durationMinutes:313,distanceMeters:20000,geometry:[input.origin.coordinates,input.destination.coordinates],geometryCrs:'WGS84'}}}};
+const server=createHttpServer({seedDemo:false,stateStore:new MemoryStateStore(),now:()=>now,placeProvider:provider,routeProvider:route});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));let browser;
+try{
+  browser=await launchMobileBrowser('bantu-feedback-1001-');const {command,evaluate,tap,fill,until,screenshot:capture}=browser;
+  const screenshot=async name=>{await browserPause(450);return capture(name)};
+  const check=(condition,label)=>{checks++;assert.ok(condition,label)};
+  await command('Page.addScriptToEvaluateOnNewDocument',{source:`const FeedbackDate=Date;window.Date=new Proxy(FeedbackDate,{construct(target,args){return Reflect.construct(target,args.length?args:[${JSON.stringify(now)}])},get(target,key){return key==='now'?()=>FeedbackDate.parse(${JSON.stringify(now)}):Reflect.get(target,key)}});Object.defineProperty(navigator,'geolocation',{value:{getCurrentPosition(ok){setTimeout(()=>ok({coords:{latitude:31.2,longitude:121.44,accuracy:12},timestamp:Date.now()}),20)},watchPosition(){return 1},clearWatch(){}}});`});
+  await command('Page.navigate',{url:`http://127.0.0.1:${server.address().port}/#/places`});await until(()=>evaluate('window.__bantuBooted===true'),'boot');
+  await evaluate(`(async()=>{window.feedbackState=(await import('/lib/store.js')).state;window.feedbackApi=(await import('/lib/api.js')).api})()`);
+  check(await evaluate(`window.feedbackState.places.length===${places.length}`),'initial directory');
+  await fill('#placeSearch','图书馆');await command('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13,text:'\r'});await command('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
+  await until(()=>evaluate('window.feedbackState.places[0]?.placeId==="search-0"'),'Enter search');check(await evaluate('window.feedbackState.places.length===3'),'Enter result');
+  await fill('#placeSearch','');await tap('[data-action=search-places]');await until(()=>evaluate(`window.feedbackState.places.length===${places.length}`),'restore directory');
+  check(await evaluate('window.feedbackState.placeQuery===""&&!window.feedbackState.places.some(p=>p.placeId.startsWith("search-"))'),'empty search leaves external results');
+  await screenshot('search-restored-390');
+  const place=places.find(p=>p.name==='武康大楼');assert.ok(place);
+  await evaluate(`(async()=>{const p=await window.feedbackApi('/api/v1/plans',{method:'POST',body:JSON.stringify({name:'夜间反馈复验',kind:'plan',localDate:'2026-10-01',timezone:'Asia/Shanghai',cityCode:'310100',snapshot:{stops:[{stopId:'review-stop',place:${JSON.stringify(place)},placeId:${JSON.stringify(place.placeId)},startMinutes:720,endMinutes:780,status:'planned'}],routeLegs:[],plannedCharges:[]}})});window.feedbackState.savedPlans=[p];window.feedbackState.companionPlanId=p.id})()`);
+  await tap('.bottom-nav [data-nav=home]');await until(()=>evaluate('!!document.querySelector(".companion-now [data-type=depart]")'),'departure control');
+  await tap('.companion-now [data-type=depart]');await until(()=>evaluate('!!document.querySelector("[data-action=confirm-departure-route]")'),'long night route confirmation');
+  check(await evaluate('document.getElementById("sheetBackdrop").textContent.includes("313")&&document.getElementById("sheetBackdrop").textContent.includes("04:33")'),'warning missing duration or overnight arrival');
+  check(await evaluate('window.feedbackState.savedPlans[0].stops[0].status==="planned"&&!(window.feedbackState.savedPlans[0].executionEvents||[]).length'),'unconfirmed departure wrote facts');await screenshot('night-confirmation-390');
+  await tap('[data-action=cancel-departure-review]');check(await evaluate('window.feedbackState.savedPlans[0].stops[0].status==="planned"'),'cancel wrote facts');
+  await tap('.bottom-nav [data-nav=today]');await until(()=>evaluate('!!document.querySelector("[data-action=exec][data-type=depart]")'),'plan departure control');
+  await tap('[data-action=exec][data-type=depart]');await until(()=>evaluate('!!document.querySelector("[data-action=confirm-departure-route]")'),'plan night confirmation');
+  check(await evaluate('window.feedbackState.savedPlans[0].stops[0].status==="planned"'),'plan entry bypassed confirmation');await tap('[data-action=cancel-departure-review]');
+  await tap('.bottom-nav [data-nav=home]');await until(()=>evaluate('!!document.querySelector(".companion-now [data-type=depart]")'),'home return');
+  await evaluate(`window.feedbackExecutionBody=null;const feedbackFetch=window.fetch.bind(window);window.fetch=(...args)=>{if(args[0]==='/api/v1/routes')return Promise.reject(new TypeError('fixture preflight connection failed'));if(String(args[0]).endsWith('/execution-events'))window.feedbackExecutionBody=JSON.parse(args[1].body);return feedbackFetch(...args)}`);
+  await tap('.companion-now [data-type=depart]');await until(()=>evaluate('!!document.querySelector("[data-action=confirm-departure-without-location]")'),'unavailable preflight feedback');
+  check(await evaluate('window.feedbackState.savedPlans[0].stops[0].status==="planned"'),'failed preflight bypassed confirmation');await screenshot('night-route-unavailable-390');
+  await tap('[data-action=confirm-departure-without-location]');await until(()=>evaluate('window.feedbackState.savedPlans[0].stops[0].status==="en_route"'),'explicit fallback');
+  check(await evaluate('window.feedbackState.savedPlans[0].stops[0].estimatedTravelMinutes==null'),'fallback repeated a route estimate');check(await evaluate('window.feedbackExecutionBody.skipRouteEstimate===true'),'fallback must prohibit a new mutation-time estimate');
+  check(browser.exceptions.length===0,browser.exceptions.join('\n'));
+  const proof={checks,roadCalls,isolatedData:true,simulatedGps:true,realPhone:false,output:browser.output};writeFileSync('tmp/feedback-1001-proof.json',JSON.stringify(proof,null,2));console.log(JSON.stringify(proof));
+}finally{browser?.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}

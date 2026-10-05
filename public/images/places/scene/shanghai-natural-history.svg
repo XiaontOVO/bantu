@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">上海自然博物馆 · 伴途原创场景</title>
+  <desc id="desc">以螺旋、生命长河与演化层叠为灵感的艺术插画。画面不是建筑测绘或室内导览图。</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b8eae3"/><stop offset=".55" stop-color="#e9f9ed"/><stop offset="1" stop-color="#f9ecd3"/></linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe5ba"/><stop offset=".55" stop-color="#e7c69c"/><stop offset="1" stop-color="#d7b180"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7f5e9"/><stop offset=".48" stop-color="#84cdbd"/><stop offset="1" stop-color="#247e89"/></linearGradient>
+    <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#a4d5af"/><stop offset="1" stop-color="#398c7b"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#fffad7" stop-opacity=".92"/><stop offset="1" stop-color="#fffad7" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.6"><feDropShadow dx="0" dy="15" stdDeviation="17" flood-color="#286b70" flood-opacity=".24"/></filter>
+    <pattern id="grain" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="5" cy="8" r="1" fill="#fff" opacity=".28"/><circle cx="25" cy="23" r=".8" fill="#317a76" opacity=".1"/></pattern>
+    <clipPath id="building"><path d="M147 477Q169 305 336 232Q457 163 676 162Q827 158 919 249Q990 320 1020 480L1020 548L141 548Z"/></clipPath>
+  </defs>
+  <rect width="1200" height="720" fill="url(#sky)"/>
+  <circle cx="901" cy="144" r="218" fill="url(#halo)"/>
+  <circle cx="943" cy="114" r="70" fill="#fff6dc" opacity=".82"/>
+  <path d="M0 360Q112 302 217 350T425 338Q559 282 678 331T941 327Q1070 282 1200 343V720H0Z" fill="#cbe8d1"/>
+  <path d="M0 406Q157 358 292 393T569 378Q792 333 918 387T1200 373V720H0Z" fill="#a8d6be"/>
+  <path d="M0 485Q154 448 300 468Q523 490 684 455Q974 390 1200 470V720H0Z" fill="#73b49c"/>
+  <path d="M0 577Q265 527 475 555Q664 583 851 530Q1057 474 1200 546V720H0Z" fill="url(#ground)"/>
+  <g opacity=".65" fill="none" stroke="#e5fff0" stroke-width="5"><path d="M-40 594Q190 552 380 583T739 569Q918 532 1240 569"/><path d="M-40 618Q164 578 386 607T764 592Q993 556 1240 590"/></g>
+  <g filter="url(#shadow)">
+    <path d="M126 498Q150 301 336 223Q467 143 680 146Q840 143 941 249Q1015 324 1034 499L1034 556H126Z" fill="url(#stone)" stroke="#fff5dc" stroke-width="6"/>
+    <g clip-path="url(#building)">
+      <path d="M159 506Q188 331 348 268Q493 187 676 192Q820 190 908 270Q966 332 994 512V556H159Z" fill="url(#glass)"/>
+      <path d="M175 533Q214 360 354 297Q495 224 681 226Q807 229 882 297Q940 347 964 533" fill="none" stroke="#f9ebcb" stroke-width="29"/>
+      <path d="M190 531Q242 402 379 338Q511 276 664 281Q776 280 855 332Q904 367 937 531" fill="none" stroke="#ccae7d" stroke-width="7" opacity=".85"/>
+      <path d="M223 532Q277 432 397 377Q515 325 651 329Q748 327 821 366Q867 394 893 532" fill="none" stroke="#fce5b8" stroke-width="24"/>
+      <path d="M262 529Q307 459 416 409Q516 362 633 369Q717 371 780 401Q821 424 840 531" fill="none" stroke="#b5946c" stroke-width="6"/>
+      <path d="M289 532Q353 451 463 416Q547 388 623 393Q721 395 782 451L804 550H289Z" fill="#2c7f84" opacity=".76"/>
+      <path d="M371 534Q430 458 524 433Q634 404 722 467L747 553H371Z" fill="#f3cf91"/>
+      <path d="M411 535Q460 473 536 461Q624 443 673 495L695 551H411Z" fill="#79b8a8"/>
+      <path d="M489 548Q522 502 582 494Q629 489 662 528V560H489Z" fill="#185d69"/>
+      <g stroke="#e1f9e8" stroke-width="4" opacity=".62">
+        <path d="M336 269Q354 378 321 543M450 219Q458 348 420 545M563 191Q563 331 544 544M683 180Q675 319 678 548M791 205Q774 354 798 548M883 254Q860 386 911 546"/>
+        <path d="M210 351Q520 393 955 349M179 420Q486 455 991 418M154 490Q476 522 1014 489"/>
+      </g>
+      <path d="M160 519Q508 478 1020 522V556H160Z" fill="#a6d5bb" opacity=".28"/>
+    </g>
+    <path d="M126 506Q474 558 1034 512V557H126Z" fill="#e5bb83"/>
+    <path d="M153 558Q526 590 1005 559" fill="none" stroke="#fff0ca" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <path d="M-15 633Q178 588 364 617Q542 645 696 610Q867 568 1058 607Q1149 624 1215 608" fill="none" stroke="#dff0ce" stroke-width="21" stroke-linecap="round" opacity=".76"/>
+  <g fill="#245f67" opacity=".85"><path d="M47 586q12-48 34-64q23 17 18 62z"/><path d="M80 592q11-57 32-73q24 17 18 68z"/><path d="M1064 568q11-50 30-65q23 21 17 64z"/><path d="M1090 573q18-68 39-82q27 24 15 77z"/></g>
+  <g fill="none" stroke="#e5ffe8" stroke-width="5" stroke-linecap="round" opacity=".75"><path d="M83 643q23-47 44-12m-73 18q-7-35-24-33m1084 28q-21-38-42-7m85 7q8-30 21-31"/></g>
+  <g fill="#ffeac4" opacity=".82"><circle cx="185" cy="110" r="5"/><circle cx="245" cy="143" r="3"/><circle cx="1052" cy="223" r="4"/><circle cx="1117" cy="180" r="3"/><circle cx="83" cy="280" r="3"/></g>
+  <path d="M1036 169q22-16 44 0m-13-30q16-12 32 0M112 211q17-14 35 0" fill="none" stroke="#3d8e8f" stroke-width="4" stroke-linecap="round" opacity=".58"/>
+  <!-- Original symbolic life and fossil studies, not exhibit positions. -->
+  <g fill="none" stroke="#654f3a" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">
+    <path d="M257 559Q360 570 441 543Q518 502 592 484L634 491 659 477 686 480 680 501 647 511 611 510" stroke="#ead9b4" stroke-width="18"/>
+    <path d="M256 559Q359 570 441 543Q518 502 591 484L634 491 659 477 686 480 680 501 647 511 611 510" stroke-width="4"/>
+    <path d="M465 537Q449 587 429 620M482 531Q472 577 480 603L508 630M590 486l-9 50 21 24M610 508l-9 25 31 16" stroke="#ead9b4" stroke-width="12"/>
+    <path d="M465 537Q449 587 429 620M482 531Q472 577 480 603L508 630M590 486l-9 50 21 24M610 508l-9 25 31 16" stroke-width="3"/>
+    <path d="M427 548q-8 40 29 52M444 542q-7 44 30 58M462 535q-5 40 28 59M481 525q-5 39 23 54M500 515q-5 35 19 48M518 505q-4 31 18 41M540 496q-3 28 16 35" stroke="#e8d7b2" stroke-width="7"/>
+    <path d="M661 487h3M638 503l11-1M433 621l-17 7M508 630l14 4" stroke-width="4"/>
+    <path d="M428 630v23M507 639v14M622 560v93M257 584v69" stroke="#8a8c76" stroke-width="3"/>
+    <path d="M242 655h401" stroke="#6b8578" stroke-width="8"/>
+  </g>
+  <g transform="translate(925 555)" filter="url(#shadow)">
+    <path d="M-86-66Q-10-100 73-64L84 52Q23 95-72 73Z" fill="#d1b88b" stroke="#997e59" stroke-width="5"/>
+    <circle r="59" fill="#bfa278" stroke="#876e50" stroke-width="4"/>
+    <path d="M45 22Q-29 69-46-6Q-38-57 13-40Q51-18 23 19Q-6 42-17 11Q-20-10 0-12Q17-9 6 5" fill="none" stroke="#705b43" stroke-width="7" stroke-linecap="round"/>
+    <path d="M-55-8l12 2M-47-30l12 6M-30-47l7 12M-5-55v12M19-50l-6 12M42-37l-10 7M53-15l-13 3M51 9l-12-3M34 39l-7-10M9 54v-12M-19 52l5-12M-43 33l12-7" stroke="#efe0bb" stroke-width="4"/>
+  </g>
+  <rect width="1200" height="720" fill="url(#grain)" pointer-events="none"/>
+</svg>

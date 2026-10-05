@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1050" viewBox="0 0 2048 1050" role="img" aria-labelledby="title desc">
+  <title id="title">上海图书馆淮海路馆 3F 自绘平面图</title>
+  <desc id="desc">伴途按上海图书馆公开楼层导览图自绘，保留馆方楼层外轮廓、阅览空间、服务点、楼梯和安全出口的相对位置。</desc>
+  <defs><filter id="shadow" x="-5%" y="-5%" width="110%" height="110%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#283f51" flood-opacity=".13"/></filter>
+    <style>
+      .canvas{fill:#f5f6f5}.shell{fill:#d9edf0;stroke:#fff;stroke-width:22;stroke-linejoin:round;filter:url(#shadow)}.shell-edge{fill:none;stroke:#748aa8;stroke-width:2.8;stroke-linejoin:round}
+      .room{stroke:#fff;stroke-width:7;stroke-linejoin:round}.primary{fill:#809bc5}.service{fill:#a0bfd2}.cutout{fill:#fff;stroke:#fff;stroke-width:4}
+      .label{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:30px;font-weight:650;fill:#223a50;text-anchor:middle;dominant-baseline:central;paint-order:stroke;stroke:#f7f8f8;stroke-width:4px;stroke-linejoin:round}
+      .label.major{font-size:29px}.label.minor{font-size:22px}.label.vertical{writing-mode:vertical-rl;letter-spacing:2px;font-size:16px}
+      .exit rect{fill:#287c57}.exit text{fill:#fff;font-family:'Microsoft YaHei',sans-serif;font-size:16px;font-weight:700;text-anchor:middle;dominant-baseline:central}.exit path{fill:none;stroke:#287c57;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .amenity rect{fill:#fff;stroke:#6683a7;stroke-width:2}.amenity text{font:700 13px sans-serif;fill:#294761;text-anchor:middle;dominant-baseline:central}
+      .stair-icon path{fill:none;stroke:#47667d;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .floor{font-family:system-ui,sans-serif;font-size:116px;font-weight:800;fill:#637fa5;text-anchor:middle}
+    </style>
+  </defs>
+  <rect class="canvas" width="2048" height="1050"/>
+  <path class="shell" d="M365 230 L432 156 H660 V310 H918 V168 H977 V135 H1113 H1408 V309 H1735 V469 H1778 V615 H1837 V700 H1805 V761 Q1798 821 1745 840 L1608 900 H1245 V872 H1040 V771 H916 V682 H644 V755 H560 V901 H193 V742 H375 V678 H288 V470 H365 Z"/><path class="shell-edge" d="M365 230 L432 156 H660 V310 H918 V168 H977 V135 H1113 H1408 V309 H1735 V469 H1778 V615 H1837 V700 H1805 V761 Q1798 821 1745 840 L1608 900 H1245 V872 H1040 V771 H916 V682 H644 V755 H560 V901 H193 V742 H375 V678 H288 V470 H365 Z"/>
+  <g class="rooms">
+    <path class="room primary" d="M918 185 H1119 V404 H914 V251 H977 V169 H918 Z"/>
+    <path class="room primary" d="M1118 145 H1396 V404 H1118 Z"/>
+    <path class="room service" d="M1200 312 H1396 V403 H1200 Z"/>
+    <path class="room service" d="M1524 326 H1684 V437 H1524 Z"/>
+    <path class="room primary" d="M300 471 H590 V684 H300 Z"/>
+    <path class="room service" d="M300 471 H457 V511 H300 Z"/>
+    <path class="room service" d="M592 532 H865 V590 H653 V607 H592 Z"/>
+    <path class="room service" d="M913 527 H1046 V752 H913 Z"/>
+    <path class="room primary" d="M1049 582 H1254 V832 H1049 Z"/>
+    <path class="room primary" d="M198 750 H520 V901 H198 Z"/>
+    <path class="room service" d="M1377 472 H1509 V613 H1377 Z"/>
+    <path class="room service" d="M1672 472 H1734 V625 H1672 Z"/>
+    <path class="cutout" d="M704 328 H856 L869 469 H727 Z"/>
+    <path class="cutout" d="M1463 472 H1560 V613 H1463 Z"/>
+  </g>
+  <g class="labels">
+    <text class="label major" x="1016" y="286"><tspan x="1016" dy="-0.52em">外文资料期刊</tspan><tspan x="1016" dy="1.05em">阅览室</tspan></text>
+    <text class="label major" x="1257" y="219"><tspan x="1257" dy="-0.52em">中文科技期刊</tspan><tspan x="1257" dy="1.05em">阅览室</tspan></text>
+    <text class="label minor" x="1299" y="356">基藏报刊服务点</text>
+    <text class="label major" x="1603" y="381">剪报服务室</text>
+    <text class="label major" x="445" y="579"><tspan x="445" dy="-1.05em">外文科技</tspan><tspan x="445" dy="1.05em">期刊阅览</tspan><tspan x="445" dy="1.05em">室</tspan></text>
+    <text class="label minor" x="326" y="487">自助检索</text>
+    <text class="label major" x="755" y="563"><tspan x="755" dy="-0.52em">中国文化名人</tspan><tspan x="755" dy="1.05em">手稿馆</tspan></text>
+    <text class="label major" x="977" y="642"><tspan x="977" dy="-0.52em">科研</tspan><tspan x="977" dy="1.05em">服务站</tspan></text>
+    <text class="label major" x="1152" y="712"><tspan x="1152" dy="-0.52em">中文社会科学</tspan><tspan x="1152" dy="1.05em">期刊阅览室</tspan></text>
+    <text class="label major" x="355" y="824">特种文献服务点</text>
+  </g>
+  <g class="symbols">
+    <g class="exit" transform="translate(652 234)"><rect x="-33" y="-13" width="66" height="26" rx="7"/><text y="1">出口</text><path d="M 36 0 H 48 M 42 -6 L 48 0 L 42 6"/></g>
+    <g class="exit" transform="translate(365 412)"><rect x="-33" y="-13" width="66" height="26" rx="7"/><text y="1">出口</text><path d="M -36 0 H -48 M -42 -6 L -48 0 L -42 6"/></g>
+    <g class="exit" transform="translate(590 562)"><rect x="-33" y="-13" width="66" height="26" rx="7"/><text y="1">出口</text><path d="M 36 0 H 48 M 42 -6 L 48 0 L 42 6"/></g>
+    <g class="exit" transform="translate(286 878)"><rect x="-33" y="-13" width="66" height="26" rx="7"/><text y="1">出口</text><path d="M 0 17 V 34 M -6 28 L 0 34 L 6 28"/></g>
+    <g class="exit" transform="translate(1290 855)"><rect x="-33" y="-13" width="66" height="26" rx="7"/><text y="1">出口</text><path d="M 0 17 V 34 M -6 28 L 0 34 L 6 28"/></g>
+    <g class="exit" transform="translate(1434 159)"><rect x="-33" y="-13" width="66" height="26" rx="7"/><text y="1">出口</text><path d="M 0 -17 V -34 M -6 -28 L 0 -34 L 6 -28"/></g>
+    <g class="exit" transform="translate(1622 576)"><rect x="-33" y="-13" width="66" height="26" rx="7"/><text y="1">出口</text><path d="M 0 17 V 34 M -6 28 L 0 34 L 6 28"/></g>
+    <g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(634 273) scale(1.2)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g>
+    <g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(1444 306) scale(1.2)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g>
+    <g class="stair-icon" transform="translate(775 391)"><path d="M-20 15H-12V8H-4V1H4V-6H12V-13H20"/><path d="M-20 19H20"/></g>
+    <g class="stair-icon" transform="translate(834 428)"><path d="M-20 15H-12V8H-4V1H4V-6H12V-13H20"/><path d="M-20 19H20"/></g>
+  </g>
+  <text class="floor" x="1830" y="195">3F</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:4.266666666666667px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:4.266666666666667px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:2.218666666666667px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

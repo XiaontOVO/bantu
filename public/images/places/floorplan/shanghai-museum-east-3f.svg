@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">上海博物馆东馆 3F 平面示意图</title><desc id="desc">依据官方导览折页（2025）重绘。展陈与开放范围以现场为准。</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#223a50" flood-opacity=".08"/></filter></defs>
+<style>.label{font-weight:600}.small{font-size:13px}.shell{filter:url(#shadow)}.wall{fill:none;stroke-width:1.6}.panel-title{font-size:18px}.panel-text{font-size:14px}.note{font-size:12px}.detail{fill:none;stroke:#748aa8;stroke-width:1;opacity:.45}.exit-label{fill:#287c57;font-size:14px;font-weight:600}</style>
+<rect class="canvas" width="1200" height="760"/>
+<text class="title" x="48" y="59" font-size="30">上海博物馆东馆</text><text class="sub" x="50" y="89" font-size="15">依据官方导览折页（2025）重绘</text>
+<g><rect x="1066" y="35" width="86" height="44" rx="12" fill="#eaf0f2"/><text class="floor" x="1109" y="58" font-size="25" text-anchor="middle" dominant-baseline="central">3F</text></g>
+<g transform="translate(69 215) scale(.93) rotate(-11 390 190)"><path class="shell" d="M60 75H160V25H225V75H270V0H620V75H655V280H690V365H540V345H160V365H115V280H30V145H60Z"/><path class="public" d="M160 80H620V120H190V285H540V105H620V315H160Z"/><rect class="room" x="270" y="0" width="308" height="82"/><rect class="room-light" x="170" y="147" width="142" height="100"/><rect class="room" x="235" y="320" width="214" height="62"/><rect class="room-light" x="449" y="320" width="103" height="62"/><rect class="room" x="585" y="304" width="190" height="92"/><rect class="service" x="621" y="20" width="125" height="125"/><circle class="void" cx="650" cy="219" r="58"/><path class="detail" d="M602 253A58 58 0 1 1 696 222"/><rect class="cutout" x="315" y="127" width="204" height="151"/><text class="label" x="424" y="41" font-size="18" text-anchor="middle" dominant-baseline="central">陶瓷馆</text><text class="label" x="241" y="197" font-size="16" text-anchor="middle" dominant-baseline="central">陶瓷专题馆</text><text class="label" x="342" y="351" font-size="18" text-anchor="middle" dominant-baseline="central">货币馆</text><text class="label" x="500.5" y="351" font-size="15" text-anchor="middle" dominant-baseline="central">第三特展厅</text><text class="label" x="680" y="350" font-size="16" text-anchor="middle" dominant-baseline="central">古代文明探索宫</text><text class="small" x="683" y="82" font-size="16" text-anchor="middle" dominant-baseline="central">餐饮区</text><text class="small" x="655" y="219" font-size="13" text-anchor="middle" dominant-baseline="central">环形交通空间</text><g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(160 58) scale(0.85)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g><g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(620 276) scale(0.85)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g><g class="stairs"><rect class="service" x="312" y="141" width="28" height="98"/><path d="M317 149h18 M317 162.66666666666666h18 M317 176.33333333333334h18 M317 190h18 M317 203.66666666666666h18 M317 217.33333333333331h18 M317 231h18" fill="none" stroke="#748aa8" stroke-width="1.1"/><path d="M333 233V147l-4 7m4-7 4 7" fill="none" stroke="#748aa8" stroke-width="1.3"/></g><g class="stairs"><rect class="service" x="404" y="216" width="84" height="30"/><path d="M409 224h74 M409 226.33333333333334h74 M409 228.66666666666666h74 M409 231h74 M409 233.33333333333334h74 M409 235.66666666666666h74 M409 238h74" fill="none" stroke="#748aa8" stroke-width="1.1"/><path d="M467 240V222l-4 7m4-7 4 7" fill="none" stroke="#748aa8" stroke-width="1.3"/></g></g>
+<rect class="panel" x="875" y="140" width="277" height="505" rx="16"/>
+<text class="panel-title" x="901" y="181">图面识别</text>
+<rect class="room" x="901" y="207" width="18" height="18"/><text class="panel-text" x="931" y="222">展厅 / 阅览空间</text><rect class="public" x="901" y="245" width="18" height="18"/><text class="panel-text" x="931" y="260">公共通道</text><rect class="service" x="901" y="283" width="18" height="18"/><text class="panel-text" x="931" y="298">交通与服务区</text>
+<g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(944 344) scale(1)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g><text class="panel-text" x="901" y="385">蓝色标记为卫生间</text>
+<path d="M901 410H1126" stroke="#d8e0e4"/>
+<text class="panel-title" x="901" y="448">读图说明</text>
+<text class="panel-text" x="901" y="480">保留展厅、通廊与中庭关系</text><text class="panel-text" x="901" y="506">扶梯以细线踏步表示</text><text class="panel-text" x="901" y="532">未标注实时位置与推荐路线</text><text class="panel-text" x="901" y="558">展厅名称按 2025 年折页</text>
+<text class="note" x="48" y="729">伴途本地重绘 · 保留公开原图的空间关系 · 非测绘比例 · 静态图不显示实时位置</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

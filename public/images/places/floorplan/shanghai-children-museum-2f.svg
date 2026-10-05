@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">上海儿童博物馆 2F 自绘平面图</title>
+  <desc id="desc">依据上海儿童博物馆官网二层彩色平面图重绘，保留太空旅行、返回地球、旅行@家和草婴书屋的相对关系。</desc>
+  <defs><style>
+    text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#20384b}.canvas{fill:#f8f9f7}.shell{fill:#e4f3f7;stroke:#167fb0;stroke-width:8;stroke-linejoin:round}.zone{stroke:#fff;stroke-width:7;stroke-linejoin:round}.blue{fill:#b8ddf0}.green{fill:#c8e5b0}.yellow{fill:#ffe08c}.lobby{fill:#d9edf4}.label{font-size:26px;font-weight:650;text-anchor:middle;dominant-baseline:middle}.minor{font-size:18px;font-weight:600;text-anchor:middle;dominant-baseline:middle}.sub{font-size:15px;fill:#416275;text-anchor:middle}.floor{font-size:86px;font-weight:800;fill:#167fb0;text-anchor:end}.route{fill:none;stroke:#e29c3b;stroke-width:8;stroke-linecap:round;stroke-dasharray:1 15}.legend{font-size:15px;fill:#678092}
+  </style></defs>
+  <rect class="canvas" width="1200" height="700"/><text class="floor" x="1150" y="100">2F</text>
+  <!-- Left return-to-earth block, central bridge and the long east gallery follow the official diagram. -->
+  <path class="shell" d="M66 313V232A173 173 0 0 1 412 232V293H531V324H1097Q1139 324 1139 367V536H1093V590H492V544H383V590H108V538H66Z"/>
+  <path class="zone green" d="M77 232A162 162 0 0 1 401 232V282H77Z"/>
+  <path class="zone blue" d="M88 241H390V275H88Z"/>
+  <text class="label" x="239" y="171">太空旅行</text>
+  <text class="sub" x="144" y="233">看太空</text><text class="sub" x="238" y="233">天外来客</text><text class="sub" x="330" y="233">返航</text>
+  <path class="zone blue" d="M116 324H372V521L340 556H121L103 540V344Z"/>
+  <path class="zone" fill="#d6ecf5" d="M141 352H320V497H141Z"/>
+  <text class="label" x="230" y="408">返回地球</text>
+  <text class="sub" x="230" y="452">动感行星 · 飞天之梦</text><text class="sub" x="230" y="480">航天飞机 · 长征火箭家族</text>
+  <path class="zone lobby" d="M373 335H507V513H373Z"/><text class="minor" x="440" y="415">连接通廊</text>
+  <path class="zone lobby" d="M524 335H1080V508H524Z"/>
+  <path class="zone green" d="M548 348H752V421H548Z"/><text class="minor" x="650" y="385">草婴书屋</text>
+  <path class="zone blue" d="M548 432H913V496H548Z"/><text class="label" x="730" y="464">旅行@家</text>
+  <path class="zone" fill="#d6ecf5" d="M925 348H1048V421H925Z"/><text class="minor" x="985" y="385">航天员的一天</text>
+  <path class="zone yellow" d="M925 431H1048V496H925Z"/><g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(986 464) scale(1)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g>
+  <path class="route" d="M606 464H482L420 451L351 442L294 410"/>
+  <text class="sub" x="615" y="522">屋里厢 · 枫糖小屋 · 和风变装屋 · 建设金字塔</text>
+  <text class="legend" x="42" y="674">伴途依据上海儿童博物馆官网楼层图重绘 · 展项与开放范围以现场为准 · 非测绘比例</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

@@ -1,0 +1,87 @@
+// Actual mobile controls and execution API, with isolated in-memory records.
+import assert from 'node:assert/strict';
+import { writeFileSync } from 'node:fs';
+import { createHttpServer } from '../dist/src/server/http-server.js';
+import { MemoryStateStore } from '../dist/src/persistence/state-store.js';
+import { DEMO_SHANGHAI_PLACES } from '../dist/src/demo/demo-data.js';
+import { launchMobileBrowser, browserPause as pause } from './lib/mobile-browser.mjs';
+let now = '2026-10-02T23:00:00+08:00';
+const server = createHttpServer({ seedDemo: false, stateStore: new MemoryStateStore(), now: () => now });
+await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+const base = 'http://127.0.0.1:' + server.address().port;
+let browser; const checks = [], screenshots = [];
+const check = (name, value) => { assert.ok(value, name); checks.push(name); };
+try {
+  browser = await launchMobileBrowser('bantu-achievements-');
+  const { command, evaluate, tap, until, viewport, screenshot } = browser;
+  await command('Page.navigate', { url: base + '/#/mine' });
+  await until(() => evaluate('window.__bantuBooted===true'));
+  await tap('.achievement-entry [data-view=achievements]');
+  await until(() => evaluate('!!document.querySelector(".achievement-empty [data-view=places]")'));
+  screenshots.push(await screenshot('achievements-empty-mobile'));
+  check('fresh guest receives empty collection', await evaluate('!document.querySelector(".achievement-card")'));
+  const names = ['武康大楼', '徐家汇书院', '上海气象博物馆（徐家汇观象台）', '上海公安博物馆'];
+  const places = names.map(name => DEMO_SHANGHAI_PLACES.find(place => place.name === name));
+  assert.ok(places.every(Boolean));
+  const counts = [1, 3, 7, 12]; let ordinal = 0;
+  const stops = places.flatMap((place, group) => Array.from({ length: counts[group] }, () => {
+    const index = ordinal++, start = 8 * 60 + index * 20;
+    return { stopId: 'real-visit-' + index, place: { placeId: place.placeId, name: place.name }, startMinutes: start,
+      endMinutes: start + 10, status: 'planned' };
+  }));
+  const input = { kind: 'plan', name: '收藏册实际到访测试', cityCode: '310100', localDate: '2026-10-02', timezone: 'Asia/Shanghai', snapshot: { stops, routeLegs: [], plannedCharges: [] } };
+  const fixture = await evaluate('(async()=>{const {api}=await import("/lib/api.js");const plan=await api("/api/v1/plans",{method:"POST",body:JSON.stringify(' + JSON.stringify(input) + ')});for(let i=0;i<plan.stops.length;i++){const minute=8*60+i*20+10,at="2026-10-02T"+String(Math.floor(minute/60)).padStart(2,"0")+":"+String(minute%60).padStart(2,"0")+":00+08:00";await api("/api/v1/plans/"+plan.id+"/execution-events",{method:"POST",body:JSON.stringify({stopId:plan.stops[i].stopId,type:"complete",occurredAt:at,expectedRevision:i})});}return{planId:plan.id};})()');
+  await tap('[data-nav=mine]'); await tap('.achievement-entry [data-view=achievements]');
+  await until(() => evaluate('document.querySelectorAll(".achievement-card").length===4'));
+  const font = await evaluate('document.fonts.ready.then(()=>({loaded:[...document.fonts].some(face=>face.family.includes("Bantu Collection Serif")&&face.status==="loaded"),family:getComputedStyle(document.querySelector(".achievement-place-name")).fontFamily,numberFamily:getComputedStyle(document.querySelector(".achievement-count-copy>strong")).fontFamily,urls:performance.getEntriesByType("resource").filter(entry=>entry.name.includes(".woff2")).map(entry=>entry.name)}))');
+  check('local collection serif is actually loaded', font.loaded && font.family.includes('Bantu Collection Serif') && font.numberFamily.includes('Bantu Collection Serif'));
+  check('known titles load only the small local font subset', font.urls.some(url => url.endsWith('serif-title.woff2')) && !font.urls.some(url => url.endsWith('serif.woff2')) && font.urls.every(url => url.startsWith(base)));
+  check('four finishes derive from actual completion events', await evaluate('import("/lib/achievements.js").then(m=>m.ownedAchievements().cards.every(c=>({1:1,3:2,7:3,12:4})[c.count]===c.tier.level))'));
+  for (const width of [320, 390, 430, 844, 1280]) {
+    await viewport(width, width === 844 ? 390 : 900); await pause(300);
+    const layout = await evaluate('(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,cards:[...document.querySelectorAll(".achievement-card")].map(el=>{const r=el.getBoundingClientRect(),art=el.querySelector(".achievement-art").getBoundingClientRect(),body=el.querySelector(".achievement-card-body");return{ratio:r.width/r.height,imageRatio:art.width/art.height,bodyOverflow:body.scrollHeight>body.clientHeight+1,bottom:el.querySelector(".achievement-card-bottom").getBoundingClientRect().bottom<=r.bottom-2}})}))()');
+    check(width + 'px: no page overflow', !layout.overflow);
+    check(width + 'px: cards 3:4 / images 2:1 / no content overflow', layout.cards.every(card => Math.abs(card.ratio - .75) < .015 && Math.abs(card.imageRatio - 2) < .02 && !card.bodyOverflow && card.bottom));
+    await evaluate('document.querySelector(".achievement-collection-head").scrollIntoView({block:"start"})');
+    screenshots.push(await screenshot('achievements-' + width));
+  }
+  await viewport(390, 844);
+  await evaluate('document.querySelector(".achievement-collection-head").scrollIntoView({block:"start"})');
+  await pause(300); check('foil starts when upgraded card enters view', await evaluate('!!document.querySelector(".achievement-card.tier-4.is-revealed")'));
+  await tap('[data-action=dismiss-agent-dock]');
+  await pause(4300); screenshots.push(await screenshot('achievements-mobile-preview'));
+  await tap('.achievement-card.tier-4');
+  check('touch opens real visit timeline', await evaluate('document.querySelectorAll(".achievement-visits li").length===12'));
+  screenshots.push(await screenshot('achievements-visit-timeline'));
+  await tap('.achievement-detail [data-action=open-place]');
+  await until(() => evaluate('location.hash.startsWith("#/place/")'));
+  await tap('[data-action=back-from-place]');
+  await until(() => evaluate('location.hash==="#/achievements"'));
+  check('place detail returns to collection', true);
+  await tap('[data-filter=shining]'); check('shining filter keeps upgraded cards', await evaluate('document.querySelectorAll(".achievement-card").length===3'));
+  await tap('[data-filter=all]');
+  await evaluate('document.documentElement.dataset.theme="dark";document.querySelector(".achievement-collection-head").scrollIntoView({block:"start"})');
+  await pause(400); screenshots.push(await screenshot('achievements-dark'));
+  await command('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
+  check('reduced motion disables shimmer', await evaluate('getComputedStyle(document.querySelector(".tier-4.achievement-card"),"::after").animationName==="none"'));
+  await evaluate('document.documentElement.dataset.theme="light";document.body.classList.add("large-text");document.querySelector(".achievement-collection-head").scrollIntoView({block:"start"})');
+  check('large text has no card content overflow', await evaluate('!([...document.querySelectorAll(".achievement-card-body")].some(el=>el.scrollHeight>el.clientHeight+1))'));
+  screenshots.push(await screenshot('achievements-large-text'));
+  await evaluate('document.body.classList.remove("large-text");localStorage.setItem("bantu-compact-mode","1");document.body.classList.add("compact-mode");import("/lib/compact-mode.js").then(m=>m.syncCompactMode())');
+  check('compact mode preserves collectible names', await evaluate('[...document.querySelectorAll(".achievement-place-name")].every(el=>el.getBoundingClientRect().height>0)'));
+  await evaluate('document.body.classList.remove("compact-mode");localStorage.removeItem("bantu-compact-mode")');
+  now = '2026-10-03T10:00:00+08:00';
+  await evaluate('import("/lib/render.js").then(m=>m.navigate("achievements"))');
+  await until(() => evaluate('import("/lib/achievements.js").then(m=>m.ownedAchievements()?.cards[0]?.visits[0]?.archived===true)'));
+  check('archiving preserves 23 visits', await evaluate('import("/lib/achievements.js").then(m=>m.ownedAchievements().summary.visitCount===23)'));
+  const result = await evaluate('(async()=>{const{api}=await import("/lib/api.js");const p=await api("/api/v1/plans/' + fixture.planId + '/history");const e=p.executionEvents[0];await api("/api/v1/plans/' + fixture.planId + '/history/corrections",{method:"POST",body:JSON.stringify({eventId:e.executionEventId,status:"planned",expectedRevision:p.revision})});return await api("/api/v1/achievements")})()');
+  check('correction retracts exactly one occurrence', result.summary.visitCount === 22 && result.summary.placeCount === 3);
+  await command('Page.reload', {}); await until(() => evaluate('window.__bantuBooted===true&&document.querySelectorAll(".achievement-card").length===3'));
+  check('deep link reload refreshes corrected collection', true);
+  await tap('.achievement-card.tier-4'); await tap('.achievement-visits li [data-action=view-plan-history]');
+  await until(() => evaluate('location.hash.startsWith("#/history/")'));
+  check('timeline links to archived progress', true);
+  check('no browser exceptions', browser.exceptions.length === 0);
+  const report = { checks, screenshots, font, isolatedMemoryState: true, realExecutionEvents: 23, noModelCalls: true };
+  writeFileSync('tmp/achievements-ui-proof.json', JSON.stringify(report, null, 2)); console.log(JSON.stringify(report));
+} finally { browser?.close(); server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }

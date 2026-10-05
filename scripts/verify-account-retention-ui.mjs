@@ -1,0 +1,112 @@
+// Account transitions on an isolated memory server; never writes local experience accounts.
+import assert from 'node:assert/strict';
+import { spawn } from 'node:child_process';
+import { mkdtempSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { createHttpServer } from '../dist/src/server/http-server.js';
+import { MemoryStateStore } from '../dist/src/persistence/state-store.js';
+import { DEMO_SHANGHAI_PLACES } from '../dist/src/demo/demo-data.js';
+
+const clock = { now: '2026-09-19T18:00:00+08:00' };
+const server = createHttpServer({ seedDemo: false, now: () => clock.now, stateStore: new MemoryStateStore() });
+await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+const base = `http://127.0.0.1:${server.address().port}`, output = mkdtempSync(join(tmpdir(), 'bantu-account-retention-'));
+let targetCookie = '';
+async function targetApi(path, body) {
+  const response = await fetch(base + path, { method: 'POST', headers: { cookie: targetCookie, 'content-type': 'application/json' }, body: JSON.stringify(body || {}) });
+  targetCookie = response.headers.get('set-cookie')?.split(';')[0] || targetCookie;
+  const result = await response.json(); assert.equal(response.status, 200, result.error?.message); return result.data;
+}
+await targetApi('/api/v1/session/guest');
+await targetApi('/api/v1/account/register', { username: 'browser_existing', password: '12345678' });
+const targetNote = await targetApi('/api/v1/memories', { userText: '已有账号的独立笔记' });
+const browser = spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', ['--headless=new', '--disable-gpu', '--no-first-run', '--no-default-browser-check', '--remote-debugging-port=0', `--user-data-dir=${output}`, 'about:blank'], { windowsHide: true, stdio: 'ignore' });
+const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+async function until(check, label) { const deadline = Date.now() + 30000; while (Date.now() < deadline) { if (await check()) return; await pause(100); } throw new Error(`Browser timeout: ${label}`); }
+let socket, diagnostic = async () => ({});
+try {
+  await until(() => existsSync(join(output, 'DevToolsActivePort')), 'Edge');
+  const port = readFileSync(join(output, 'DevToolsActivePort'), 'utf8').split('\n')[0];
+  const targets = await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
+  socket = new WebSocket(targets.find(target => target.type === 'page').webSocketDebuggerUrl);
+  await new Promise((resolve, reject) => { socket.onopen = resolve; socket.onerror = reject; });
+  let sequence = 0; const pending = new Map();
+  socket.onmessage = event => { const message = JSON.parse(event.data), call = pending.get(message.id); if (!call) return; pending.delete(message.id); clearTimeout(call.timer); if (message.error) call.reject(new Error(JSON.stringify(message.error))); else call.resolve(message.result); };
+  const command = (method, params = {}) => new Promise((resolve, reject) => { const id = ++sequence, timer = setTimeout(() => { pending.delete(id); reject(new Error(method)); }, 30000); pending.set(id, { resolve, reject, timer }); socket.send(JSON.stringify({ id, method, params })); });
+  const evaluate = async expression => { const result = await command('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true }); if (result.exceptionDetails) throw new Error(JSON.stringify(result.exceptionDetails)); return result.result.value; };
+  const click = async selector => { await until(() => evaluate(`Boolean(document.querySelector(${JSON.stringify(selector)}))`), selector); await evaluate(`document.querySelector(${JSON.stringify(selector)}).click()`); };
+  const api = (path, method = 'GET', body) => evaluate(`import('/lib/api.js').then(m=>m.api(${JSON.stringify(path)},{method:${JSON.stringify(method)}${body ? `,body:JSON.stringify(${JSON.stringify(body)})` : ''}}))`);
+  const navigate = view => evaluate(`import('/lib/render.js').then(m=>m.navigate(${JSON.stringify(view)}))`);
+  const fill = (username, password = '12345678') => evaluate(`document.getElementById('accountUsername').value=${JSON.stringify(username)};document.getElementById('accountPassword').value=${JSON.stringify(password)}`);
+  const principal = () => api('/api/v1/me');
+  const reload = async () => { await command('Page.navigate', { url: base + '/?account-check=' + Math.random() + '#/mine' }); await until(() => evaluate('Boolean(window.__bantuBooted)'), 'boot'); };
+  diagnostic = () => evaluate('({url:location.href,text:document.body.innerText.slice(-6000),booted:window.__bantuBooted})');
+  await command('Page.enable'); await reload();
+  const guest = await principal(), place = DEMO_SHANGHAI_PLACES[0];
+  const plan = await api('/api/v1/plans', 'POST', { kind: 'plan', name: '游客原日计划', localDate: '2026-09-19', snapshot: { stops: [{ stopId: 'guest-stop', place, startMinutes: 600, endMinutes: 660, status: 'planned' }], routeLegs: [], plannedCharges: [] } });
+  const note = await api('/api/v1/memories', 'POST', { userText: '游客原文\n注册后继续保留。' });
+  await api('/api/v1/favorites', 'POST', { placeId: place.placeId });
+  clock.now = '2026-09-20T18:00:00+08:00';
+  await api('/api/v1/plans/history'); await reload();
+  assert.equal(await evaluate('document.body.innerText.includes("当前游客会话有效至")'), true);
+  await click('[data-action="account-panel"]');
+  const shots = [];
+  for (const width of [1440, 390, 320]) {
+    await command('Emulation.setDeviceMetricsOverride', { width, height: 1000, deviceScaleFactor: 1, mobile: width < 600 });
+    if (width === 320) await evaluate('document.body.classList.add("large-text");document.documentElement.dataset.theme="dark"');
+    await pause(180);
+    assert.equal(await evaluate('document.documentElement.scrollWidth>innerWidth+1||document.getElementById("sheet").scrollWidth>document.getElementById("sheet").clientWidth+1'), false, `account form fits ${width}`);
+    assert.equal(await evaluate('document.querySelectorAll("[data-account-form] input").length'), 2, 'only username and password');
+    assert.equal(await evaluate('Array.from(document.querySelectorAll("[data-account-form] button")).every(button=>button.getBoundingClientRect().height>=44)'), true);
+    const shot = await command('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true }); writeFileSync(join(output, `account-guest-${width}.png`), Buffer.from(shot.data, 'base64')); shots.push({ width });
+  }
+  await command('Emulation.setDeviceMetricsOverride', { width: 320, height: 568, deviceScaleFactor: 1, mobile: true });
+  await until(()=>evaluate('Math.abs(visualViewport.height-568)<1&&Math.abs(document.getElementById("sheetBackdrop").getBoundingClientRect().height-568)<1'),'short visual viewport resized');
+  const point = await evaluate(`(()=>{const button=document.querySelector('[data-account-form] [value="register"]');button.scrollIntoView({block:'nearest',behavior:'instant'});const rect=button.getBoundingClientRect();return {x:rect.left+rect.width/2,y:rect.top+rect.height/2,visible:rect.bottom<=innerHeight&&rect.top>=0}})()`);
+  assert.equal(point.visible, true, 'registration remains reachable on a short phone screen');
+  await command('Input.dispatchMouseEvent', { type: 'mousePressed', button: 'left', clickCount: 1, x: point.x, y: point.y });
+  await command('Input.dispatchMouseEvent', { type: 'mouseReleased', button: 'left', clickCount: 1, x: point.x, y: point.y });
+  assert.equal(await evaluate('document.activeElement.id'), 'accountUsername', 'real pointer submit respects required fields');
+  const shortShot = await command('Page.captureScreenshot', { format: 'png' }); writeFileSync(join(output, 'account-guest-320-short.png'), Buffer.from(shortShot.data, 'base64'));
+  await command('Emulation.setDeviceMetricsOverride', { width: 320, height: 1000, deviceScaleFactor: 1, mobile: true });
+  await fill('browser_existing'); await click('[data-account-form] [value="register"]');
+  await until(() => evaluate('document.getElementById("accountStatus")?.textContent.includes("账号已存在")'), 'registration failure');
+  assert.equal(await evaluate('document.getElementById("accountUsername").value'), 'browser_existing');
+  assert.equal((await principal()).principalId, guest.principalId);
+  await fill('browser_registered'); await click('[data-account-form] [value="register"]');
+  await until(() => evaluate(`import('/lib/store.js').then(({state})=>Boolean(window.__bantuBooted)&&state.principal?.username==='browser_registered')`), 'registration reload');
+  assert.equal((await principal()).principalId, guest.principalId);
+  assert.equal((await api(`/api/v1/memories/${note.memoryId}`)).userText, '游客原文\n注册后继续保留。');
+  assert.equal((await api(`/api/v1/plans/${plan.id}/history`)).id, plan.id);
+  assert.equal((await api('/api/v1/favorites')).length, 1);
+  assert.equal(await evaluate('Boolean(document.querySelector(".account-retention-note"))'), false, 'registered account has no guest warning');
+  await click('[data-action="account-panel"]'); await click('[data-action="account-logout"]');
+  await until(() => evaluate(`import('/lib/store.js').then(({state})=>Boolean(window.__bantuBooted)&&state.principal?.kind==='anonymous')`), 'logout guest');
+  const secondGuest = await principal(); assert.notEqual(secondGuest.principalId, guest.principalId);
+  const secondNote = await api('/api/v1/memories', 'POST', { userText: '切换前的独立游客笔记' });
+  await evaluate(`import('/lib/account.js').then(m=>m.openAccount())`);
+  await fill('browser_existing', 'wrong_password'); await click('[data-account-form] [value="login"]');
+  await until(() => evaluate('document.getElementById("accountStatus")?.textContent.includes("账号或密码错误")'), 'login failure');
+  assert.equal((await principal()).principalId, secondGuest.principalId);
+  assert.equal((await api(`/api/v1/memories/${secondNote.memoryId}`)).userText, '切换前的独立游客笔记');
+  await fill('browser_existing'); await click('[data-account-form] [value="login"]');
+  await until(() => evaluate(`import('/lib/store.js').then(({state})=>Boolean(window.__bantuBooted)&&state.principal?.username==='browser_existing')`), 'existing account reload');
+  assert.deepEqual((await api('/api/v1/memories')).map(item => item.memoryId), [targetNote.memoryId]);
+  clock.now = '2026-10-21T18:00:00+08:00'; await reload();
+  assert.equal(await evaluate('Boolean(document.querySelector(".account-recovery-banner"))'), true, 'expiry recovery remains on page');
+  await navigate('memories'); await reload();
+  assert.equal(await evaluate('Boolean(document.querySelector(".account-recovery-banner"))'), true, 'notice survives navigation and reload');
+  await evaluate('document.body.classList.add("large-text");document.documentElement.dataset.theme="dark"');
+  await pause(250);
+  assert.equal(await evaluate('document.documentElement.scrollWidth>innerWidth+1'), false, 'recovery fits 320px dark large text');
+  const recoveryShot = await command('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true }); writeFileSync(join(output, 'account-recovery-320.png'), Buffer.from(recoveryShot.data, 'base64'));
+  await click('[data-action="dismiss-session-notice"]'); await reload();
+  assert.equal(await evaluate('Boolean(document.querySelector(".account-recovery-banner"))'), false, 'dismissal persists in this tab');
+  await click('[data-action="account-panel"]'); await fill('browser_existing'); await click('[data-account-form] [value="login"]');
+  await until(() => evaluate(`import('/lib/store.js').then(({state})=>Boolean(window.__bantuBooted)&&state.principal?.username==='browser_existing')`), 'original account recovered');
+  assert.equal((await api('/api/v1/memories'))[0].memoryId, targetNote.memoryId);
+  writeFileSync(join(output, 'report.json'), JSON.stringify({ verified: true, source: 'isolated memory server', shots, flows: ['guest expiry and ownership guidance', 'failed registration preserves inputs and identity', 'registration keeps notes/history/favorites', 'logout changes identity', 'failed login keeps guest data', 'existing login never merges guest data', 'expired session visible through reload', 'dismissal and original account recovery'] }, null, 2));
+  console.log(`Account retention browser checks passed: ${output}`);
+} catch (error) { writeFileSync(join(output, 'failure.json'), JSON.stringify({ error: String(error), ...(await diagnostic().catch(cause => ({ diagnosticError: String(cause) }))) }, null, 2)); console.error(`Browser failure details: ${output}`); throw error; }
+finally { socket?.close(); browser.kill(); server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }

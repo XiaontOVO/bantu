@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">西岸梦中心 M Factory 3F 平面图</title>
+  <desc id="desc">依据 MVRDV 公开设计平面重绘。楼层以大跨空间为主，北侧分布服务房间，南侧为连续交通与附属空间带。</desc>
+  <defs><filter id="shadow" x="-8%" y="-8%" width="116%" height="120%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#263b35" flood-opacity=".12"/></filter></defs>
+  <style>
+    .bg{fill:#f4f5f2}.title{font:700 32px 'Microsoft YaHei',sans-serif;fill:#263c38}.sub{font:16px 'Microsoft YaHei',sans-serif;fill:#687871}.shell{fill:#e6ebe6;stroke:#465a52;stroke-width:5;stroke-linejoin:round;filter:url(#shadow)}.hall{fill:#fafbf8;stroke:#c7d0c9;stroke-width:2}.room{fill:#d5dfd8;stroke:#fff;stroke-width:3}.wall{fill:none;stroke:#66766f;stroke-width:2}.fine{fill:none;stroke:#89968f;stroke-width:1.5}.column{fill:#54645c}.label{font:700 19px 'Microsoft YaHei',sans-serif;fill:#364b43;text-anchor:middle;dominant-baseline:central}.small{font:14px 'Microsoft YaHei',sans-serif;fill:#677770;text-anchor:middle}.panel{fill:#fff;stroke:#d9e0da;stroke-width:2}.panel-title{font:700 18px 'Microsoft YaHei',sans-serif;fill:#31473d}.panel-text{font:14px 'Microsoft YaHei',sans-serif;fill:#586960}.note{font:12px 'Microsoft YaHei',sans-serif;fill:#74817a}.orange{fill:#d47a36;stroke:#fff;stroke-width:2}.north{font:700 14px 'Microsoft YaHei',sans-serif;fill:#43584f;text-anchor:middle}
+  </style>
+  <rect class="bg" width="1200" height="760"/><text class="title" x="48" y="52">西岸梦中心 · M Factory · 3F</text><text class="sub" x="50" y="80">大跨空间与南侧交通附属带 · 按公开楼层图重绘</text>
+  <g transform="translate(824 94)"><text class="north" y="0">北</text><path d="M0 10v29m-6-13 6-16 6 16" fill="none" stroke="#43584f" stroke-width="2.5"/></g>
+  <path class="shell" d="M94 185H799V421H646V500H799V574H431V421H94Z"/><path class="hall" d="M111 259H781V405H636V483H449V405H111Z"/>
+  <path class="room" d="M111 198H781V249H111Z"/><path class="wall" d="M174 198V249M235 198V249M296 198V249M356 198V249M419 198V249M479 198V249M540 198V249M601 198V249M663 198V249M721 198V249"/>
+  <path class="room" d="M135 267H248V295H135Z"/><path class="room" d="M264 267H342V295H264Z"/><path class="room" d="M562 267H701V295H562Z"/>
+  <rect class="room" x="449" y="425" width="187" height="58"/><rect class="room" x="640" y="425" width="141" height="58"/><rect class="orange" x="795" y="304" width="20" height="124" rx="3"/>
+  <path class="fine" d="M111 420H781M150 431h272m-272 12h272m-272 12h272m-272 12h272"/>
+  <g class="column"><circle cx="155" cy="322" r="5"/><circle cx="275" cy="322" r="5"/><circle cx="395" cy="322" r="5"/><circle cx="515" cy="322" r="5"/><circle cx="635" cy="322" r="5"/><circle cx="755" cy="322" r="5"/><circle cx="155" cy="384" r="5"/><circle cx="275" cy="384" r="5"/><circle cx="395" cy="384" r="5"/><circle cx="515" cy="384" r="5"/><circle cx="635" cy="384" r="5"/><circle cx="755" cy="384" r="5"/></g>
+  <text class="label" x="420" y="343">连续大跨空间</text><text class="small" x="191" y="281">服务空间</text><text class="small" x="303" y="281">设备间</text><text class="small" x="631" y="281">配套空间</text><text class="small" x="542" y="455">南侧交通 / 附属用房</text><text class="small" x="805" y="454">外接楼梯</text>
+  <rect class="panel" x="866" y="126" width="292" height="468" rx="18"/><text class="panel-title" x="892" y="166">空间分布</text><text class="panel-text" x="892" y="202">中央为连续的大跨空间</text><text class="panel-text" x="892" y="232">北侧服务用房按结构柱网排列</text><text class="panel-text" x="892" y="262">南侧设交通与附属空间</text><path d="M892 284H1132" stroke="#e2e7e1" stroke-width="2"/><text class="panel-title" x="892" y="324">连通方式</text><text class="panel-text" x="892" y="360">东西向主厅保持连续</text><text class="panel-text" x="892" y="390">东侧楼梯连接室外平台</text><text class="note" x="892" y="544">MVRDV 公开设计平面</text><text class="note" x="892" y="567">伴途本地重绘 · 非测绘图</text>
+  <text class="note" x="48" y="718">以 MVRDV 设计平面为依据重绘 · 房间用途未明确处仅保留轮廓</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

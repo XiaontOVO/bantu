@@ -1,0 +1,50 @@
+services:
+  app:
+    build: .
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 8787
+      BANTU_SEED_DEMO: "false"
+      STATE_STORE: sqlite
+      STATE_FILE: /app/data/bantu-state.sqlite
+      TRUST_PROXY_HOPS: "1"
+    expose:
+      - "8787"
+    volumes:
+      - bantu_data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:8787/api/v1/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  caddy:
+    image: caddy:2
+    environment:
+      BANTU_DOMAIN: ${BANTU_DOMAIN:?Set BANTU_DOMAIN in .env.deploy}
+      BANTU_AUTH_USER: ${BANTU_AUTH_USER:?Set BANTU_AUTH_USER in .env.deploy}
+      BANTU_AUTH_HASH: ${BANTU_AUTH_HASH:?Set BANTU_AUTH_HASH in .env.deploy}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  bantu_data:
+  caddy_data:
+  caddy_config:

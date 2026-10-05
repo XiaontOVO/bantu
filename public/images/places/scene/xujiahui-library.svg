@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">徐家汇书院 · 伴途原创阅读场景</title>
+  <desc id="desc">暖色书墙、通高光影和不同高度的阅读席位构成艺术化的书院主题画面。画面不是房间布局、楼层平面或室内定位图。</desc>
+  <defs>
+    <linearGradient id="room" x2="0" y2="1"><stop stop-color="#f9e6c8"/><stop offset=".55" stop-color="#f7f2e5"/><stop offset="1" stop-color="#d8d4be"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dca96e"/><stop offset=".55" stop-color="#b9754f"/><stop offset="1" stop-color="#8d5947"/></linearGradient>
+    <linearGradient id="shelf" x2="1" y2="0"><stop stop-color="#5f473f"/><stop offset=".52" stop-color="#9f654c"/><stop offset="1" stop-color="#6f5143"/></linearGradient>
+    <linearGradient id="light" x2="0" y2="1"><stop stop-color="#fffaf0"/><stop offset=".52" stop-color="#e8f2df"/><stop offset="1" stop-color="#b4d8d0"/></linearGradient>
+    <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#e2f2ec"/><stop offset=".5" stop-color="#a3c6bf"/><stop offset="1" stop-color="#52888b"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#fff8d8" stop-opacity=".9"/><stop offset="1" stop-color="#fff8d8" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.5"><feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#5a6c60" flood-opacity=".23"/></filter>
+    <g id="books"><rect x="0" y="0" width="11" height="47" rx="2" fill="#325f67"/><rect x="14" y="4" width="8" height="43" rx="1" fill="#d8bd80"/><rect x="24" y="1" width="14" height="46" rx="1" fill="#a05e50"/><rect x="41" y="7" width="10" height="40" rx="1" fill="#f0d5a6"/><rect x="54" y="2" width="12" height="45" rx="1" fill="#6d8981"/><rect x="69" y="5" width="9" height="42" rx="1" fill="#e9ad76"/><rect x="82" y="0" width="13" height="47" rx="1" fill="#735856"/><rect x="98" y="3" width="11" height="44" rx="1" fill="#ecd3ae"/><path d="M4 8h5M27 8h8M55 10h9M84 8h9M99 11h8" stroke="#fff0d2" stroke-width="1.6" opacity=".65"/></g>
+    <g id="bay"><rect width="138" height="78" rx="3" fill="url(#shelf)"/><path d="M4 66h130" stroke="#ebc395" stroke-width="7"/><rect x="6" y="5" width="126" height="57" fill="#3f4949" opacity=".35"/><use href="#books" x="13" y="15"/><rect x="2" y="2" width="134" height="74" fill="none" stroke="#e8bc83" stroke-width="5"/></g>
+    <clipPath id="bookWall"><path d="M40 119 477 71 477 606 40 627Z"/></clipPath>
+    <clipPath id="windowWall"><path d="M765 122 1162 183 1162 609 765 586Z"/></clipPath>
+  </defs>
+  <rect width="1200" height="720" fill="url(#room)"/>
+  <circle cx="609" cy="213" r="279" fill="url(#glow)"/>
+  <path d="M0 0h1200v88Q1007 105 817 89Q614 69 459 91Q220 116 0 83Z" fill="#e9d6b9"/>
+  <path d="M0 85Q258 123 477 89M764 85Q971 102 1200 149" fill="none" stroke="#c7a985" stroke-width="15"/>
+  <path d="M0 111 476 58v555L0 641Z" fill="url(#wood)" filter="url(#shadow)"/>
+  <g clip-path="url(#bookWall)">
+    <path d="M52 140 465 91v516L52 624Z" fill="#9a624c"/>
+    <g transform="translate(62 134)"><use href="#bay"/><use href="#bay" x="143"/><use href="#bay" x="286"/></g>
+    <g transform="translate(62 224)"><use href="#bay"/><use href="#bay" x="143"/><use href="#bay" x="286"/></g>
+    <g transform="translate(62 314)"><use href="#bay"/><use href="#bay" x="143"/><use href="#bay" x="286"/></g>
+    <g transform="translate(62 404)"><use href="#bay"/><use href="#bay" x="143"/><use href="#bay" x="286"/></g>
+    <g transform="translate(62 494)"><use href="#bay"/><use href="#bay" x="143"/><use href="#bay" x="286"/></g>
+    <path d="M50 193 470 155M50 284 470 257M50 374 470 356M50 464 470 455M50 554 470 554" stroke="#f7d398" stroke-width="7" opacity=".8"/>
+  </g>
+  <path d="M476 89Q602 38 766 111V603Q615 650 476 614Z" fill="#f0d4ad" stroke="#b98b68" stroke-width="8" filter="url(#shadow)"/>
+  <path d="M506 144Q613 102 737 153V573Q632 619 506 578Z" fill="url(#light)" stroke="#b88d6a" stroke-width="12"/>
+  <path d="M522 168Q629 132 724 177V548Q631 589 522 554Z" fill="#ecf4df" opacity=".55"/>
+  <path d="M520 272Q627 236 730 281M518 421Q626 388 731 425" stroke="#ceaa82" stroke-width="18"/>
+  <path d="M526 277Q631 245 724 286M524 426Q629 398 725 428" stroke="#fff2cf" stroke-width="5"/>
+  <path d="M537 169 537 549M710 178 710 546" stroke="#d4b28a" stroke-width="8" opacity=".55"/>
+  <path d="M558 359Q620 328 691 361v48Q625 390 558 413Z" fill="#d88f75" opacity=".78"/>
+  <path d="M575 341Q620 324 674 343" fill="none" stroke="#f3d8b1" stroke-width="8"/>
+  <path d="M538 523Q622 492 707 520v34Q624 580 538 556Z" fill="#799f96" opacity=".7"/>
+  <path d="M753 101 1183 167v461L753 600Z" fill="#cfb38d" stroke="#a38264" stroke-width="8" filter="url(#shadow)"/>
+  <g clip-path="url(#windowWall)">
+    <path d="M781 137 1165 192v368L781 560Z" fill="url(#glass)"/>
+    <path d="M800 151v419M896 163v422M992 177v419M1088 188v418" stroke="#efdcc0" stroke-width="15"/>
+    <path d="M775 309 1165 343M775 453 1165 479" stroke="#e7d1ac" stroke-width="18"/>
+    <path d="M783 317 1168 350M783 459 1168 487" stroke="#877661" stroke-width="5"/>
+    <path d="M804 185 883 200v109l-79-8ZM905 197 984 211v106l-79-8ZM1001 211 1077 225v99l-76-7ZM1097 225 1153 237v92l-56-6Z" fill="#dcece0" opacity=".46"/>
+  </g>
+  <path d="M0 614Q243 586 466 617Q605 640 775 593Q982 552 1200 613V720H0Z" fill="#d3c6a7"/>
+  <path d="M0 641Q242 610 469 644Q615 671 778 625Q992 590 1200 642" fill="none" stroke="#fff1d1" stroke-width="13" opacity=".72"/>
+  <g filter="url(#shadow)">
+    <path d="M768 563Q819 531 880 553l25 16-28 12-97-2Z" fill="#98715a"/>
+    <path d="M776 570h108v13H776Z" fill="#d8ae78"/>
+    <path d="M789 581v54M866 581v54" stroke="#715950" stroke-width="9"/>
+    <path d="M925 579Q979 547 1040 570l27 17-31 12-100-6Z" fill="#98715a"/>
+    <path d="M933 587h112v13H933Z" fill="#d8ae78"/>
+    <path d="M947 597v52M1028 597v52" stroke="#715950" stroke-width="9"/>
+    <path d="M557 589Q617 568 674 588v22H557Z" fill="#f6dcab" stroke="#c19268" stroke-width="5"/>
+    <path d="M574 606v33M654 606v33" stroke="#ba8662" stroke-width="8"/>
+  </g>
+  <g fill="#4c8981"><path d="M85 639q-36-54-11-102 23 6 28 42 17-28 42-29 11 51-28 90Z"/><path d="M1123 633q-29-66 8-104 18 23 16 50 20-26 39-19 3 42-23 72Z"/></g>
+  <path d="M0 0h1200v720H0z" fill="#fff4db" opacity=".05"/>
+</svg>

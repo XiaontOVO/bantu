@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">徐家汇书院 B1 功能布局示意</title>
+  <desc id="desc">依据上海市文旅局公开信息列出地下层的东西公园文创空间与智能书库。未公开测绘平面，因此不表示两者的精确位置、边界或通行路线。</desc>
+  <defs>
+    <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fbfaf6"/><stop offset="1" stop-color="#f2f0e8"/></linearGradient>
+    <linearGradient id="public" x2="1" y2="1"><stop stop-color="#e6eee5"/><stop offset="1" stop-color="#dce8dc"/></linearGradient>
+    <linearGradient id="closed" x2="1" y2="1"><stop stop-color="#ece9e0"/><stop offset="1" stop-color="#e3e0d7"/></linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#d9d8ce" stroke-width=".7" opacity=".38"/></pattern>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="135%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#49534b" flood-opacity=".10"/></filter>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#3c473f}.title{font-size:26px;font-weight:700;letter-spacing:.4px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;fill:#718075}.sub{font-size:13px;fill:#788077}.zone-title{font-size:22px;font-weight:700}.zone-sub{font-size:13px;fill:#68746b}.tag{font-size:11px;font-weight:700;letter-spacing:.6px}.small{font-size:12px;fill:#788078}.notice{font-size:12px;fill:#6f746e}.index{font-size:11px;font-weight:700;letter-spacing:1.3px;fill:#8b9388}
+    </style>
+  </defs>
+  <rect width="900" height="620" rx="24" fill="url(#paper)"/>
+  <rect x="24" y="24" width="852" height="572" rx="18" fill="url(#grid)" stroke="#e1e0d7"/>
+  <path d="M54 59h34" stroke="#b16d53" stroke-width="4" stroke-linecap="round"/>
+  <text x="54" y="91" class="eyebrow">地下功能</text>
+  <text x="54" y="127" class="title">徐家汇书院 · B1</text>
+  <text x="54" y="153" class="sub">地下层功能组成</text>
+  <g transform="translate(688 72)">
+    <rect width="145" height="34" rx="17" fill="#efe9df"/>
+    <circle cx="18" cy="17" r="4" fill="#a96a50"/>
+    <text x="32" y="21" class="tag" fill="#865d4e">功能示意 · 非平面图</text>
+  </g>
+
+  <text x="54" y="202" class="index">开放文化空间</text>
+  <g filter="url(#shadow)">
+    <rect x="54" y="218" width="792" height="146" rx="18" fill="url(#public)" stroke="#9daa98" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(82 248)">
+    <circle cx="38" cy="38" r="38" fill="#f8f8f1" stroke="#a8b4a2" stroke-width="1.5"/>
+    <path d="M17 43c8-1 12-8 21-8s13 7 21 8M19 51c7-1 12-6 19-6s13 5 19 6" fill="none" stroke="#6f8b73" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M22 29h32M27 23h22" stroke="#b16d53" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="184" y="265" class="zone-title">「东西公园」</text>
+  <text x="184" y="291" class="zone-sub">海派文创展售 · 咖啡茶饮 · 艺术与展览</text>
+  <rect x="184" y="312" width="92" height="25" rx="12.5" fill="#f7f8f1" stroke="#bdc8b8"/>
+  <text x="230" y="329" text-anchor="middle" class="tag" fill="#627b65">公众活动区</text>
+  <g transform="translate(776 246)">
+    <path d="M0 10h28M0 22h20M0 34h25" stroke="#afbbb0" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="428" width="792" height="90" rx="16" fill="url(#closed)" stroke="#b3afa4" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(84 452)">
+    <rect x="0" y="4" width="40" height="35" rx="6" fill="#f7f5ed" stroke="#8b8b7f" stroke-width="2"/>
+    <path d="M10 4V0a10 10 0 0 1 20 0v4" fill="none" stroke="#8b8b7f" stroke-width="2.5"/>
+    <circle cx="20" cy="19" r="2.5" fill="#8b8b7f"/>
+    <path d="M20 22v6" stroke="#8b8b7f" stroke-width="2"/>
+  </g>
+  <text x="150" y="466" class="zone-title" style="font-size:18px">智能书库</text>
+  <text x="150" y="490" class="zone-sub">机器人存取藏书 · 非公众阅览空间</text>
+  <rect x="716" y="458" width="100" height="28" rx="14" fill="#f5f2e9" stroke="#c3bdb0"/>
+  <text x="766" y="477" text-anchor="middle" class="tag" fill="#777469">工作人员区域</text>
+
+  <path d="M54 546H846" stroke="#d8d7cf"/>
+  <circle cx="64" cy="567" r="4" fill="#b16d53"/>
+  <text x="78" y="571" class="notice">公开资料未提供 B1 建筑平面：本图不表示房间边界、区域相对位置或通行路线。</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:1.875px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:1.875px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:0.9750000000000001px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

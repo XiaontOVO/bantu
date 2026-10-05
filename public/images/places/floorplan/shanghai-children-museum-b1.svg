@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">上海儿童博物馆 B1 自绘平面图</title>
+  <desc id="desc">依据上海儿童博物馆官网地下一层平面图重绘，保留挖挖乐园、主题活动教室、“读书乐”展区和洗手间的相对位置。</desc>
+  <defs><style>
+    text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#20384b}.canvas{fill:#f8f9f7}.shell{fill:#e4f3f7;stroke:#167fb0;stroke-width:8;stroke-linejoin:round}.zone{stroke:#fff;stroke-width:7;stroke-linejoin:round}.blue{fill:#c4e2ef}.green{fill:#c8e5b0}.yellow{fill:#ffe08c}.lobby{fill:#d9edf4}.label{font-size:28px;font-weight:650;text-anchor:middle;dominant-baseline:middle}.minor{font-size:19px;font-weight:600;text-anchor:middle;dominant-baseline:middle}.sub{font-size:15px;fill:#416275;text-anchor:middle}.floor{font-size:86px;font-weight:800;fill:#167fb0;text-anchor:end}.legend{font-size:15px;fill:#678092}
+  </style></defs>
+  <rect class="canvas" width="1200" height="700"/><text class="floor" x="1150" y="100">B1</text>
+  <path class="shell" d="M97 137H313V159H514V143H1086V538H1044V580H709V566H492V585H108L91 568V362H71V187Z"/>
+  <path class="zone lobby" d="M110 151H298V210H110Z"/><text class="sub" x="204" y="181">楼梯及设备区</text>
+  <path class="zone green" d="M316 151H676V312H316Z"/>
+  <path class="zone" fill="#d5ebbd" d="M346 176H647V286H346Z"/>
+  <text class="label" x="495" y="220">挖挖乐园</text><text class="sub" x="495" y="258">主题互动体验区</text>
+  <path class="zone green" d="M686 151H1072V303H686Z"/><text class="label" x="879" y="220">主题活动室二</text><text class="sub" x="879" y="258">活动教室</text>
+  <path class="zone blue" d="M112 224H298V520H112Z"/><text class="label" x="205" y="346">地下城</text>
+  <path class="zone lobby" d="M316 322H447V520H316Z"/><text class="sub" x="381" y="418">交通空间</text>
+  <path class="zone green" d="M456 318H693V548H456Z"/><text class="label" x="574" y="412">主题活动室一</text><text class="sub" x="574" y="456">动手做课堂 · 科学小讲堂</text>
+  <path class="zone green" d="M702 318H867V548H702Z"/><text class="label" x="784" y="396">“读书乐”</text><text class="minor" x="784" y="436">陈列室</text>
+  <path class="zone yellow" d="M876 318H1069V548H876Z"/><g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(973 416) scale(1)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g>
+  <path class="zone lobby" d="M110 528H444V569H110Z"/><text class="sub" x="277" y="550">疏散通道</text>
+  <path d="M300 211V519M693 301V548M867 301V548" fill="none" stroke="#167fb0" stroke-width="5"/>
+  <text class="legend" x="42" y="674">伴途依据上海儿童博物馆官网楼层图重绘 · 活动安排以现场为准 · 非测绘比例</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

@@ -1,0 +1,9 @@
+{$BANTU_DOMAIN} {
+	encode zstd gzip
+
+	basic_auth {
+		{$BANTU_AUTH_USER} {$BANTU_AUTH_HASH}
+	}
+
+	reverse_proxy app:8787
+}

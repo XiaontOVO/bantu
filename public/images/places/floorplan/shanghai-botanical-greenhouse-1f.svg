@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">上海植物园展览温室（一）平面图</title>
+  <desc id="desc">按专业测绘导览图重绘，标出热带雨林、室内花园、四类专类植物展区、步道和主入口。</desc>
+  <defs>
+    <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fbfcf4"/><stop offset="1" stop-color="#f1f5e8"/></linearGradient>
+    <pattern id="leafBed" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M3 13q3-9 8-8-1 6-8 8Zm7 4q2-7 7-7-1 5-7 7Z" fill="#a9c99a" opacity=".45"/></pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#566c4c" flood-opacity=".12"/></filter>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#33493d}
+      .title{font-size:25px;font-weight:700;letter-spacing:1px}.sub{font-size:12px;fill:#748477}.zone{stroke:#8ba687;stroke-width:2}.label{font-size:18px;font-weight:700}.detail{font-size:12px;fill:#617466}.path{fill:none;stroke:#fffdf5;stroke-width:15;stroke-linecap:round;stroke-linejoin:round}.path-edge{fill:none;stroke:#c2d2ae;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.bed{stroke:#a2b696;stroke-width:1.5}.tiny{font-size:11px;fill:#65796a}
+    </style>
+  </defs>
+  <rect width="900" height="620" rx="24" fill="url(#paper)"/>
+  <text x="44" y="52" class="title">展览温室（一） · 一层</text>
+  <text x="44" y="76" class="sub">热带雨林与室内花园｜馆方专业测绘导览图重绘</text>
+  <g transform="translate(824 54)" aria-label="北"><text x="0" y="0" text-anchor="middle" class="tiny">北</text><path d="M0 8v30m-7-10 7-20 7 20" fill="none" stroke="#506b57" stroke-width="2"/></g>
+  <g filter="url(#shadow)">
+    <path class="plan-shell" d="M150 111 742 111 742 292 811 316 811 467 698 510 698 555 358 555 358 532 216 532 216 505 118 505 118 362 92 362 92 246 150 246Z" fill="#e8f0de" stroke="#718a70" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M165 127 724 127 724 290 773 310 773 341 713 356 665 330 615 343 572 323 527 347 480 328 431 347 382 322 337 345 292 322 247 340 202 318 165 337Z" class="zone" fill="#d9ebcc"/>
+    <path d="M175 137H713V301L670 319 625 304 578 325 530 306 484 326 437 305 389 325 342 305 296 324 250 304 205 321 175 306Z" fill="url(#leafBed)" opacity=".6"/>
+    <path d="M216 358 336 349 377 371 368 500 216 500 145 482 145 393Z" class="zone" fill="#e3f0d6"/>
+    <path d="M385 358 493 350 530 372 524 508 383 508Z" class="zone" fill="#f0efd5"/>
+    <path d="M540 357 684 345 754 364 754 465 687 494 540 494Z" class="zone" fill="#d5e8d2"/>
+    <path d="M558 373 668 365 731 379 731 447 675 472 558 472Z" fill="url(#leafBed)" class="bed"/>
+    <path d="M393 378h55v48h-55zM458 378h55v48h-55zM393 438h55v48h-55zM458 438h55v48h-55z" fill="#e7f0dc" class="bed"/>
+    <path d="M147 408q35-35 69-2t62-2q29-32 54 1t39 5" fill="none" stroke="#91c9ce" stroke-width="13" stroke-linecap="round" opacity=".88"/>
+    <path d="M176 164C230 184 240 237 294 234S367 183 418 204 461 264 515 259 593 194 671 223" class="path"/>
+    <path d="M176 164C230 184 240 237 294 234S367 183 418 204 461 264 515 259 593 194 671 223" class="path-edge"/>
+    <path d="M192 332C222 357 253 361 288 350m85-6q-16 16-20 37m173-33q25 12 25 34m27-17q-18 20-18 38" class="path" stroke-width="11"/>
+    <path d="M192 332C222 357 253 361 288 350m85-6q-16 16-20 37m173-33q25 12 25 34m27-17q-18 20-18 38" class="path-edge"/>
+  </g>
+  <text x="440" y="176" text-anchor="middle" class="label">热带雨林区</text>
+  <text x="440" y="196" text-anchor="middle" class="detail">雨林步道 · 水景与立体植物景观</text>
+  <text x="256" y="431" text-anchor="middle" class="label">棕榈与室内花园</text>
+  <text x="256" y="452" text-anchor="middle" class="detail">南侧热带植物展示</text>
+  <text x="451" y="350" text-anchor="middle" class="detail">专类植物展示区</text>
+  <text x="421" y="408" text-anchor="middle" class="detail">凤梨科</text><text x="486" y="408" text-anchor="middle" class="detail">天南星科</text>
+  <text x="421" y="469" text-anchor="middle" class="detail">苦苣苔科</text><text x="486" y="469" text-anchor="middle" class="detail">秋海棠科</text>
+  <text x="648" y="410" text-anchor="middle" class="label">室内花园</text>
+  <text x="648" y="431" text-anchor="middle" class="detail">特色景观植物</text>
+  <path d="M525 555v20" stroke="#b65c3e" stroke-width="4"/><circle cx="525" cy="555" r="7" fill="#fff" stroke="#b65c3e" stroke-width="3"/>
+  <text x="525" y="598" text-anchor="middle" class="tiny">主入口</text>
+  <g transform="translate(44 579)"><rect width="258" height="22" rx="11" fill="#e8eee2"/><text x="129" y="15" text-anchor="middle" class="tiny">轮廓与分区依馆方测绘图重绘 · 非比例图</text></g>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:1.875px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:1.875px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:0.9750000000000001px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

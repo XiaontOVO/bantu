@@ -1,0 +1,87 @@
+// Deliberately paced product presentation; all writes go to an isolated memory service.
+import assert from 'node:assert/strict';
+import {mkdtempSync,writeFileSync} from 'node:fs';
+import {join} from 'node:path';
+import {tmpdir} from 'node:os';
+import {ModelSettings} from '../dist/src/services/model-settings.js';
+import {createHttpServer} from '../dist/src/server/http-server.js';
+import {MemoryStateStore} from '../dist/src/persistence/state-store.js';
+import {DEMO_SHANGHAI_PLACES} from '../dist/src/demo/demo-data.js';
+import {launchMobileBrowser,browserPause as pause} from './lib/mobile-browser.mjs';
+import {startDemoCapture} from './lib/demo-capture.mjs';
+
+const official=new ModelSettings('data/model-settings.json').provider;assert.ok(official);
+const clock={value:'2026-10-02T05:00:00Z'};let modelCalls=0,roadCalls=0,browser,capture;const modelErrors=[];
+const road={providerName:'presentation-road-fixture',supportedModes:['walking','driving'],async plan(input){roadCalls++;return{departureSupport:'current_only',leg:{legId:'demo-road',fromStopId:'',toStopId:'',transportMode:input.transportMode,durationMinutes:12,distanceMeters:850,geometry:[input.origin.coordinates,input.destination.coordinates],geometryCrs:'WGS84'}}}};
+const server=createHttpServer({seedDemo:false,stateStore:new MemoryStateStore(),now:()=>clock.value,routeProvider:road,modelProvider:{providerName:official.providerName,modelName:official.modelName,thinking:official.thinking,controls:official.controls,async generateTurn(input){const r=await official.generateTurn(input);modelCalls++;if(r.error)modelErrors.push({call:modelCalls,code:r.error.code});console.log(JSON.stringify({modelCall:modelCalls,tools:r.toolCalls.map(t=>t.name),errorCode:r.error?.code}));return r}}});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));const base=`http://127.0.0.1:${server.address().port}`;
+const directory=mkdtempSync(join(tmpdir(),'bantu-product-film-'));
+try{
+ browser=await launchMobileBrowser('bantu-product-film-browser-',{gpu:true});
+ const {command,evaluate,until}=browser;
+ const viewport=async(landscape=false)=>{const width=landscape?844:432,height=landscape?390:700;await command('Emulation.setDeviceMetricsOverride',{width:width*2,height:height*2,deviceScaleFactor:1,mobile:true});await evaluate(`(()=>{const m=document.querySelector('meta[name=viewport]');if(m)m.content='width=${width},initial-scale=2'})()`);await command('Emulation.setPageScaleFactor',{pageScaleFactor:2});await pause(700)};
+ await viewport();
+ await command('Page.addScriptToEvaluateOnNewDocument',{source:`document.addEventListener('DOMContentLoaded',()=>{document.querySelector('meta[name=viewport]').content='width=432,initial-scale=2'},{once:true});window.__journeyClock=${JSON.stringify(clock.value)};window.__journeyFix={lat:31.1846,lng:121.4343};const OriginalDate=Date;window.Date=new Proxy(OriginalDate,{construct(t,a){return Reflect.construct(t,a.length?a:[window.__journeyClock])},get(t,k){return k==='now'?()=>OriginalDate.parse(window.__journeyClock):Reflect.get(t,k)}});Object.defineProperty(navigator,'geolocation',{value:{getCurrentPosition(ok){setTimeout(()=>ok({coords:{latitude:window.__journeyFix.lat,longitude:window.__journeyFix.lng,accuracy:12},timestamp:Date.now()}),50)},watchPosition(){return 1},clearWatch(){}}});`});
+ await command('Page.navigate',{url:base});await until(()=>evaluate('window.__bantuBooted===true'));
+ await evaluate(`(async()=>{const api=(await import('/lib/api.js')).api;await api('/api/v1/account/register',{method:'POST',body:JSON.stringify({username:'bantu_demo_film',password:'12345678'})})})()`);
+ await command('Page.reload');await pause(400);await until(()=>evaluate('window.__bantuBooted===true'));
+ await evaluate(`window.demoState=null;import('/lib/store.js').then(m=>window.demoState=m.state)`);await until(()=>evaluate('!!window.demoState'));
+ // Capture the product's own WebAudio BGM. The presentation adds no substituted voice or music.
+ await evaluate(`(()=>{window.demoAudio=[];const native=AudioNode.prototype.connect;AudioNode.prototype.connect=function(target,...args){if(target===this.context.destination&&this.context.demoDest)native.call(this,this.context.demoDest);return native.call(this,target,...args)};const A=window.AudioContext;window.AudioContext=new Proxy(A,{construct(T,args){const ctx=Reflect.construct(T,args),dest=ctx.createMediaStreamDestination();ctx.demoDest=dest;const chunks=[],recorder=new MediaRecorder(dest.stream),item={chunks,started:performance.now(),recorder};window.demoAudio.push(item);recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};recorder.start(250);const close=ctx.close.bind(ctx);ctx.close=()=>{if(recorder.state!=='inactive')recorder.stop();return close()};return ctx}})})()`);
+ capture=await startDemoCapture(browser,directory);const audioOffset=capture.now()-(await evaluate('performance.now()'))/1000;
+ const cue=(chapter,title,subtitle,points=[])=>capture.cue(chapter,title,subtitle,points);
+ const hold=async(seconds=6)=>pause(seconds*1000);
+ const scroll=async(selector,seconds=4)=>{await evaluate(`document.querySelector(${JSON.stringify(selector)}).scrollIntoView({block:'center',behavior:'smooth'})`);await hold(seconds)};
+ const tap=async selector=>{
+  await until(()=>evaluate(`!!document.querySelector(${JSON.stringify(selector)})&&!document.querySelector(${JSON.stringify(selector)}).disabled`),selector);
+  await evaluate(`document.querySelector(${JSON.stringify(selector)}).scrollIntoView({block:'center',behavior:'smooth'})`);await pause(700);
+  const p=await evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)}),r=e.getBoundingClientRect(),x=r.x+r.width/2,y=r.y+r.height/2;return{x,y,w:innerWidth,h:innerHeight,hit:e.contains(document.elementFromPoint(x,y))}})()`);assert.ok(p.hit,'covered presentation control '+selector);capture.touch(p.x,p.y,p.w,p.h);
+  await command('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:p.x,y:p.y}]});await pause(100);await command('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await pause(800);
+ };
+ const fill=async(selector,text)=>{await tap(selector);await command('Input.dispatchKeyEvent',{type:'keyDown',key:'a',code:'KeyA',windowsVirtualKeyCode:65,modifiers:2});await command('Input.dispatchKeyEvent',{type:'keyUp',key:'a',code:'KeyA',windowsVirtualKeyCode:65,modifiers:2});for(const part of text.match(/.{1,7}/gu)||[]){await command('Input.insertText',{text:part});await pause(210)}await hold(2)};
+ const say=async(text,chapter,title,points=[])=>{const before=await evaluate('demoState.messages.length');await fill('#chatText',text);cue(chapter,title,'发送后由真实模型查询资料并调用工具，等待执行回执。',points);await tap('[data-chat-form] button[type=submit]');await until(()=>evaluate(`demoState.messages.length>${before}`),'message accepted');await until(()=>evaluate('!demoState.chatPending'),'real model',240000);assert.equal(await evaluate('demoState.messages.at(-1)?.role'), 'assistant');assert.equal(await evaluate('!!demoState.chatRetry'),false);await hold(7)};
+ const time=async(value,coordinates)=>{clock.value=value;await evaluate(`window.__journeyClock=${JSON.stringify(value)};${coordinates?`window.__journeyFix=${JSON.stringify(coordinates)};`:''}`)};
+ const status=async(index,value)=>until(()=>evaluate(`demoState.savedPlans.find(p=>p.id===window.demoPlanId).stops[${index}].status===${JSON.stringify(value)}`),value);
+
+ cue('01 / 08','伴途 · 跟得上真实旅途','从想去哪里，到走在路上，再到留下回忆，伴途把这些体验连接起来。',['移动端城市漫游','首页随行与地图','随时可问的 Agent']);await hold(8);
+ await tap('.bottom-nav [data-nav=places]');await until(()=>evaluate('!!document.getElementById("placeSearch")'));
+ cue('01 / 08','先找到想去的地方','搜索武康大楼，查看地点资料、照片和进入场景的入口。',['地点搜索','统一地点卡','实拍照片与场地资料']);await fill('#placeSearch','武康');await tap('[data-action=search-places]');await until(()=>evaluate('demoState.places.some(p=>p.name==="武康大楼")&&!demoState.placesLoading'));await hold(5);
+ await tap('.place-card-main[data-action=open-place]');await until(()=>evaluate('!!document.querySelector("[data-action=open-place-scene]")'));await scroll('.place-detail-actions',6);
+
+ cue('02 / 08','一句话，生成可执行计划','告诉伴途时间、地点、停留时长和交通方式，直接保存今天的安排。',['今天 14:00 出发','武康大楼 → 龙华寺 → 西岸','每站45分钟，步行前往']);await tap('.bottom-nav [data-nav=agent]');await until(()=>evaluate('!!document.getElementById("chatText")'));
+ await say('今天下午两点开始上海半日游，依次去武康大楼、龙华寺、西岸美术馆，每站45分钟，去各站步行，直接保存今天的日计划叫「手机半日慢行」，并计算站间路线。','02 / 08','模型查询，工具执行',['查询地点','创建日计划','补齐站间路线']);
+ const plan=await evaluate('demoState.savedPlans.find(p=>p.name==="手机半日慢行"&&p.kind==="plan")');assert.equal(plan.stops.length,3);await evaluate(`window.demoPlanId=${JSON.stringify(plan.id)}`);
+ cue('02 / 08','看见真实的执行结果','收到保存回执后，可以直接回到这份计划对应的首页随行。',['已保存三站日计划','查看计划回执','回到首页继续执行']);await scroll('.agent-result-links',5);
+ await tap(`[data-agent-result-view=home][data-result-id="${plan.id}"]`);await until(()=>evaluate('demoState.currentView==="home"&&!!document.querySelector(".companion-now")'));await scroll('.companion-now',6);
+ cue('03 / 08','首页就是旅途中的工作台','当前站点、下一步操作和今天的进度，集中显示在首页。',['当前站点','出发 / 到达 / 完成','完整行程入口']);await hold(7);
+ await tap('.bottom-nav [data-nav=today]');await until(()=>evaluate('!!document.querySelector(".dated-plan-card")'));await scroll('.dated-plan-timeline',7);
+ cue('03 / 08','计划与实际，分别记录','计划时段帮助安排；出发、到达、完成由用户确认，记录真实经历。',['计划保留','交通时间按路线估算','实际进度独立记录']);await hold(6);await tap('.bottom-nav [data-nav=home]');await scroll('.companion-now',2);
+ await time('2026-10-02T06:00:00Z');await tap('.companion-now [data-action=companion-exec][data-type=depart]');await status(0,'en_route');
+ cue('03 / 08','出发后，看清全程路线','出发后打开地图，点击“全程路线”查看各站。定位和道路为演示数据。',['首页记录出发','地图显示各站与全程路线','交通方式可切换']);await hold(6);
+ await tap('.bottom-nav [data-nav=today]');await tap('.section-navigation [data-nav=map]');await until(()=>evaluate('!!document.querySelector(".leaflet-tile-loaded")'),'map tiles',45000);await tap('[data-action=toggle-full-route]');await until(()=>evaluate('document.querySelector("[data-action=toggle-full-route]").getAttribute("aria-pressed")==="true"&&!!document.querySelector("#travel-map path.leaflet-interactive")'),'full route geometry');await scroll('#travel-map',9);await scroll('.route-planner-card',5);
+ await tap('.bottom-nav [data-nav=home]');await time('2026-10-02T06:10:00Z');await tap('.companion-now [data-action=companion-exec][data-type=arrive]');await status(0,'visiting');
+ cue('04 / 08','到达了，慢慢看这个地方','确认到达后，可以从当前站点直接进入沉浸场景。',['地点艺术场景','直接触摸画中元素','文字讲解与氛围音乐']);await scroll('.companion-now',5);await tap('#homeCompanion [data-action=open-place-scene]');await until(()=>evaluate('demoState.currentView==="scene"&&!!document.querySelector(".scene-hotspot:not(:disabled)")'));await viewport(true);await hold(6);
+ cue('04 / 08','点画里的红砖，故事就展开','横屏探索武康大楼。直接触摸画中的红砖立面，查看对应讲解。',['横屏展开画面','点击建筑真实特征','本产品原生场景 BGM']);await tap('[data-action=select-scene-hotspot][data-hotspot=brick-facade]');await until(()=>evaluate('demoState.sceneSelectedHotspotId==="brick-facade"'));assert.ok(await evaluate('document.querySelector(".scene-summary").textContent.length>10'));await hold(12);
+ cue('05 / 08','想改计划，伴途随时陪你','转回竖屏，打开伴途小窗，在参观页面提出修改。',['了解当前页面','小窗不遮断其他操作','一句话调整原计划']);await viewport();await tap('[data-action=ask-scene-agent]');await until(()=>evaluate('demoState.agentDockOpen&&!!document.getElementById("chatText")'));await hold(5);
+ const factsBefore=await evaluate('JSON.stringify(demoState.savedPlans.find(p=>p.id===demoPlanId).executionEvents)');
+ await say('最后一站西岸美术馆游览时间改成30分钟，其余开始时间和已有进度保留，直接修改今天的日计划，不创建新方案。','05 / 08','修改尚未开始的安排',['西岸美术馆：45 → 30分钟','保留其他开始时间','保留已有到访进度']);
+ assert.equal(await evaluate('demoState.savedPlans.find(p=>p.id===demoPlanId).stops[2].plannedDurationMinutes'),30);assert.equal(await evaluate('JSON.stringify(demoState.savedPlans.find(p=>p.id===demoPlanId).executionEvents)'),factsBefore);
+ cue('05 / 08','修改完成，接着原来的旅途','查看模型回执，再回首页；同一份计划和已经发生的进度继续保留。',['执行后给出回执','不另建一份计划','回原行程继续']);await hold(7);await tap(`[data-agent-result-view=home][data-result-id="${plan.id}"]`);await until(()=>evaluate('demoState.currentView==="home"&&!demoState.agentDockOpen'));await scroll('.companion-now',4);
+ await time('2026-10-02T06:55:00Z');await tap('.companion-now [data-type=complete]');await status(0,'completed');
+ cue('06 / 08','走完一站，继续下一站','第一站完成后，首页自动提示下一站；每次到访分别确认和记录。',['同一旅程连续执行','每一站独立的实际记录','可反复到访同一地点']);await hold(5);
+ const times=[['2026-10-02T07:00:00Z','2026-10-02T07:20:00Z','2026-10-02T08:05:00Z'],['2026-10-02T08:10:00Z','2026-10-02T08:30:00Z','2026-10-02T09:00:00Z']];
+ for(let i=1;i<3;i++){const origin=DEMO_SHANGHAI_PLACES.find(p=>p.name===plan.stops[i-1].place.name).coordinates;await time(times[i-1][0],origin);await tap('.companion-now [data-type=depart]');await status(i,'en_route');await hold(2);await time(times[i-1][1]);await tap('.companion-now [data-type=arrive]');await status(i,'visiting');await hold(3);await time(times[i-1][2]);await tap('.companion-now [data-type=complete]');await status(i,'completed');await hold(3)}
+ await until(()=>evaluate('!!document.querySelector("[data-action=open-journey-review]")'));cue('06 / 08','一天结束，自动连起旅行足迹','三站游览完成，打开本次旅程对应的私人回顾。',['走过的地点','实际到达与完成时间','对应这一次旅程']);await scroll('.companion-finished',6);await tap('[data-action=open-journey-review]');await until(()=>evaluate('demoState.currentView==="memories"&&demoState.agentResultTarget?.scrolled'));await scroll('.journey-memory-content',6);
+ cue('07 / 08','记下感受，也可以交给伴途','请 Agent 在这份旅行记忆里补写原话，保留足迹，不另建笔记。',['本人原话','同一条旅行记忆','默认保留私人记录']);await tap('[data-action=toggle-agent-dock]');await say('请在刚完成的「手机半日慢行」旅行记忆里补写我的原话「今天最喜欢武康大楼的街角光影」，保留足迹，不新建笔记，不公开。','07 / 08','把感受写进这一天',['补写本人原话','保留实际足迹','不自动发布到社区']);
+ assert.equal(await evaluate('demoState.memories.length'),1);assert.ok(await evaluate('demoState.memories[0].userText.includes("今天最喜欢武康大楼的街角光影")'));await tap('[data-action=close-agent-dock]');await scroll('.journey-memory-content',3);await evaluate('window.scrollBy({top:-240,behavior:"smooth"})');await hold(7);
+ cue('07 / 08','公开还是私密，由你决定','旅行记忆可预览成帖子，发布前选择“仅自己可见”。原旅行记忆不受影响。',['保留原始私人记忆','发布前预览文字和地点','公开 / 仅自己可见']);await tap('[data-action=share-memory]');await until(()=>evaluate('!!document.getElementById("postVisibility")'));await scroll('#postVisibility',3);await tap('#postVisibility');await command('Input.dispatchKeyEvent',{type:'keyDown',key:'End',code:'End',windowsVirtualKeyCode:35});await command('Input.dispatchKeyEvent',{type:'keyUp',key:'End',code:'End',windowsVirtualKeyCode:35});await command('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await command('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});assert.equal(await evaluate('document.getElementById("postVisibility").value'),'private');await hold(7);
+ cue('07 / 08','把旅途留给自己','这里展示私密发布的预览，不发送帖子。演示中的账号和记录均为隔离数据。',['规划 → 随行 → 探索','临时调整 → 继续执行','私人回顾 → 自主分享']);await tap('#sheet .sheet-head [data-action=close-sheet]');await scroll('.journey-memory-content',3);await hold(8);
+ cue('08 / 08','每一次相遇，点亮一张卡','完成游览后，旅行成就自动收集本次到访。点开地点卡，能查看记录来源。',['游览事实点亮收藏','重访让地点卡逐级升级','仅自己可见的到访时间线']);await tap('.appbar [data-nav=mine]');await until(()=>evaluate('!!document.querySelector(".achievement-entry")'));await tap('.achievement-entry [data-view=achievements]');await until(()=>evaluate('document.querySelectorAll(".achievement-card").length===3'));await scroll('.achievement-grid',5);await tap('.achievement-card');await until(()=>evaluate('!!document.querySelector(".achievement-detail")'));await scroll('.achievement-detail',7);
+ cue('08 / 08','伴途，让每一步跟上真实旅途','计划能执行，变化能处理，风景能探索，走过的路能留给自己。',['真实模型与工具操作','全程记录和私人回顾','移动端场景与旅行收藏']);await tap('.bottom-nav [data-nav=home]');await hold(8);
+ assert.equal(browser.exceptions.length,0,browser.exceptions.join('\n'));
+ assert.equal(modelErrors.length,0,'Model errors must not be hidden by local narration fallback');
+ const audio=await evaluate(`(async()=>{const files=[];for(const item of window.demoAudio){if(item.recorder.state!=='inactive'){await new Promise(r=>{item.recorder.addEventListener('stop',r,{once:true});item.recorder.stop()})}await new Promise(r=>setTimeout(r,200));const blob=new Blob(item.chunks,{type:'audio/webm'}),bytes=new Uint8Array(await blob.arrayBuffer());let binary='';for(let p=0;p<bytes.length;p+=16384)binary+=String.fromCharCode(...bytes.subarray(p,p+16384));files.push({started:item.started/1000,data:btoa(binary)})}return files})()`);
+ const audioFiles=audio.map((item,i)=>{const file=`scene-audio-${i}.webm`;writeFileSync(join(directory,file),Buffer.from(item.data,'base64'));return{file,start:audioOffset+item.started}});
+ const report=await capture.stop({modelCalls,modelErrors,roadCalls,realModel:true,simulatedRoads:true,simulatedGps:true,isolatedData:true,source:'mobile browser, not Android native',audio:audioFiles});capture=null;writeFileSync('tmp/product-demo-recording.json',JSON.stringify({directory,...report},null,2));console.log(JSON.stringify({directory,duration:report.duration,frames:report.sourceFrames,modelCalls,modelErrors,roadCalls,audioFiles:audioFiles.length}));
+}catch(error){if(browser){await browser.screenshot('failure').catch(()=>{});console.error(JSON.stringify({directory,browserOutput:browser.output,body:await browser.evaluate('document.body.innerText.slice(-2500)').catch(()=>''),error:error.message}))}if(capture)await capture.stop({failed:true}).catch(()=>{});throw error}
+finally{browser?.close();server.closeAllConnections();await new Promise(r=>server.close(r))}

@@ -1,0 +1,35 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { createServerContext } from '../src/server/http/bootstrap.js';
+import { MemoryStateStore } from '../src/persistence/state-store.js';
+import { personalPlaceTagTools } from '../src/services/personal-agent-place-tags.js';
+
+test('agent edits private tags without overwriting unrelated tags or leaking them to another account', async () => {
+  const store = new MemoryStateStore();
+  const ctx = createServerContext({ seedDemo: false, stateStore: store });
+  ctx.accounts.register('tag_author', 'test-password-123', 'author');
+  ctx.accounts.register('tag_reader', 'test-password-456', 'reader');
+  const place = (await ctx.options.placeProvider!.search({ cityCode: '310100', query: '武康大楼' })).places[0];
+  const refresh = new Set<string>();
+  const tools = personalPlaceTagTools(ctx, 'author', refresh);
+  const edit = tools.find(t => t.name === 'places.edit_tags')!;
+  await edit.run({ placeId: place.placeId, action: 'add', tags: ['想再去'] });
+  await edit.run({ placeId: place.placeId, action: 'add', tags: ['想再去', '黄昏来'] });
+  assert.deepEqual(ctx.communityService.myTags(place.placeId, 'author'), ['想再去', '黄昏来']);
+  assert.deepEqual(ctx.communityService.myTags(place.placeId, 'reader'), []);
+  const ownerSearch = await ctx.options.placeProvider!.search({ actorId: 'author', cityCode: '310100', query: '想再去' });
+  const readerSearch = await ctx.options.placeProvider!.search({ actorId: 'reader', cityCode: '310100', query: '想再去' });
+  assert.ok(ownerSearch.places.some(p => p.placeId === place.placeId));
+  assert.equal(readerSearch.places.length, 0);
+  await edit.run({ placeId: place.placeId, action: 'remove', tags: ['想再去'] });
+  assert.deepEqual(ctx.communityService.myTags(place.placeId, 'author'), ['黄昏来']);
+  await assert.rejects(edit.run({ placeId: place.placeId, action: 'add', tags: Array.from({ length: 8 }, (_, i) => `标签${i}`) }), /最多|8/);
+  assert.deepEqual(ctx.communityService.myTags(place.placeId, 'author'), ['黄昏来']);
+  await assert.rejects(edit.run({ placeId: 'missing-place', action: 'add', tags: ['不存在'] }), /不存在/);
+  ctx.persistState();
+  const restored = createServerContext({ seedDemo: false, stateStore: store });
+  assert.deepEqual(restored.communityService.myTags(place.placeId, 'author'), ['黄昏来']);
+  await personalPlaceTagTools(restored, 'author', refresh).find(t => t.name === 'places.edit_tags')!.run({ placeId: place.placeId, action: 'replace', tags: [] });
+  assert.deepEqual(restored.communityService.myTags(place.placeId, 'author'), []);
+  assert.ok(refresh.has('places'));
+});

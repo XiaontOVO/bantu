@@ -1,0 +1,152 @@
+// Actual mobile layouts and touches on isolated current-stop/place fixtures.
+import assert from 'node:assert/strict';
+import { spawn } from 'node:child_process';
+import { mkdtempSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { createHttpServer } from '../dist/src/server/http-server.js';
+import { DEMO_SHANGHAI_PLACES } from '../dist/src/demo/demo-data.js';
+import { MemoryStateStore } from '../dist/src/persistence/state-store.js';
+const place = DEMO_SHANGHAI_PLACES.find(p=>p.name==='武康大楼');
+const provider={providerName:'time-session-fixture',async search(){return{places:[place],empty:false,nextCursor:null}},async detail(id){return id===place.placeId?place:null}};
+const server=createHttpServer({seedDemo:false,stateStore:new MemoryStateStore(),placeProvider:provider,now:()=>new Date().toISOString()});
+await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+const base=`http://127.0.0.1:${server.address().port}`;
+const output=mkdtempSync(join(tmpdir(),'bantu-home-place-layout-'));
+const browser=spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',['--headless=new','--disable-gpu','--no-first-run','--no-default-browser-check','--remote-debugging-port=0',`--user-data-dir=${output}`,'about:blank'],{windowsHide:true,stdio:'ignore'});
+let socket;
+const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+async function until(check){const deadline=Date.now()+30000;while(Date.now()<deadline){if(await check())return;await pause(100)}throw new Error('Plan time session timed out')}
+try{
+  const file=join(output,'DevToolsActivePort');await until(()=>existsSync(file));
+  const port=readFileSync(file,'utf8').split('\n')[0],targets=await(await fetch(`http://127.0.0.1:${port}/json/list`)).json();
+  socket=new WebSocket(targets.find(t=>t.type==='page'&&t.url==='about:blank').webSocketDebuggerUrl);
+  await new Promise((resolve,reject)=>{socket.onopen=resolve;socket.onerror=reject});
+  let sequence=0;const pending=new Map();
+  socket.onmessage=event=>{const m=JSON.parse(event.data),p=pending.get(m.id);if(!p)return;pending.delete(m.id);clearTimeout(p.timer);m.error?p.reject(new Error(JSON.stringify(m.error))):p.resolve(m.result)};
+  const command=(method,params={})=>new Promise((resolve,reject)=>{const id=++sequence,timer=setTimeout(()=>{pending.delete(id);reject(new Error(method))},30000);pending.set(id,{resolve,reject,timer});socket.send(JSON.stringify({id,method,params}))});
+  const evaluate=async expression=>{const r=await command('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw new Error(JSON.stringify(r.exceptionDetails));return r.result.value};
+  const tap=async selector=>{
+    let p;
+    await until(async()=>{
+      if(!await evaluate(`Boolean(document.querySelector(${JSON.stringify(selector)}))`))return false;
+      await evaluate(`document.querySelector(${JSON.stringify(selector)}).scrollIntoView({block:'center',behavior:'instant'})`);await pause(120);
+      p=await evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});if(!e)return{hit:false};const r=e.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;return{x,y,hit:!e.disabled&&e.contains(document.elementFromPoint(x,y)),blocker:document.elementFromPoint(x,y)?.outerHTML?.slice(0,200)}})()`);
+      return p.hit;
+    });
+    assert.equal(p.hit,true,'covered '+selector+' '+JSON.stringify(p));
+    await command('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:p.x,y:p.y}]});await command('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await pause(80);
+  };
+  const escape=async()=>{await command('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape'});await command('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape'});await pause(100)};
+  const screenshot=async name=>{const shot=await command('Page.captureScreenshot',{format:'png'});writeFileSync(join(output,name+'.png'),Buffer.from(shot.data,'base64'))};
+  const defects=[];let checks=0;const check=(ok,label)=>{checks++;if(!ok)defects.push(label)};
+  await command('Page.enable');await command('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await command('Emulation.setTouchEmulationEnabled',{enabled:true});
+  await command('Page.navigate',{url:base});await until(()=>evaluate('Boolean(window.__bantuBooted)'));
+  const plan=await evaluate(`(async()=>{
+    const {api}=await import('/lib/api.js'),{state}=await import('/lib/store.js'),{dateKeyInTimeZone}=await import('/lib/format.js');
+    window.__layoutModules={api,state,render:await import('/lib/render.js'),plans:await import('/lib/plan-library.js'),compact:await import('/lib/compact-mode.js')};
+    const place=${JSON.stringify(place)},date=dateKeyInTimeZone(new Date(),'Asia/Shanghai');
+    const time=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date()).split(':').map(Number);
+    const start=Math.min(1430,time[0]*60+time[1]+5);
+    const plan=await api('/api/v1/plans',{method:'POST',body:JSON.stringify({kind:'plan',name:'今天，慢慢看上海',cityCode:'310100',timezone:'Asia/Shanghai',localDate:date,snapshot:{stops:[{stopId:'home-current',place,status:'planned',startMinutes:start,endMinutes:start+60,plannedDurationMinutes:60}],routeLegs:[],plannedCharges:[]}})});
+    await window.__layoutModules.plans.loadPlans();window.__layoutPlan=structuredClone(state.savedPlans.find(p=>p.id===plan.id));return plan;
+  })()`);
+  await evaluate(`(async()=>{window.__layoutModules.companion=await import('/lib/companion.js');window.__layoutModules.details=await import('/lib/place-detail.js');const {state,render,companion,details}=window.__layoutModules;state.places=[];details.invalidatePlaceDetail(${JSON.stringify(place.placeId)});await companion.loadCompanion();render.render()})()`);
+  await until(()=>evaluate('!window.__layoutModules.state.companionLoading'));
+  check(await evaluate('window.__layoutModules.state.places.length===0'),'home detail pollutes filtered search');
+  check(await evaluate(`Boolean(window.__layoutModules.details.cachedPlaceDetail(${JSON.stringify(place.placeId)}))`),'current station detail is not hydrated');
+  await evaluate(`(()=>{
+    window.__routeOriginalFetch=window.fetch.bind(window);window.__routeRequests=[];window.__routeGps=[];window.__routeWatches=[];window.__routePermissions=[];
+    window.__routeGpsDescriptor=Object.getOwnPropertyDescriptor(navigator,'geolocation');window.__routePermissionDescriptor=Object.getOwnPropertyDescriptor(navigator,'permissions');
+    Object.defineProperty(navigator,'geolocation',{configurable:true,value:{getCurrentPosition(success,error){window.__routeGps.push({success,error})},watchPosition(success,error){window.__routeWatches.push({success,error});return window.__routeWatches.length},clearWatch(){}}});
+    window.fetch=(input,init)=>{const url=typeof input==='string'?input:input.url;if(url.includes('/companion/context'))return new Promise((resolve,reject)=>window.__routeRequests.push({resolve,reject,init}));return window.__routeOriginalFetch(input,init)};
+    window.__routePreviousContext=structuredClone(window.__layoutModules.state.companionContext);
+  })()`);
+  for(const mode of [{width:390,large:false,dark:false},{width:320,large:true,dark:true},{width:430,large:false,dark:false}]){
+    await command('Emulation.setDeviceMetricsOverride',{width:mode.width,height:844,deviceScaleFactor:1,mobile:true});
+    await evaluate(`document.documentElement.dataset.theme=${JSON.stringify(mode.dark?'dark':'light')};document.body.classList.toggle('large-text',${mode.large})`);
+    await tap('[data-action=refresh-companion-route]');
+    await until(()=>evaluate('Boolean(document.querySelector("[data-action=cancel-companion-route]"))'));
+    check(await evaluate('document.querySelector(".companion-route-info").getAttribute("aria-busy")==="true"&&document.querySelector(".companion-route-info").textContent.includes("正在取得设备定位")'),'GPS wait lacks feedback '+mode.width);
+    const heading=await evaluate('(()=>{const h=document.querySelector(".companion-route h3").getBoundingClientRect(),b=document.querySelector(".companion-route-refresh").getBoundingClientRect();return {titleHeight:h.height,separate:h.right<=b.left,height:b.height,overflow:document.documentElement.scrollWidth>innerWidth}})()');
+    check(heading.separate&&heading.titleHeight<=32&&heading.height>=44&&!heading.overflow,'mobile route heading wraps or overlaps '+mode.width);
+    await evaluate('(()=>{const r=document.querySelector(".companion-route").getBoundingClientRect();window.scrollTo({top:scrollY+r.top-88,behavior:"instant"})})()');
+    await screenshot('route-wait-'+mode.width);
+    await tap('[data-action=cancel-companion-route]');
+    check(await evaluate('!window.__layoutModules.state.companionLoading&&Boolean(document.querySelector("[data-action=refresh-companion-route]"))'),'cancel does not restore route control');
+    check(await evaluate('JSON.stringify(window.__layoutModules.state.companionContext)===JSON.stringify(window.__routePreviousContext)'),'cancel loses previous route');
+    await evaluate('window.__routeGps.at(-1).success({coords:{latitude:31.2,longitude:121.4,accuracy:15},timestamp:Date.now()})');await pause(50);
+    check(await evaluate('window.__routeRequests.length===0&&window.__layoutModules.state.currentLocation===null'),'late canceled GPS updates route or position');
+  }
+  await tap('[data-action=refresh-companion-route]');
+  await evaluate('window.__routeGps.at(-1).success({coords:{latitude:31.2,longitude:121.4,accuracy:15},timestamp:Date.now()})');
+  await until(()=>evaluate('window.__routeRequests.length===1&&window.__layoutModules.state.companionQueryStage==="routing"'));
+  check(await evaluate('document.querySelector(".companion-route-info").textContent.includes("正在核对道路路线")'),'route query lacks feedback');
+  await tap('[data-action=cancel-companion-route]');
+  await tap('[data-action=refresh-companion-route]');
+  await evaluate('window.__routeGps.at(-1).success({coords:{latitude:31.2,longitude:121.4,accuracy:15},timestamp:Date.now()})');
+  await until(()=>evaluate('window.__routeRequests.length===2'));
+  await evaluate('window.__routeRequests[0].resolve(new Response(JSON.stringify({data:{...window.__routePreviousContext,routeReason:"旧请求结果"},meta:{}}),{status:200}))');await pause(60);
+  check(await evaluate('window.__layoutModules.state.companionLoading&&window.__layoutModules.state.companionContext?.routeReason!=="旧请求结果"'),'old route response clears a new request');
+  await evaluate('window.__routeRequests[1].resolve(new Response(JSON.stringify({data:{...window.__routePreviousContext,routeUnknown:true,routeReason:"新的受控结果"},meta:{}}),{status:200}))');
+  await until(()=>evaluate('!window.__layoutModules.state.companionLoading'));
+  check(await evaluate('window.__layoutModules.state.companionContext?.routeReason==="新的受控结果"'),'new route result is not applied');
+  check(await evaluate('!document.getElementById("companionRouteMap").hidden&&Boolean(document.querySelector("#companionRouteMap .leaflet-overlay-pane path"))'),'updating loses destination map');
+  await tap('[data-action=refresh-companion-route]');
+  await evaluate('window.__routeGps.at(-1).error({code:3,message:"Timeout expired"})');
+  await until(()=>evaluate('!window.__layoutModules.state.companionLoading'));
+  check(await evaluate('window.__layoutModules.state.companionError.includes("定位超时")&&!document.querySelector(".companion-route-info").textContent.includes("Timeout expired")'),'GPS timeout is not localized');
+  await tap('[data-action=refresh-companion-route]');
+  await evaluate('window.__routeGps.at(-1).success({coords:{latitude:31.2,longitude:121.4,accuracy:15},timestamp:Date.now()})');
+  await until(()=>evaluate('window.__routeRequests.length===3'));
+  await evaluate('window.__routeRequests[2].reject(new TypeError("Failed to fetch"))');
+  await until(()=>evaluate('!window.__layoutModules.state.companionLoading'));
+  check(await evaluate('window.__layoutModules.state.companionError.includes("网络暂时不可用")'),'network failure is not localized');
+  await evaluate(`(()=>{window.fetch=window.__routeOriginalFetch;Object.defineProperty(navigator,'permissions',{configurable:true,value:{query(){return new Promise(resolve=>window.__routePermissions.push(resolve))}}});const {state,render}=window.__layoutModules;state.savedPlans=[structuredClone(window.__layoutPlan)];state.savedPlans[0].stops[0].status='en_route';render.render()})()`);
+  await until(()=>evaluate('window.__routePermissions.length===1'));
+  await evaluate('(()=>{const {state,render}=window.__layoutModules;state.currentView="places";state.navigationRevision++;render.render();state.currentView="home";state.navigationRevision++;render.render()})()');
+  await until(()=>evaluate('window.__routePermissions.length===2'));
+  await evaluate('window.__routePermissions[0]({state:"granted"})');await pause(60);
+  check(await evaluate('window.__routeWatches.length===0'),'old permission response reinstalls GPS watcher');
+  await evaluate('window.__routePermissions[1]({state:"granted"})');await pause(60);
+  check(await evaluate('window.__routeWatches.length===1'),'current permission response does not start tracking');
+  await evaluate('(()=>{const {state,render}=window.__layoutModules;window.__lastCompanionFix=JSON.stringify(state.currentLocation);state.savedPlans[0].revision++;render.render();window.__routeWatches[0].success({coords:{latitude:31.5,longitude:121.5,accuracy:15},timestamp:Date.now()})})()');await pause(60);
+  check(await evaluate('JSON.stringify(window.__layoutModules.state.currentLocation)===window.__lastCompanionFix'),'cleared GPS callback updates a different visit');
+  await evaluate(`(()=>{const {companion,state}=window.__layoutModules;companion.disposeCompanion();if(window.__routeGpsDescriptor)Object.defineProperty(navigator,'geolocation',window.__routeGpsDescriptor);else delete navigator.geolocation;if(window.__routePermissionDescriptor)Object.defineProperty(navigator,'permissions',window.__routePermissionDescriptor);else delete navigator.permissions;state.savedPlans=[structuredClone(window.__layoutPlan)];state.companionError='';state.companionContext=null})()`);
+  check(await evaluate(`window.__layoutModules.api('/api/v1/plans').then(plans=>{const p=plans.find(p=>p.id===${JSON.stringify(plan.id)});return p.revision===0&&p.executionEvents.length===0})`),'route actions modify actual progress');
+  const measurements=[];
+  const modes=[{width:390,theme:'light',large:false,compact:false},{width:320,theme:'dark',large:true,compact:false},{width:430,theme:'light',large:false,compact:true},{width:1440,theme:'light',large:false,compact:false}];
+  for(const mode of modes){
+    await command('Emulation.setDeviceMetricsOverride',{width:mode.width,height:844,deviceScaleFactor:1,mobile:mode.width<700});
+    await evaluate(`document.documentElement.dataset.theme=${JSON.stringify(mode.theme)};document.body.classList.toggle('large-text',${mode.large});window.__layoutModules.compact.setCompactMode(${mode.compact},{persist:false})`);
+    for(const status of ['planned','en_route','visiting']){
+      await evaluate(`(()=>{const {state,render}=window.__layoutModules;state.savedPlans=[structuredClone(window.__layoutPlan)];state.savedPlans[0].stops[0].status=${JSON.stringify(status)};state.companionPlanId=${JSON.stringify(plan.id)};state.currentView='home';render.render()})()`);await pause(220);
+      await evaluate('Promise.all([...document.querySelectorAll(".companion-impression img")].map(img=>img.decode().catch(()=>{})))');
+      await evaluate('(()=>{const r=document.querySelector(".companion-now").getBoundingClientRect();window.scrollTo({top:Math.max(0,scrollY+r.top-90),behavior:"instant"})})()');await pause(100);
+      const metrics=await evaluate('(()=>{const card=document.querySelector(".companion-now").getBoundingClientRect(),image=document.querySelector(".companion-impression").getBoundingClientRect(),ctx=document.querySelector(".companion-place-context").getBoundingClientRect(),child=document.querySelector(".companion-place-context>div").getBoundingClientRect(),button=document.querySelector(".companion-primary");return {width:card.width,height:card.height,imageRatio:image.width/image.height,blank:Math.max(0,ctx.height-child.height),documentWidth:document.documentElement.scrollWidth,viewport:innerWidth,buttonHeight:button.getBoundingClientRect().height,type:button.dataset.type}})()');
+      measurements.push({mode,status,...metrics});check(metrics.blank<=12,'current stop has stretched empty space '+mode.width+' '+status);check(Math.abs(metrics.imageRatio-2)<.01,'current stop image loses 2:1 '+mode.width);check(metrics.documentWidth<=metrics.viewport,'home overflow '+mode.width+' '+status);check(metrics.buttonHeight>=44&&metrics.type==={planned:'depart',en_route:'arrive',visiting:'complete'}[status],'execution action changes or shrinks '+status);
+      const compactLayout=await evaluate(`(()=>{const heading=document.querySelector('.companion-place-heading'),title=heading.querySelector('h3').getBoundingClientRect(),station=heading.querySelector('.companion-kicker').getBoundingClientRect(),facts=document.querySelector('.companion-facts').getBoundingClientRect(),boxes=[...document.querySelectorAll('.companion-facts small,.companion-facts strong')].map(e=>e.getBoundingClientRect());return{titleSeparate:title.right<=station.left,readable:boxes.every(r=>r.left>=facts.left-1&&r.right<=facts.right+1&&r.top>=facts.top&&r.bottom<=facts.bottom),overlap:boxes.some((a,i)=>boxes.slice(i+1).some(b=>Math.min(a.right,b.right)-Math.max(a.left,b.left)>1&&Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1))}})()`);
+      check(compactLayout.titleSeparate,'station overlaps place title '+mode.width+' '+status);check(compactLayout.readable&&!compactLayout.overlap,'compact time information overlaps or clips '+mode.width+' '+status);
+      const cardSpacing=await evaluate(`(()=>{const body=document.querySelector('.companion-now-body').getBoundingClientRect(),actions=document.querySelector('.companion-step-actions').getBoundingClientRect(),last=document.querySelector('.companion-abort')?.getBoundingClientRect()||actions,title=document.querySelector('.companion-place-heading h3').getBoundingClientRect(),station=document.querySelector('.companion-place-heading .companion-kicker').getBoundingClientRect();return{bottomGap:body.bottom-last.bottom,headingCenters:Math.abs(title.top+title.height/2-station.top-station.height/2)}})()`);
+      check(cardSpacing.bottomGap<=13,'current card retains unnecessary bottom space '+mode.width+' '+status);
+      check(cardSpacing.headingCenters<1,'current station number is not centered with title '+mode.width+' '+status);
+      const actionRow=await evaluate(`(()=>{const g=document.querySelector('.companion-step-actions'),buttons=[...g.querySelectorAll('button')],boxes=buttons.map(b=>b.getBoundingClientRect());return{count:buttons.length,sameRow:boxes.length===1||Math.abs(boxes[0].top-boxes[1].top)<1,sameHeight:boxes.length===1||Math.abs(boxes[0].height-boxes[1].height)<1,readable:buttons.every((b,i)=>b.scrollWidth<=b.clientWidth+1&&boxes[i].height>=48&&boxes[i].left>=0&&boxes[i].right<=innerWidth)}})()`);
+      check(actionRow.count===(status==='visiting'?1:2)&&actionRow.sameRow&&actionRow.sameHeight&&actionRow.readable,'station transport and execution actions wrap, shrink or overflow '+mode.width+' '+status);
+      await screenshot('home-current-'+mode.width+'-'+status);
+    }
+    await evaluate(`(()=>{const {state,render}=window.__layoutModules;state.placeDetailId=${JSON.stringify(place.placeId)};state.currentView='place';render.render()})()`);await until(()=>evaluate('Boolean(document.querySelector(".place-detail-actions"))'));await pause(220);
+    await evaluate('document.querySelector(".place-detail-actions").scrollIntoView({block:"center",behavior:"instant"})');await pause(100);
+    const actions=await evaluate('(()=>{const g=document.querySelector(".place-detail-actions"),r=g.getBoundingClientRect(),photo=document.querySelector(".place-photo-section"),heading=document.getElementById("place-photo-heading"),buttons=[...g.querySelectorAll("button")],boxes=buttons.map(b=>b.getBoundingClientRect());return {position:getComputedStyle(g).position,inPhotos:photo.contains(g),aboveHeading:Boolean(g.compareDocumentPosition(heading)&Node.DOCUMENT_POSITION_FOLLOWING),heights:boxes.map(b=>b.height),topAligned:Math.abs(boxes[0].top-boxes[1].top)<1,ratio:boxes[0].width/boxes[1].width,visible:boxes.every(b=>b.width>=44&&b.left>=0&&b.right<=innerWidth),sceneIcon:buttons[1].querySelector("svg")?.outerHTML,labels:buttons.map(b=>b.getAttribute("aria-label"))}})()');
+    check(actions.position==='static','place actions still float '+mode.width);check(actions.inPhotos&&actions.aboveHeading,'place actions not directly above photos '+mode.width);check(actions.topAligned&&actions.heights.every(h=>h>=48)&&Math.abs(actions.ratio-1)<.01&&actions.visible,'place actions misaligned '+mode.width);check(actions.labels.every(Boolean),'compact actions lose accessible labels');check(Boolean(actions.sceneIcon?.includes('M2 12h10m-3-3 3 3-3 3')&&!actions.sceneIcon.includes('m13 8 6 4-6 4Z')),'scene entry lacks a clear entering arrow');
+    check(await evaluate('Math.abs(document.querySelector(".place-detail-actions").getBoundingClientRect().width-document.querySelector(".place-photo-section").getBoundingClientRect().width)<1'),'place actions do not align with photo section width '+mode.width);
+    await screenshot('place-actions-'+mode.width);
+    const before=await evaluate('document.querySelector(".place-detail-actions").getBoundingClientRect().top');await evaluate('window.scrollBy({top:80,behavior:"instant"})');await pause(80);const shifted=await evaluate('document.querySelector(".place-detail-actions").getBoundingClientRect().top');
+    check(Math.abs(before-shifted-80)<2,'place actions stay fixed when page scrolls '+mode.width);
+  }
+  await command('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await evaluate('document.documentElement.dataset.theme="light";document.body.classList.remove("large-text");window.__layoutModules.compact.setCompactMode(false,{persist:false})');
+  await tap('[data-action=open-place-scene]');await until(()=>evaluate('Boolean(document.querySelector(".scene-stage"))'));check(true,'actual scene entry works');
+  await tap('[data-action=leave-place-scene]');await until(()=>evaluate('Boolean(document.querySelector(".place-detail-actions"))'));
+  await tap('[data-action=add-to-plan]');await until(()=>evaluate('!document.getElementById("sheetBackdrop").hidden'));
+  check(await evaluate('document.getElementById("sheet").textContent.includes("确认加入")'),'actual add-to-plan entry no longer opens preview');await escape();
+  console.log(JSON.stringify({checks,defects,measurements,output},null,2));assert.deepEqual(defects,[]);
+}finally{socket?.close();browser.kill();server.closeAllConnections();await new Promise(resolve=>server.close(resolve))}

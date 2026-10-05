@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">星美术馆屋顶平台平面图</title>
+  <desc id="desc">依据让·努维尔事务所公开的平台层设计发展平面重绘，呈现长向屋顶公共平台、三个艺术展示平台及两端交通核心；不表示当前展品或开放情况。</desc>
+  <defs>
+    <pattern id="pave" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#dfe4df" stroke-width="1"/></pattern>
+    <filter id="shadow" x="-8%" y="-12%" width="116%" height="130%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#273c38" flood-opacity=".12"/></filter>
+  </defs>
+  <style>
+    .bg{fill:#f5f6f2}.title{font:700 32px 'Microsoft YaHei',sans-serif;fill:#243a36}.sub{font:16px 'Microsoft YaHei',sans-serif;fill:#687771}.small{font:14px 'Microsoft YaHei',sans-serif;fill:#62716b}.shell{fill:#fffefa;stroke:#3e534d;stroke-width:4}.edge{fill:none;stroke:#8b9991;stroke-width:2}.platform{fill:#e9efe7;stroke:#718178;stroke-width:2}.platform2{fill:#f1e5ce;stroke:#b39a6c;stroke-width:2}.core{fill:#e8e9e2;stroke:#728077;stroke-width:2}.gridline{stroke:#d6ddd7;stroke-width:1.3}.label{font:600 15px 'Microsoft YaHei',sans-serif;fill:#30453e;text-anchor:middle;dominant-baseline:central}.label2{font:600 12px 'Microsoft YaHei',sans-serif;fill:#4b5b54;text-anchor:middle;dominant-baseline:central}.panel{fill:#fff;stroke:#d9e0d9;stroke-width:2}.pt{font:700 18px 'Microsoft YaHei',sans-serif;fill:#30453e}.copy{font:14px 'Microsoft YaHei',sans-serif;fill:#52635b}.note{font:12px 'Microsoft YaHei',sans-serif;fill:#75827a}.north{font:700 13px 'Microsoft YaHei',sans-serif;fill:#53655b}.stair{stroke:#7e8c83;stroke-width:2}.guard{stroke:#a5b0a8;stroke-width:1.5}.river{fill:#e4eef0;stroke:#cddde0;stroke-width:1.5}
+  </style>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="title" x="48" y="54">星美术馆 · 屋顶平台</text>
+  <text class="sub" x="50" y="82">户外艺术展示平台 · 设计阶段平台层平面</text>
+  <rect x="48" y="120" width="832" height="488" rx="8" fill="url(#pave)"/>
+  <g filter="url(#shadow)">
+    <path class="shell" d="M104 284H832V318H858V447H832V482H104Z"/>
+    <path class="edge" d="M104 274H832V284M104 492H832V482"/>
+    <path class="platform" d="M128 300H813V466H128Z"/>
+    <path class="gridline" d="M150 300V466M790 300V466"/>
+    <rect class="platform2" x="252" y="322" width="132" height="112"/>
+    <rect class="platform2" x="455" y="332" width="88" height="96"/>
+    <rect class="platform2" x="617" y="322" width="142" height="112"/>
+    <path class="core" d="M106 305H151V370H106ZM106 397H151V460H106Z"/>
+    <path class="stair" d="M111 310l35 0M111 318l35 0M111 326l35 0M111 334l35 0M111 342l35 0M111 350l35 0M111 358l35 0M111 402l35 0M111 410l35 0M111 418l35 0M111 426l35 0M111 434l35 0M111 442l35 0M111 450l35 0"/>
+    <path class="core" d="M811 304H852V365H811ZM811 404H852V462H811Z"/>
+    <path class="stair" d="M816 310h31M816 318h31M816 326h31M816 334h31M816 342h31M816 350h31M816 358h31M816 410h31M816 418h31M816 426h31M816 434h31M816 442h31M816 450h31"/>
+    <path class="guard" d="M160 300V286M190 300V286M220 300V286M250 300V286M280 300V286M310 300V286M340 300V286M370 300V286M400 300V286M430 300V286M460 300V286M490 300V286M520 300V286M550 300V286M580 300V286M610 300V286M640 300V286M670 300V286M700 300V286M730 300V286M760 300V286M160 466V480M190 466V480M220 466V480M250 466V480M280 466V480M310 466V480M340 466V480M370 466V480M400 466V480M430 466V480M460 466V480M490 466V480M520 466V480M550 466V480M580 466V480M610 466V480M640 466V480M670 466V480M700 466V480M730 466V480M760 466V480"/>
+  </g>
+  <text class="label2" x="318" y="378">西侧展台</text>
+  <text class="label2" x="499" y="380">艺术平台</text>
+  <text class="label2" x="688" y="378">东侧展台</text>
+  <text class="label2" x="128" y="383" transform="rotate(-90 128 383)">西侧楼梯</text>
+  <text class="label2" x="831" y="384" transform="rotate(-90 831 384)">东侧楼梯</text>
+  <path class="river" d="M86 538H876V575H86Z"/>
+  <path d="M100 550H860M125 562H845" stroke="#b8ced1" stroke-width="1.4" stroke-dasharray="8 8"/>
+  <text class="label2" x="480" y="557">黄浦江滨水侧 · 方向参考</text>
+  <g transform="translate(862 156)"><text class="north" x="0" y="0">北</text><path d="M8 10L27 38M21 22l6 16 10-10" fill="none" stroke="#64766c" stroke-width="2"/><path d="M27 38l-1-10 9 5Z" fill="#64766c"/></g>
+  <rect class="panel" x="916" y="126" width="236" height="458" rx="18"/>
+  <text class="pt" x="940" y="166">平台索引</text>
+  <rect x="940" y="190" width="18" height="18" rx="3" fill="#e9efe7" stroke="#718178"/><text class="copy" x="970" y="204">开放式屋顶平台</text>
+  <rect x="940" y="226" width="18" height="18" rx="3" fill="#f1e5ce" stroke="#b39a6c"/><text class="copy" x="970" y="240">艺术展示台</text>
+  <rect x="940" y="262" width="18" height="18" rx="3" fill="#eaf1f3" stroke="#728077"/><text class="copy" x="970" y="276">楼梯与交通核心</text>
+  <path d="M940 302H1128" stroke="#e2e7e1" stroke-width="2"/>
+  <text class="pt" x="940" y="342">使用提示</text>
+  <text class="copy" x="940" y="382">设计图包含多处屋顶展示台，</text>
+  <text class="copy" x="940" y="408">不是当前展品摆放或游客动线。</text>
+  <text class="copy" x="940" y="434">请先核实屋顶开放安排。</text>
+  <text class="note" x="940" y="498">2022 设计发展图 · 非测绘</text>
+  <text class="note" x="940" y="522">屋顶开放以场馆公告为准</text>
+  <text class="small" x="48" y="704">Ateliers Jean Nouvel · Platform Floor Plan · 伴途本地重绘；不表示当前艺术装置、参观路线或开放边界</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

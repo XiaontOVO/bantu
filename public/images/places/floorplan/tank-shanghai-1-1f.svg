@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">上海油罐艺术中心一号罐一层平面图</title>
+  <desc id="desc">圆形储油罐壳体内加入鼓形声学体量，用于双层 Livehouse。图中只表示公开资料明确的体量关系。</desc>
+  <defs><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12L12 0" stroke="#bdc9c0" stroke-width="1.2"/></pattern><filter id="shadow" x="-8%" y="-8%" width="116%" height="120%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#263b35" flood-opacity=".12"/></filter></defs>
+  <style>.bg{fill:#f4f5f2}.title{font:700 32px 'Microsoft YaHei',sans-serif;fill:#263c38}.sub{font:16px 'Microsoft YaHei',sans-serif;fill:#687871}.shell{fill:#e8ece7;stroke:#465a52;stroke-width:5;filter:url(#shadow)}.ring{fill:#f9faf7;stroke:#839188;stroke-width:2}.core{fill:#ead7bd;stroke:#b67842;stroke-width:4}.label{font:700 24px 'Microsoft YaHei',sans-serif;fill:#364b43;text-anchor:middle;dominant-baseline:central}.small{font:16px 'Microsoft YaHei',sans-serif;fill:#677770;text-anchor:middle}.panel{fill:#fff;stroke:#d9e0da;stroke-width:2}.pt{font:700 19px 'Microsoft YaHei',sans-serif;fill:#31473d}.copy{font:15px 'Microsoft YaHei',sans-serif;fill:#586960}.note{font:13px 'Microsoft YaHei',sans-serif;fill:#74817a}.north{font:700 15px 'Microsoft YaHei',sans-serif;fill:#43584f;text-anchor:middle}</style>
+  <rect class="bg" width="1200" height="760"/><text class="title" x="48" y="54">油罐艺术中心 · 一号罐 · 1F</text><text class="sub" x="50" y="83">圆形原罐壳体内置鼓形声学空间</text>
+  <g transform="translate(755 108)"><text class="north" y="0">北</text><path d="M0 12v32m-6-15 6-17 6 17" fill="none" stroke="#43584f" stroke-width="2.5"/></g>
+  <circle class="shell" cx="410" cy="392" r="247"/><circle class="ring" cx="410" cy="392" r="190"/><circle class="core" cx="410" cy="392" r="148"/><circle cx="410" cy="392" r="77" fill="#f8eee1" stroke="#c18a5b" stroke-width="2"/>
+  <text class="label" x="410" y="370">Livehouse</text><text class="small" x="410" y="415">演出空间</text><text class="small" x="410" y="541">鼓形声学内置体量</text>
+  <rect class="panel" x="832" y="132" width="328" height="474" rx="20"/><text class="pt" x="864" y="177">图面识别</text><circle cx="879" cy="220" r="11" fill="#d9edf0" stroke="#465a52" stroke-width="3"/><text class="copy" x="902" y="225">原储油罐圆形壳体</text><circle cx="879" cy="266" r="11" fill="#eaf1f3" stroke="#b67842" stroke-width="3"/><text class="copy" x="902" y="271">中置演出单元</text><path d="M864 297H1128" stroke="#e2e7e1" stroke-width="2"/><text class="pt" x="864" y="339">建筑关系</text><text class="copy" x="864" y="379">公开设计资料确认一号罐为</text><text class="copy" x="864" y="405">双层 Livehouse，并加入鼓形</text><text class="copy" x="864" y="431">体量改善演出声学。</text><text class="note" x="864" y="548">未公开的隔断、楼梯与</text><text class="note" x="864" y="570">入口位置不作推断</text>
+  <text class="note" x="48" y="717">OPEN Architecture 设计资料 · 伴途本地重绘 · 轮廓比例为阅读示意，非测绘图</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

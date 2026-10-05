@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">上海儿童博物馆 1F 自绘平面图</title>
+  <desc id="desc">依据上海儿童博物馆官网一层彩色平面图重绘，保留生态水池、深海展区、船舱展区、序厅及天文厅的相对位置。</desc>
+  <defs><style>
+    text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#20384b}.canvas{fill:#f8f9f7}.shell{fill:#e4f3f7;stroke:#167fb0;stroke-width:8;stroke-linejoin:round}.wall{fill:none;stroke:#167fb0;stroke-width:7;stroke-linejoin:round}.zone{stroke:#fff;stroke-width:7;stroke-linejoin:round}.blue{fill:#a8d9ee}.green{fill:#c8e5b0}.yellow{fill:#ffe08c}.pink{fill:#f7cbd8}.lobby{fill:#d8eaf3}.label{font-size:26px;font-weight:650;text-anchor:middle;dominant-baseline:middle}.minor{font-size:19px;font-weight:600}.sub{font-size:15px;fill:#416275;text-anchor:middle}.floor{font-size:86px;font-weight:800;fill:#167fb0;text-anchor:end}.amenity{fill:#fff;stroke:#2389b4;stroke-width:3}.route{fill:none;stroke:#e29c3b;stroke-width:8;stroke-linecap:round;stroke-dasharray:1 15}.door{fill:#128156}.legend{font-size:15px;fill:#678092}
+  </style></defs>
+  <rect class="canvas" width="1200" height="700"/>
+  <text class="floor" x="1150" y="100">1F</text>
+  <!-- Ecological pool and the deep-sea gallery follow the round north wing on the official plan. -->
+  <path class="shell" d="M78 236A198 198 0 0 1 474 236L474 290Q468 345 414 363L346 376L282 355L221 376L153 358Q97 341 83 291Z"/>
+  <path class="zone green" d="M83 232A193 193 0 0 1 469 232Z"/>
+  <path class="zone blue" d="M111 239H445L451 292Q434 325 388 337L340 348L282 331L222 350L165 337Q123 324 111 294Z"/>
+  <path class="zone pink" d="M413 245Q457 253 469 290Q461 328 419 347L390 331Q418 296 413 245Z"/>
+  <path class="zone yellow" d="M111 323Q143 344 182 345L194 373L145 370Q111 359 98 340Z"/>
+  <text class="label" x="278" y="111">生态水池</text>
+  <text class="label" x="276" y="272">潜入深海</text>
+  <text class="sub" x="190" y="224">深海家族</text><text class="sub" x="357" y="224">深潜器</text>
+  <text class="sub" x="438" y="298">休息区</text><g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(147 354) scale(0.85)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g>
+  <!-- Ship gallery and central lobby are connected by the narrow passage shown on the floor guide. -->
+  <path class="shell" d="M104 379H278L310 403H428V462H481V626H106L82 603V415Z"/>
+  <path class="zone blue" d="M111 400H272L298 422H414V475H458V606H112L101 594V423Z"/>
+  <path class="zone" fill="#c3e1f0" d="M129 427H245V590H121V438Z"/>
+  <path class="zone" fill="#d6ecf5" d="M253 431H407V470H447V593H274V566H253Z"/>
+  <path class="zone yellow" d="M321 600H473V625H321Z"/>
+  <text class="label" x="190" y="486">进入船舱</text>
+  <text class="sub" x="182" y="530">船长驾驶室</text><text class="sub" x="181" y="562">海上龙卷风</text><text class="sub" x="326" y="500">船模景墙</text><text class="sub" x="337" y="555">造浪台</text>
+  <text class="sub" x="393" y="614">安全出口</text>
+  <path class="shell" d="M455 405H823V624H455V575H426V465H455Z"/>
+  <path class="zone lobby" d="M463 414H812V554H463Z"/>
+  <path class="zone yellow" d="M463 558H812V616H463Z"/>
+  <path class="zone" fill="#f5e7bd" d="M570 560H707V615H570Z"/>
+  <text class="label" x="633" y="488">序厅</text>
+  <text class="sub" x="516" y="585">出口</text><text class="sub" x="758" y="585">入口</text><text class="sub" x="638" y="585">服务台</text>
+  <text class="sub" x="711" y="438">地下城入口</text><text class="sub" x="520" y="438">礼品商店</text>
+  <path class="shell" d="M855 426H927V399A112 112 0 1 1 1151 399V551A112 112 0 0 1 927 551V526H855Z"/>
+  <path class="zone green" d="M935 403A104 104 0 1 1 1143 403V547A104 104 0 0 1 935 547Z"/>
+  <text class="label" x="1040" y="475">天文厅</text><text class="sub" x="1040" y="513">PLANETARIUM</text>
+  <path class="route" d="M639 548H482L435 510L409 472"/>
+  <circle class="door" cx="758" cy="624" r="9"/><text class="sub" x="758" y="654">主入口</text>
+  <text class="legend" x="42" y="674">伴途依据上海儿童博物馆官网楼层图重绘 · 展项与开放范围以现场为准 · 非测绘比例</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

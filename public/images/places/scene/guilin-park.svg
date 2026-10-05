@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">桂林公园 · 伴途原创园林场景</title>
+  <desc id="desc">以本地收录的桂林公园竹林月洞门与木构游廊照片为参考，组合白墙圆门、竹影、游廊和湖石。画面不是园内方位图或可通行路径。</desc>
+  <defs>
+    <linearGradient id="day" x2="0" y2="1"><stop stop-color="#cfe1d8"/><stop offset=".55" stop-color="#f3edcf"/><stop offset="1" stop-color="#d2d2a8"/></linearGradient>
+    <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#fff8e7"/><stop offset=".54" stop-color="#ebe9d7"/><stop offset="1" stop-color="#d0d6bf"/></linearGradient>
+    <linearGradient id="timber" x2="1" y2="0"><stop stop-color="#3a3b36"/><stop offset=".52" stop-color="#725047"/><stop offset="1" stop-color="#302f32"/></linearGradient>
+    <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#b7b99b"/><stop offset="1" stop-color="#d4c7a8"/></linearGradient>
+    <filter id="shade" x="-.2" y="-.2" width="1.4" height="1.5"><feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#435b4c" flood-opacity=".22"/></filter>
+    <mask id="moonHole"><rect width="1200" height="720" fill="white"/><circle cx="544" cy="381" r="157" fill="black"/></mask>
+    <clipPath id="moonView"><circle cx="544" cy="381" r="155"/></clipPath>
+    <g id="bamboo">
+      <path d="M0 160V-190M3 47l-70-105M1-34l78-98M-2-102l-50-75" fill="none" stroke="#53725c" stroke-width="11" stroke-linecap="round"/>
+      <path d="M-64-51q-40-24-65-12 25 26 65 31ZM-64-49q-3-39-29-53-8 31 29 53ZM-41-91q-13-45-37-57-3 28 37 57ZM12-109q30-39 57-37-11 30-57 37ZM24-89q43-22 67-9-19 26-67 28ZM-24-149q-34-23-58-12 22 25 58 29ZM9-158q25-34 52-33-8 28-52 33Z" fill="#639469"/>
+      <path d="M-87-60q26 18 40 17M24-100q29-10 48-7" fill="none" stroke="#a8c685" stroke-width="4" opacity=".6"/>
+    </g>
+    <g id="rock">
+      <path d="M0 76Q-14 40 0 20L17 15Q18-11 40-18l20 10Q75-21 94 7l-4 32 18 14-13 24Z" fill="#c8c9b7" stroke="#879386" stroke-width="5"/>
+      <path d="M18 15Q34 32 29 50M60-8Q49 24 63 41M90 16Q73 35 73 71" fill="none" stroke="#8e9c91" stroke-width="5" opacity=".74"/>
+      <path d="M-1 70q27-16 41 0M61 68q21-21 41 0" fill="none" stroke="#eff0d8" stroke-width="6" opacity=".7"/>
+    </g>
+  </defs>
+  <rect width="1200" height="720" fill="url(#day)"/>
+  <circle cx="744" cy="129" r="201" fill="#fff6db" opacity=".44"/>
+  <path d="M0 346Q189 294 323 331Q512 277 737 326Q969 278 1200 329V573H0Z" fill="#a5c09a"/>
+  <path d="M0 404Q208 341 347 385Q545 330 748 386Q1006 318 1200 390V591H0Z" fill="#719278"/>
+  <path d="M0 487Q242 423 459 451Q747 397 1200 445V720H0Z" fill="#507b65"/>
+  <!-- A layered view through the circular garden opening. -->
+  <g clip-path="url(#moonView)">
+    <path d="M358 259h373v339H358Z" fill="#acc99f"/>
+    <path d="M340 434Q466 379 575 402Q669 376 735 416V606H340Z" fill="#658c6b"/>
+    <path d="M548 433Q493 472 485 541Q469 580 440 610H652Q572 523 548 433Z" fill="#d8cfab"/>
+    <path d="M434 530h229v20H434Z" fill="#b6ac8e" opacity=".7"/>
+    <path d="M379 360Q474 321 566 353M565 352Q651 317 745 349" fill="none" stroke="#3f725e" stroke-width="25" opacity=".8"/>
+    <path d="M474 421v118M639 420v119" stroke="#627a5e" stroke-width="15"/>
+  </g>
+  <path d="M249 153Q517 134 793 161V577Q537 556 251 587Z" fill="url(#wall)" mask="url(#moonHole)" filter="url(#shade)"/>
+  <path d="M247 160Q518 142 794 165M245 174Q516 156 794 180" fill="none" stroke="#424c47" stroke-width="18"/>
+  <path d="M248 160Q518 144 794 167" fill="none" stroke="#7b8376" stroke-width="5"/>
+  <circle cx="544" cy="381" r="158" fill="none" stroke="#414d48" stroke-width="26"/>
+  <circle cx="544" cy="381" r="142" fill="none" stroke="#c8cabb" stroke-width="8"/>
+  <path d="M250 583Q545 552 795 575" fill="none" stroke="#a9b4a0" stroke-width="13"/>
+  <!-- The covered timber walkway is a separate photo view. -->
+  <g filter="url(#shade)">
+    <path d="M770 239Q978 196 1200 242V292Q988 259 770 281Z" fill="#353c3b" stroke="#283436" stroke-width="6"/>
+    <path d="M773 237Q985 191 1200 236M774 262Q992 222 1200 262" fill="none" stroke="#9ba294" stroke-width="8" opacity=".75"/>
+    <path d="M760 279h440v26H760Z" fill="#413b37"/>
+    <path d="M790 301v284M904 298v294M1042 300v301M1165 304v317" stroke="url(#timber)" stroke-width="24"/>
+    <path d="M779 351h421M779 509h421" stroke="#463c37" stroke-width="18"/>
+    <path d="M810 370v110M838 370v110M865 370v110M926 370v110M956 370v110M985 370v110M1064 370v110M1095 370v110M1126 370v110" stroke="#78584a" stroke-width="6"/>
+    <path d="M784 555h416v53H784Z" fill="#e1dac6" stroke="#8d9081" stroke-width="7"/>
+    <path d="M797 554h403v23H797Z" fill="#65473f"/>
+    <path d="M815 571v61M866 571v61M917 571v61M968 571v61M1019 571v61M1070 571v61M1121 571v61M1172 571v61" stroke="#60463f" stroke-width="9"/>
+    <path d="M812 628h388" stroke="#3a3835" stroke-width="11"/>
+  </g>
+  <path d="M0 570Q190 535 342 567Q565 542 765 576Q978 550 1200 581V720H0Z" fill="url(#ground)"/>
+  <path d="M279 581Q509 558 747 575L993 720H180Z" fill="#d5c8a8" opacity=".82"/>
+  <path d="M0 618Q200 570 347 598M785 599Q991 576 1200 623" fill="none" stroke="#e6dfbb" stroke-width="10" opacity=".8"/>
+  <g filter="url(#shade)"><use href="#rock" transform="translate(68 535) scale(1.24)"/><use href="#rock" transform="translate(753 561) scale(.8)"/></g>
+  <g><use href="#bamboo" transform="translate(143 440) scale(1.45)"/><use href="#bamboo" transform="translate(283 358) scale(.83)"/><use href="#bamboo" transform="translate(1161 393) scale(1.12)"/></g>
+  <path d="M0 0q126 61 213 18 88-42 146 18V0ZM990 0q127 51 210 12V0Z" fill="#55785c" opacity=".65"/>
+  <path d="M0 0h1200v720H0Z" fill="#fff9e5" opacity=".035"/>
+</svg>

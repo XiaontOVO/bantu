@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">武康大楼 · 伴途原创街角场景</title>
+  <desc id="desc">从武康路与淮海中路街角的外观照片汲取轮廓，绘制红砖立面、弧形转角、石质底层与树影。画面不是测绘图，也不代表可进入的室内空间。</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b9d9e5"/><stop offset=".62" stop-color="#f2e9d7"/><stop offset="1" stop-color="#f6d9ae"/></linearGradient>
+    <linearGradient id="brick" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a8584b"/><stop offset=".52" stop-color="#b96c55"/><stop offset="1" stop-color="#87453f"/></linearGradient>
+    <linearGradient id="brickSide" x2="1" y2=".3"><stop stop-color="#7e4340"/><stop offset="1" stop-color="#b96652"/></linearGradient>
+    <linearGradient id="stone" x2="0" y2="1"><stop stop-color="#d9d1ba"/><stop offset="1" stop-color="#a99e8e"/></linearGradient>
+    <linearGradient id="road" x2="0" y2="1"><stop stop-color="#757f81"/><stop offset="1" stop-color="#596a6b"/></linearGradient>
+    <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#d5ede8"/><stop offset=".5" stop-color="#547e87"/><stop offset="1" stop-color="#1c424f"/></linearGradient>
+    <filter id="shade" x="-.2" y="-.2" width="1.4" height="1.6"><feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#3b5553" flood-opacity=".23"/></filter>
+    <pattern id="masonry" width="46" height="19" patternUnits="userSpaceOnUse"><path d="M0 0H46M0 19H46M23 0V9M0 9H46M0 9V19M46 9V19" fill="none" stroke="#f0b395" stroke-opacity=".14" stroke-width="1.4"/></pattern>
+    <g id="bay"><path d="M0 0h44v57H0z" fill="#d9bda3" stroke="#68443c" stroke-width="3"/><path d="M5 6h34v45H5z" fill="url(#glass)" stroke="#342f35" stroke-width="3"/><path d="M22 6v45M5 28h34" stroke="#2a3f46" stroke-width="3"/><path d="M-5 57h54" stroke="#e3cdb2" stroke-width="5"/><path d="M-4 61h52" stroke="#7c4940" stroke-width="4"/></g>
+    <g id="arch"><path d="M0 74V29Q0 0 29 0t29 29v45" fill="#414c4d" stroke="#766b61" stroke-width="7"/><path d="M8 74V28Q8 9 29 9t21 19v46" fill="url(#glass)" stroke="#c8bfa9" stroke-width="3"/><path d="M29 11v63M9 38h40" stroke="#334e50" stroke-width="3"/></g>
+    <clipPath id="left"><path d="M84 435 464 240 511 255 477 592 84 615Z"/></clipPath>
+    <clipPath id="right"><path d="M770 259 1150 421 1150 608 797 587Z"/></clipPath>
+    <clipPath id="prow"><path d="M435 261Q563 201 679 209Q772 209 822 263L840 586Q635 623 432 589Z"/></clipPath>
+  </defs>
+  <rect width="1200" height="720" fill="url(#sky)"/>
+  <path d="M0 154Q158 108 302 158T562 139Q729 89 913 151T1200 130" fill="none" stroke="#fff" stroke-opacity=".33" stroke-width="39"/>
+  <circle cx="975" cy="147" r="127" fill="#fff8df" opacity=".46"/>
+  <path d="M0 490Q193 442 330 476T629 466Q854 423 1200 473V720H0Z" fill="#b2bba0"/>
+  <path d="M0 569Q194 529 436 553T836 529Q1010 500 1200 535V720H0Z" fill="#7d9d82"/>
+  <g filter="url(#shade)">
+    <path d="M84 435 464 240 511 255 477 592 84 615Z" fill="url(#brickSide)" stroke="#76463f" stroke-width="6"/>
+    <path d="M770 259 1150 421 1150 608 797 587Z" fill="url(#brickSide)" stroke="#71453f" stroke-width="6"/>
+    <path d="M435 261Q563 201 679 209Q772 209 822 263L840 586Q635 623 432 589Z" fill="url(#brick)" stroke="#753f38" stroke-width="7"/>
+    <g clip-path="url(#left)">
+      <path d="M55 462 476 245 495 291 60 502Z" fill="#d4c5ac"/>
+      <path d="M54 475 496 260M55 492 496 285" stroke="#8c7469" stroke-width="7"/>
+      <path d="M72 545 482 438M72 551 481 445" stroke="#e4b39a" stroke-width="5"/>
+      <g transform="translate(133 410) scale(.63 .87)"><use href="#bay"/><use href="#bay" x="93"/><use href="#bay" x="186"/><use href="#bay" x="279"/><use href="#bay" x="372"/></g>
+      <g transform="translate(118 475) scale(.72 .9)"><use href="#bay"/><use href="#bay" x="93"/><use href="#bay" x="186"/><use href="#bay" x="279"/><use href="#bay" x="372"/></g>
+      <path d="M65 543 490 483v132L67 645Z" fill="url(#stone)" stroke="#857a70" stroke-width="5"/>
+      <g transform="translate(106 542) scale(.78 .86)"><use href="#arch"/><use href="#arch" x="94"/><use href="#arch" x="188"/><use href="#arch" x="282"/><use href="#arch" x="376"/></g>
+    </g>
+    <g clip-path="url(#right)">
+      <path d="M776 273 1168 424v37L779 310Z" fill="#d9c9ae"/>
+      <path d="M785 480 1160 541M785 488 1160 549" stroke="#e3b398" stroke-width="6"/>
+      <g transform="translate(829 348) scale(.78 .9)"><use href="#bay"/><use href="#bay" x="84"/><use href="#bay" x="168"/><use href="#bay" x="252"/></g>
+      <g transform="translate(828 420) scale(.77 .9)"><use href="#bay"/><use href="#bay" x="84"/><use href="#bay" x="168"/><use href="#bay" x="252"/></g>
+      <path d="M790 517 1160 561v90L790 603Z" fill="url(#stone)" stroke="#8c8274" stroke-width="5"/>
+      <g transform="translate(830 536) scale(.74 .84)"><use href="#arch"/><use href="#arch" x="94"/><use href="#arch" x="188"/><use href="#arch" x="282"/></g>
+    </g>
+    <g clip-path="url(#prow)">
+      <path d="M432 256Q623 169 834 266v43Q653 236 434 310Z" fill="#d8c8b1"/>
+      <path d="M422 298Q638 214 837 300M421 312Q639 229 838 315" fill="none" stroke="#806d62" stroke-width="7"/>
+      <path d="M433 260h414v339H433z" fill="url(#masonry)"/>
+      <g transform="translate(480 305)"><use href="#bay"/><use href="#bay" x="74"/><use href="#bay" x="148"/><use href="#bay" x="222"/></g>
+      <g transform="translate(480 384)"><use href="#bay"/><use href="#bay" x="74"/><use href="#bay" x="148"/><use href="#bay" x="222"/></g>
+      <g transform="translate(480 463)"><use href="#bay"/><use href="#bay" x="74"/><use href="#bay" x="148"/><use href="#bay" x="222"/></g>
+      <path d="M421 283Q641 194 844 281M421 373Q640 290 844 374M421 452Q641 375 844 456" fill="none" stroke="#d7a68c" stroke-width="7"/>
+      <path d="M420 522Q632 468 843 527v95H420Z" fill="url(#stone)" stroke="#857a71" stroke-width="7"/>
+      <path d="M420 528Q627 471 843 530M420 543Q632 487 843 545" fill="none" stroke="#e8d8bb" stroke-width="9"/>
+      <g transform="translate(475 537)"><use href="#arch"/><use href="#arch" x="77"/><use href="#arch" x="154"/><use href="#arch" x="231"/></g>
+      <path d="M454 298Q645 223 816 297" fill="none" stroke="#f5e3c2" stroke-width="6"/>
+    </g>
+    <path d="M428 261Q594 177 732 214Q799 230 838 279" fill="none" stroke="#775b57" stroke-width="9"/>
+    <path d="M435 244Q575 176 695 184Q788 187 843 256" fill="none" stroke="#ded1b9" stroke-width="13"/>
+    <path d="M439 234Q601 159 724 181Q796 193 845 248" fill="none" stroke="#6f5e58" stroke-width="6"/>
+  </g>
+  <path d="M0 617Q245 584 435 612Q638 645 860 596Q1037 562 1200 584v136H0Z" fill="#c9bba1"/>
+  <path d="M0 650Q242 615 431 645Q647 681 876 628Q1055 595 1200 619v101H0Z" fill="url(#road)"/>
+  <path d="M0 655Q214 624 434 652T889 636Q1046 610 1200 631" fill="none" stroke="#f5e7c8" stroke-width="5" stroke-opacity=".72"/>
+  <g opacity=".72" fill="#f8f1dd"><path d="m141 691 72-9 47 20-90 10Z"/><path d="m274 675 67-6 62 27-85 10Z"/><path d="m414 669 67 1 68 31-81 7Z"/><path d="m570 675 68 3 59 28-81 6Z"/></g>
+  <g fill="#668f6b" opacity=".9"><circle cx="1102" cy="414" r="70"/><circle cx="1162" cy="378" r="90"/><circle cx="1012" cy="453" r="54"/></g>
+  <path d="M1131 487v125M1088 495l42 45" stroke="#655d4f" stroke-width="15"/>
+  <path d="M0 0h1200v720H0z" fill="#f9e9d7" opacity=".06"/>
+</svg>

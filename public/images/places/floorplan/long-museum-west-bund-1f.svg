@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">龙美术馆西岸馆 1F 首层平面图</title>
+  <desc id="desc">伴途依据大舍建筑公布的首层平面重绘。入口大厅、商店、当代艺术展厅、临展空间、餐厅与公共庭院围绕保留的煤斗桥组织。</desc>
+  <defs><filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#263942" flood-opacity=".13"/></filter><pattern id="trees" width="44" height="38" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="6" fill="#dbe5d3" stroke="#b9c8b0" stroke-width="1.2"/><circle cx="34" cy="28" r="5" fill="#e4ebdd" stroke="#c2ceb9" stroke-width="1.2"/></pattern></defs>
+  <style>
+    .bg{fill:#f3f2ed}.title{font:700 33px 'Microsoft YaHei',sans-serif;fill:#283d43}.sub{font:17px 'Microsoft YaHei',sans-serif;fill:#6d7b77}.shell{fill:#fff;stroke:#30454b;stroke-width:6;stroke-linejoin:round;filter:url(#shadow)}.room{stroke:#fff;stroke-width:5;stroke-linejoin:round}.gallery{fill:#e8d8c9}.gallery2{fill:#ddc6b3}.public{fill:#dce9e4}.service{fill:#e7ebe9}.garden{fill:#e7eddf}.courtyard{fill:#dfeadd;stroke:#94a78f;stroke-width:2.5}.wall{fill:none;stroke:#78847f;stroke-width:2.5}.label{font:700 17px 'Microsoft YaHei',sans-serif;fill:#293e43;text-anchor:middle;dominant-baseline:central}.small{font:15px 'Microsoft YaHei',sans-serif;fill:#677873;text-anchor:middle}.panel{fill:#fff;stroke:#d8dfd9;stroke-width:2}.panel-head{font:700 18px 'Microsoft YaHei',sans-serif;fill:#31464b}.panel-label{font:600 15px 'Microsoft YaHei',sans-serif;fill:#53645f}.note{font:14px 'Microsoft YaHei',sans-serif;fill:#687672}.north{font:700 14px 'Microsoft YaHei',sans-serif;fill:#42585a;text-anchor:middle}.tree{fill:#d5e0ce;stroke:#aebea5;stroke-width:1.5}.door{stroke:#438b84;stroke-width:8;stroke-linecap:round}
+  </style>
+  <rect class="bg" width="1200" height="760"/><text class="title" x="48" y="54">龙美术馆西岸馆 · 1F</text><text class="sub" x="50" y="84">入口大厅、当代展廊与公共庭院 · 建筑平面本地重绘</text>
+  <g transform="translate(875 69)"><text class="north" y="0">北</text><path d="M0 10v30m-6-12 6-18 6 18" fill="none" stroke="#42585a" stroke-width="2.5"/></g>
+  <path class="garden" d="M115 151 827 224 850 592 174 655 135 604Z" stroke="#81927e" stroke-width="3" stroke-linejoin="round"/>
+  <path fill="url(#trees)" d="M142 180 252 190 246 288 142 289Z"/><path fill="url(#trees)" d="M728 246 824 257 831 342 739 335Z"/><path fill="url(#trees)" d="M176 565 286 570 292 634 180 640Z"/><path fill="url(#trees)" d="M720 536 820 548 829 592 731 600Z"/>
+  <path class="shell" d="M250 221H728L820 285V526L753 589H282L238 547V311Z"/>
+  <path class="room service" d="M275 244H358V316H275Z"/>
+  <path class="room public" d="M364 244H430V365H364Z"/>
+  <path class="room gallery" d="M436 244H562V352H436Z"/>
+  <path class="room gallery2" d="M568 244H703V354H568Z"/>
+  <path class="room gallery" d="M704 244H769L794 278V414H704Z"/>
+  <path class="room public" d="M430 359H510V492H430Z"/>
+  <path class="courtyard" d="M514 360H622V492H514Z"/>
+  <path class="room gallery" d="M626 360H704V492H626Z"/>
+  <path class="room gallery2" d="M710 420H778V515H710Z"/>
+  <path class="room gallery" d="M369 497H506V560H369Z"/>
+  <path class="room public" d="M511 498H622V558H511Z"/>
+  <path class="room service" d="M628 498H706V558H628Z"/>
+  <path class="room service" d="M283 455H356V535H283Z"/>
+  <path class="room food" d="M283 538H359V574H283Z"/>
+  <path class="room service" d="M360 564H425V585H360Z"/>
+  <path class="room service" d="M706 560H752V585H706Z"/>
+  <path class="wall" d="M357 242V563M431 240V560M564 241V354M622 356V493M704 240V553M279 319H429M434 356H702M366 493H707M282 537H357"/>
+  <path class="room public" d="M213 305H252V567H213Z"/><path d="M226 307v257" stroke="#8c765f" stroke-width="2" stroke-dasharray="5 7"/>
+  <path class="door" d="M770 292h30"/><path class="door" d="M236 344v34"/>
+  <g><text class="small" x="740" y="338">美术馆入口</text></g>
+  <g><text class="small" x="396" y="300">入口大厅</text></g>
+  <g><text class="small" x="316" y="291"><tspan x="316" dy="-0.5em">艺术设计</tspan><tspan x="316" dy="1.15em">商店</tspan></text></g>
+  <g><text class="small" x="500" y="300">当代艺术展厅</text></g>
+  <g><text class="small" x="635" y="300">临时展厅</text></g>
+  <g><text class="small" x="470" y="428">公共门厅</text></g>
+  <text class="small" x="568" y="425">中庭 / 挑空</text>
+  <g><text class="small" x="665" y="432">当代展廊</text></g>
+  <g><text class="small" x="744" y="485">影像室</text></g>
+  <g><text class="small" x="432" y="545">临展空间</text></g>
+  <text class="small" x="565" y="533">展厅前厅</text><text class="small" x="668" y="531">服务区</text>
+  <text class="small" x="319" y="490">贵宾与后勤</text>
+  <g><text class="small" x="319" y="575">餐厅</text></g>
+  <text class="small" x="237" y="432">煤斗桥</text><text class="small" x="198" y="615">户外作品区</text>
+
+  <rect class="panel" x="890" y="144" width="270" height="458" rx="18"/><text class="panel-head" x="914" y="179">访客空间</text>
+  <rect x="914" y="199" width="20" height="14" rx="4" fill="#809bc5"/><text class="panel-label" x="944" y="211">当代与临时展厅</text>
+  <rect x="914" y="228" width="20" height="14" rx="4" fill="#a0bfd2"/><text class="panel-label" x="944" y="240">入口与公共门厅</text>
+  <rect x="914" y="257" width="20" height="14" rx="4" fill="#d7e6dd"/><text class="panel-label" x="944" y="269">庭院、草地与户外作品</text>
+  <path d="M914 294h220" stroke="#e1e5e0" stroke-width="2"/><text class="panel-head" x="914" y="328">空间关系</text>
+  <text class="panel-label" x="914" y="360">煤斗桥接入西侧公共空间</text>
+  <text class="panel-label" x="914" y="389">大厅连接入口、商店与展廊</text>
+  <text class="panel-label" x="914" y="418">展厅环绕中庭与挑空布置</text>
+  <text class="note" x="914" y="555">园林与楼层边界按公开</text><text class="note" x="914" y="578">设计平面关系整理。</text>
+  <text class="note" x="48" y="718">依据大舍建筑公开首层平面重绘 · 楼层边界与房间尺寸为方向参考 · 以馆内指引为准</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

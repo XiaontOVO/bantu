@@ -1,0 +1,27 @@
+{
+    "name": "bantu-trip",
+    "version": "0.1.0",
+    "private": true,
+    "description": "伴途 · 智能旅游伴侣 - 核心领域与 Web 原型",
+    "type": "module",
+    "scripts": {
+        "build:test": "tsc -p tsconfig.build.json",
+        "test": "npm run build:test && node scripts/run-tests.mjs",
+        "typecheck": "tsc --noEmit",
+        "build": "tsc -p tsconfig.build.json",
+        "start": "npm run build:test && node dist/src/server/main.js",
+        "smoke": "npm run build:test && node scripts/smoke.mjs",
+        "recovery": "npm run build:test && node scripts/backup-recovery.mjs",
+        "check": "npm run typecheck && npm test"
+    },
+    "devDependencies": {
+        "@types/node": "^22.20.3",
+        "tsx": "^4.23.13",
+        "typescript": "^5.9.3"
+    },
+    "dependencies": {
+        "gcoord": "^1.0.7",
+        "leaflet": "^1.9.4",
+        "markdown-it": "^15.0.2"
+    }
+}

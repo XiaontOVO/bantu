@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">上海自然博物馆 L2 楼层平面图</title>
+  <desc id="desc">伴途依据上海自然博物馆官方楼层导览重绘。起源之谜位于西北展翼，四维影院位于东侧展区，中央为穹顶与环形公共空间。</desc>
+  <defs><filter id="shadow" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#293e4a" flood-opacity=".13"/></filter></defs>
+  <style>
+    .bg{fill:#f4f6f5}.shell{fill:#fff;stroke:#334750;stroke-width:8;stroke-linejoin:round;filter:url(#shadow)}.zone{stroke:#fff;stroke-width:8;stroke-linejoin:round}.gallery{fill:#c6d4e6}.deep{fill:#91aacb}.service{fill:#dce5e6}.public{fill:#e3ece9}.dome{fill:#f6f4ed;stroke:#b8c7c6;stroke-width:4}.ring{fill:none;stroke:#dce4df;stroke-width:34}.title{font:700 34px 'Microsoft YaHei',sans-serif;fill:#263e49}.sub{font:18px 'Microsoft YaHei',sans-serif;fill:#74817e}.label{font:650 22px 'Microsoft YaHei',sans-serif;fill:#263e49;text-anchor:middle;dominant-baseline:central}.small{font:16px 'Microsoft YaHei',sans-serif;fill:#536c78;text-anchor:middle}.num{font:700 15px system-ui,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:central}.dot{fill:#55789a}.north{font:700 16px system-ui,sans-serif;fill:#455b60;text-anchor:middle}.note{font:15px 'Microsoft YaHei',sans-serif;fill:#78837d}.core{fill:#fff;stroke:#9bafb0;stroke-width:2}
+  </style>
+  <rect class="bg" width="1200" height="760"/>
+  <text class="title" x="54" y="62">上海自然博物馆 · L2</text><text class="sub" x="55" y="93">起源之谜　/　穹顶与展翼空间</text>
+  <g transform="translate(1118 56)"><text class="north" y="0">N</text><path d="M0 9v32m-7-11 7-21 7 21" fill="none" stroke="#455b60" stroke-width="2.5"/></g>
+  <path class="shell" d="M167 232C218 146 357 126 478 170C544 112 698 122 795 163C916 183 1032 275 1056 390C1085 522 1002 608 895 641C791 673 704 614 618 606C524 596 460 665 354 646C235 626 142 548 133 432C127 349 127 295 167 232Z"/>
+  <path class="zone gallery" d="M188 246C237 184 332 165 436 191L493 306C454 335 423 373 411 416L257 425C194 384 164 314 188 246Z"/>
+  <path class="zone deep" d="M725 194C836 176 947 240 997 326L866 363C838 313 787 275 717 264Z"/>
+  <path class="zone public" d="M238 443L412 431C421 490 467 536 527 555L480 615C383 626 287 576 238 512Z"/>
+  <path class="zone service" d="M846 393L1003 361C1036 451 1000 534 927 584L817 534C852 496 864 445 846 393Z"/>
+  <ellipse class="ring" cx="641" cy="408" rx="182" ry="144"/><ellipse class="dome" cx="641" cy="408" rx="143" ry="108"/>
+  <path d="M467 321C505 284 556 263 610 259" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/><path d="M462 494C499 538 551 562 603 563" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/><path d="M815 323C845 356 855 410 841 454" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+  <g><circle class="dot" cx="253" cy="265" r="15"/><text class="num" x="253" y="265">01</text><text class="label" x="330" y="314">起源之谜</text><text class="small" x="330" y="349">宇宙与生命起源展区</text></g>
+  <g><circle class="dot" cx="897" cy="276" r="15"/><text class="num" x="897" y="276">02</text><text class="label" x="889" y="319">四维影院</text><text class="small" x="889" y="354">沉浸式科普放映</text></g>
+  <g><rect class="core" x="589" y="384" width="104" height="48" rx="14"/><text class="small" x="641" y="413">中央穹顶</text></g>
+  <g><rect class="core" x="518" y="178" width="74" height="38" rx="10"/><text class="small" x="555" y="202">楼梯 · 电梯</text><rect class="core" x="642" y="576" width="84" height="38" rx="10"/><text class="small" x="684" y="600">公共通廊</text></g>
+  <text class="note" x="55" y="733">馆方楼层导览的展区关系本地重绘 · 房间边界与尺寸非测绘</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

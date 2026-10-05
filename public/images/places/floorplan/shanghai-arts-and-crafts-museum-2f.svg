@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">上海工艺美术博物馆二层平面图</title>
+  <desc id="desc">依据 2019 年公开主楼平面图重绘，标明中央综合展厅、东西展厅、雕刻与玉雕展厅及楼梯。</desc>
+  <defs><filter id="shadow" x="-8%" y="-8%" width="116%" height="120%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#263b35" flood-opacity=".12"/></filter></defs>
+  <style>.bg{fill:#f4f5f2}.title{font:700 32px 'Microsoft YaHei',sans-serif;fill:#263c38}.sub{font:16px 'Microsoft YaHei',sans-serif;fill:#687871}.shell{fill:#fffefa;stroke:#465a52;stroke-width:2.7;filter:url(#shadow)}.room{stroke:#78857c;stroke-width:1.6}.gallery{fill:#e6eadd}.gallery2{fill:#e8e3d8}.service{fill:#eee9df}.hall{fill:#edf1e9}.label{font:600 8px 'Microsoft YaHei',sans-serif;fill:#34483f;text-anchor:middle;dominant-baseline:central}.label-small{font:600 7px 'Microsoft YaHei',sans-serif;fill:#34483f;text-anchor:middle;dominant-baseline:central}.small{font:15px 'Microsoft YaHei',sans-serif;fill:#687871}.panel{fill:#fff;stroke:#d9e0da;stroke-width:2}.pt{font:700 18px 'Microsoft YaHei',sans-serif;fill:#31473d}.copy{font:14px 'Microsoft YaHei',sans-serif;fill:#586960}.note{font:12px 'Microsoft YaHei',sans-serif;fill:#74817a}.door{stroke:#c4783d;stroke-width:4;stroke-linecap:round}</style>
+  <rect class="bg" width="1200" height="760"/><text class="title" x="48" y="54">上海工艺美术博物馆 · 2F</text><text class="sub" x="50" y="82">东西展厅与中央综合展厅 · 按公开主楼平面重绘</text>
+  <g transform="translate(53 126) scale(2.3)">
+    <path class="shell" d="M47 103H118V63H184V55H240V76H344V200H268V169H194V212H148V169H55V185H29V137H47Z"/>
+    <path class="room gallery" d="M150 89H202V160L176 176L150 160Z"/><text class="label" x="176" y="126">综合展厅</text>
+    <rect class="room gallery" x="68" y="100" width="78" height="42"/><text class="label" x="107" y="121">西展厅</text>
+    <rect class="room gallery" x="207" y="99" width="71" height="46"/><text class="label" x="242.5" y="122">东展厅</text>
+    <rect class="room gallery2" x="280" y="81" width="64" height="47"/><text class="label-small" x="312" y="104.5">雕刻展厅</text>
+    <rect class="room gallery2" x="280" y="131" width="64" height="48"/><text class="label-small" x="312" y="155">玉雕展厅</text>
+    <rect class="room service" x="58" y="142" width="78" height="40"/><text class="label" x="97" y="162">贵宾室</text>
+    <rect class="room hall" x="150" y="66" width="56" height="20"/><path d="M155 69v14m7-14v14m7-14v14m7-14v14m7-14v14m7-14v14m7-14v14" stroke="#77847b" stroke-width="1.5"/><text class="label-small" x="178" y="76">楼梯</text>
+    <path class="door" d="M160 212h28"/><text class="label-small" x="174" y="222">入口</text>
+  </g>
+  <rect class="panel" x="930" y="126" width="230" height="466" rx="18"/><text class="pt" x="954" y="165">展区索引</text><rect x="954" y="187" width="18" height="18" rx="3" fill="#809bc5" stroke="#78857c"/><text class="copy" x="984" y="201">东西与综合展厅</text><rect x="954" y="222" width="18" height="18" rx="3" fill="#b7c9dc" stroke="#78857c"/><text class="copy" x="984" y="236">雕刻与玉雕展厅</text><rect x="954" y="257" width="18" height="18" rx="3" fill="#eaf1f3" stroke="#78857c"/><text class="copy" x="984" y="271">独立接待空间</text><path d="M954 294H1136" stroke="#e2e7e1" stroke-width="2"/><text class="pt" x="954" y="333">交通关系</text><text class="copy" x="954" y="372">从南侧入口进入中央</text><text class="copy" x="954" y="397">综合展厅，楼梯设在</text><text class="copy" x="954" y="422">北侧，展厅分布于两翼。</text><text class="note" x="954" y="520">依据 2019 年公开平面图</text><text class="note" x="954" y="542">现状以场馆现场为准</text>
+  <text class="small" x="48" y="714">上海工艺美术博物馆主楼平面图（2019）· 伴途本地重绘 · 非当前测绘图</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

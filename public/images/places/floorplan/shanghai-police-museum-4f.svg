@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1188.1" viewBox="0 0 1200 1188.1" role="img" aria-labelledby="title desc">
+ <title id="title">上海公安博物馆 4F 平面示意图</title><desc id="desc">依据公开 VR 导览房间坐标重绘楼层轮廓、展区与交通空间。静态平面图不表示用户实时位置，开放布局以现场为准。</desc>
+ <style>.title{font-size:30px;font-weight:650;fill:#223a50}.sub{font-size:15px;fill:#637c92}.note{font-size:13px;fill:#637c92}</style>
+ <rect class="canvas" width="1200" height="1188.1"/>
+ <text class="title" x="58" y="59">上海公安博物馆</text><text class="sub" x="60" y="89">依据公开 VR 导览轮廓重绘 · 展区与公共通行空间</text>
+ <g aria-label="4F"><rect class="floor-badge" x="1066" y="35" width="86" height="44" rx="12"/><text class="floor-text" x="1109" y="58" text-anchor="middle" dominant-baseline="central" style="font-size:25px">4F</text></g>
+ <g transform="translate(102 114)"><defs>
+    <style>
+      .paper{fill:#f5f6f5}.zone{stroke:#f5f6f5;stroke-width:9;stroke-linejoin:round}
+      .exhibit{fill:#809bc5}.passage{fill:#d9edf0}.stair{fill:#a0bfd2}.exit{fill:#287c57}.wc{fill:#e8f0f2}
+      .wall{fill:none;stroke:#748aa8;stroke-width:2.8;stroke-linejoin:round;stroke-linecap:round}
+      .label{fill:#223a50;text-anchor:middle;dominant-baseline:central;font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;paint-order:stroke;stroke:#f5f6f5;stroke-width:3px;stroke-linejoin:round}.label.passage{fill:#47667d}.label.exit{fill:#fff;stroke:none}
+      .entry-marker rect{fill:#287c57}.entry-marker text{fill:#fff;font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:21px;font-weight:700;text-anchor:middle;dominant-baseline:central}.entry-marker path{fill:none;stroke:#287c57;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .floor-badge{fill:#23383d}.floor-text{fill:#fff;font-family:system-ui,sans-serif;font-size:14px;font-weight:700;letter-spacing:.08em}
+      .scale-note{fill:#738185;font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:12px}
+    </style>
+  </defs>
+  
+  <g aria-label="根据公开导览房间坐标绘制的平面轮廓">
+    <path class="zone exhibit" d="M48.0 48.0 L948.0 48.0 L948.0 269.8 L655.9 269.8 L655.9 467.5 L420.8 467.5 L353.8 467.5 L202.2 467.5 L48.0 467.5 Z"/>
+    <path class="zone passage" d="M375.8 567.5 L420.8 567.5 L420.8 643.8 L739.1 643.8 L739.1 693.1 L655.9 693.1 L503.9 693.1 L420.8 693.1 L344.3 693.1 L344.3 643.8 L375.8 643.8 Z"/>
+    <path class="zone exhibit" d="M48.0 925.1 L48.0 791.5 L48.0 643.8 L344.3 643.8 L344.3 693.1 L420.8 693.1 L503.9 693.1 L655.9 693.1 L655.9 925.1 Z"/>
+    <path class="zone exhibit" d="M948.0 925.1 L655.9 925.1 L655.9 693.1 L739.1 693.1 L739.1 643.8 L739.1 467.5 L655.9 467.5 L655.9 269.8 L948.0 269.8 L948.0 467.5 Z"/>
+    <path class="zone exit" d="M202.2 467.5 L353.8 467.5 L420.8 467.5 L420.8 567.5 L375.8 567.5 L202.2 567.5 Z"/>
+    <path class="zone wc" d="M420.8 467.5 L655.9 467.5 L739.1 467.5 L739.1 643.8 L420.8 643.8 L420.8 567.5 Z"/>
+    <path class="wall" d="M48.0 48.0 L948.0 48.0 L948.0 269.8 L655.9 269.8 L655.9 467.5 L420.8 467.5 L353.8 467.5 L202.2 467.5 L48.0 467.5 Z"/>
+    <path class="wall" d="M375.8 567.5 L420.8 567.5 L420.8 643.8 L739.1 643.8 L739.1 693.1 L655.9 693.1 L503.9 693.1 L420.8 693.1 L344.3 693.1 L344.3 643.8 L375.8 643.8 Z"/>
+    <path class="wall" d="M48.0 925.1 L48.0 791.5 L48.0 643.8 L344.3 643.8 L344.3 693.1 L420.8 693.1 L503.9 693.1 L655.9 693.1 L655.9 925.1 Z"/>
+    <path class="wall" d="M948.0 925.1 L655.9 925.1 L655.9 693.1 L739.1 693.1 L739.1 643.8 L739.1 467.5 L655.9 467.5 L655.9 269.8 L948.0 269.8 L948.0 467.5 Z"/>
+    <path class="wall" d="M202.2 467.5 L353.8 467.5 L420.8 467.5 L420.8 567.5 L375.8 567.5 L202.2 567.5 Z"/>
+    <path class="wall" d="M420.8 467.5 L655.9 467.5 L739.1 467.5 L739.1 643.8 L420.8 643.8 L420.8 567.5 Z"/>
+    <text class="label exhibit" x="260.3" y="257.8" font-size="27" font-weight="650" fill="#34474a">消防管理馆</text>
+    <text class="label passage" x="400.2" y="663.5" font-size="27" font-weight="500" fill="#58686b">过道</text>
+    <text class="label exhibit" x="191.4" y="784.4" font-size="27" font-weight="650" fill="#34474a">警务交流馆</text>
+    <text class="label exhibit" x="818.5" y="795.3" font-size="27" font-weight="650" fill="#34474a">警用装备馆</text>
+    <text class="label exit" x="253.7" y="517.5" font-size="27" font-weight="650" fill="#34474a">出入口</text>
+    <g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(513.9 555.6) scale(1.4)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g>
+  </g>
+
+  
+</g>
+ <path d="M60 1098.1H1140" stroke="#d8e0e4"/>
+ <rect x="60" y="1121.1" width="15" height="15" rx="3" fill="#809bc5"/><text class="note" x="86" y="1133.1">展区</text>
+ <rect x="165" y="1121.1" width="15" height="15" rx="3" fill="#a0bfd2"/><text class="note" x="191" y="1133.1">通行空间</text>
+ <rect x="320" y="1121.1" width="15" height="15" rx="3" fill="#287c57"/><text class="note" x="346" y="1133.1">入口 / 出口</text>
+ <text class="note" x="490" y="1133.1">非测绘比例 · 以现场为准</text><g class="restroom-marker" role="img" aria-label="卫生间" transform="translate(955 1130.1) scale(1)"><rect class="restroom-backplate" x="-43" y="-15" width="86" height="30" rx="7"/><g class="restroom-pictogram" transform="translate(-30 -10)"><circle cx="-3" cy="3" r="2"/><circle cx="7" cy="3" r="2"/><path d="M-6 7h6v6h-1v6h-2v-6h-1v6h-2V7ZM7 7l4 8H9v4H7v-4H5v4H3v-4H1l4-8Z"/></g><text class="restroom-caption" x="12" y="1">卫生间</text></g><text class="note" x="1100" y="1133.1" text-anchor="end">已核实</text>
+ <style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.5px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.3px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "name": "伴途 · 智能旅游伴侣",
+  "short_name": "伴途",
+  "description": "旅行中局部调整的智能伴侣原型",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f9fc",
+  "theme_color": "#365de8",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

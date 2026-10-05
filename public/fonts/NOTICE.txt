@@ -1,0 +1,11 @@
+Bantu Collection Serif
+Copyright (c) 2017-2024 Adobe.
+
+Derivative glyph subsets of Noto Serif CJK SC Medium.
+Licensed under the SIL Open Font License 1.1, distributed alongside this notice.
+Source: notofonts/noto-cjk, Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Medium.otf.
+Build: scripts/build-achievement-font.py. Original copyright and license records remain in the font metadata.
+
+The small title subset covers the current local catalogue and collection headings.
+The broader subset covers GB2312 and local catalogue text; missing glyphs use the device font.
+Both are served from this application; no external font service is used at runtime.

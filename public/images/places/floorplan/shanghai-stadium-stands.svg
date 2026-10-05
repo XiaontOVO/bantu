@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 960" role="img" aria-labelledby="title desc">
+  <title id="title">上海体育场看台层与场芯导引平面图</title>
+  <desc id="desc">伴途依据徐汇区政府 2025 年观演指南本地重绘上海体育场看台平面，标出 01 至 32 号看台区域、七组扶梯、主看台与场芯。场次入口和现场开放情况以当日指引为准。</desc>
+  <defs>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="130%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#3b4f55" flood-opacity=".12"/></filter>
+    <style>
+      text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif;fill:#34474b}
+      .title{font-size:27px;font-weight:750;letter-spacing:1px}.subtitle{font-size:13px;fill:#748286}.section{font-size:14px;font-weight:700;fill:#52656a}.tiny{font-size:11px;fill:#7b898b}.sector-number{font-size:14px;font-weight:700;fill:#52646a}.stair-connector{fill:none;stroke:#9ba9aa;stroke-width:2;stroke-dasharray:4 5}.stair-tag{fill:#fffefa;stroke:#9babad;stroke-width:1.5}.stair-index{font-size:12px;font-weight:750}.route-chip{fill:#fffefa;stroke:#d9dfdc;stroke-width:1}.route-text{font-size:11px;font-weight:650}.route-detail{font-size:10px;fill:#68777a}
+    </style>
+  </defs>
+  <rect width="1060" height="960" rx="26" fill="#f7f8f5"/>
+  <text x="46" y="52" class="title">上海体育场 · 看台层</text>
+  <text x="46" y="78" class="subtitle">看台 01–32　·　观众扶梯 1–7　·　场芯与观众席导引</text>
+  <g transform="translate(1000 45)" aria-label="北"><text x="0" y="0" text-anchor="middle" class="tiny">北</text><path d="M0 9v25m-6-10 6-15 6 15" fill="none" stroke="#586b6e" stroke-width="2"/></g>
+  <g filter="url(#shadow)">
+    <ellipse cx="525" cy="474" rx="301" ry="352" fill="#edf0ed" stroke="#708084" stroke-width="4"/>
+    <ellipse cx="525" cy="474" rx="288" ry="338" fill="#fafbf8" stroke="#d5ddda" stroke-width="2"/>
+    <g aria-label="01 至 32 号看台区域">
+  <path d="M256.3 505.4 A270 320 0 0 1 256.3 442.6 L335.9 451.9 A190 225 0 0 0 335.9 496.1 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="295" y="479" class="sector-number" text-anchor="middle">01</text>
+  <path d="M266.6 566.9 A270 320 0 0 1 256.3 505.4 L335.9 496.1 A190 225 0 0 0 343.2 539.3 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="299.4" y="532.1" class="sector-number" text-anchor="middle">02</text>
+  <path d="M286.9 624.8 A270 320 0 0 1 266.6 566.9 L343.2 539.3 A190 225 0 0 0 357.4 580.1 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="312.5" y="583.1" class="sector-number" text-anchor="middle">03</text>
+  <path d="M316.3 677 A270 320 0 0 1 286.9 624.8 L357.4 580.1 A190 225 0 0 0 378.1 616.7 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="333.8" y="630.1" class="sector-number" text-anchor="middle">04</text>
+  <path d="M353.7 721.4 A270 320 0 0 1 316.3 677 L378.1 616.7 A190 225 0 0 0 404.5 647.9 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="362.4" y="671.3" class="sector-number" text-anchor="middle">05</text>
+  <path d="M397.7 756.2 A270 320 0 0 1 353.7 721.4 L404.5 647.9 A190 225 0 0 0 435.4 672.4 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="397.2" y="705.2" class="sector-number" text-anchor="middle">06</text>
+  <path d="M446.6 780.2 A270 320 0 0 1 397.7 756.2 L435.4 672.4 A190 225 0 0 0 469.8 689.3 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="437" y="730.3" class="sector-number" text-anchor="middle">07</text>
+  <path d="M498.5 792.5 A270 320 0 0 1 446.6 780.2 L469.8 689.3 A190 225 0 0 0 506.4 697.9 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="480.1" y="745.8" class="sector-number" text-anchor="middle">08</text>
+  <path d="M551.5 792.5 A270 320 0 0 1 498.5 792.5 L506.4 697.9 A190 225 0 0 0 543.6 697.9 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="525" y="751" class="sector-number" text-anchor="middle">09</text>
+  <path d="M603.4 780.2 A270 320 0 0 1 551.5 792.5 L543.6 697.9 A190 225 0 0 0 580.2 689.3 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="569.9" y="745.8" class="sector-number" text-anchor="middle">10</text>
+  <path d="M652.3 756.2 A270 320 0 0 1 603.4 780.2 L580.2 689.3 A190 225 0 0 0 614.6 672.4 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="613" y="730.3" class="sector-number" text-anchor="middle">11</text>
+  <path d="M696.3 721.4 A270 320 0 0 1 652.3 756.2 L614.6 672.4 A190 225 0 0 0 645.5 647.9 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="652.8" y="705.2" class="sector-number" text-anchor="middle">12</text>
+  <path d="M733.7 677 A270 320 0 0 1 696.3 721.4 L645.5 647.9 A190 225 0 0 0 671.9 616.7 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="687.6" y="671.3" class="sector-number" text-anchor="middle">13</text>
+  <path d="M763.1 624.8 A270 320 0 0 1 733.7 677 L671.9 616.7 A190 225 0 0 0 692.6 580.1 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="716.2" y="630.1" class="sector-number" text-anchor="middle">14</text>
+  <path d="M783.4 566.9 A270 320 0 0 1 763.1 624.8 L692.6 580.1 A190 225 0 0 0 706.8 539.3 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="737.5" y="583.1" class="sector-number" text-anchor="middle">15</text>
+  <path d="M793.7 505.4 A270 320 0 0 1 783.4 566.9 L706.8 539.3 A190 225 0 0 0 714.1 496.1 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="750.6" y="532.1" class="sector-number" text-anchor="middle">16</text>
+  <path d="M793.7 442.6 A270 320 0 0 1 793.7 505.4 L714.1 496.1 A190 225 0 0 0 714.1 451.9 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="755" y="479" class="sector-number" text-anchor="middle">17</text>
+  <path d="M783.4 381.1 A270 320 0 0 1 793.7 442.6 L714.1 451.9 A190 225 0 0 0 706.8 408.7 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="750.6" y="425.9" class="sector-number" text-anchor="middle">18</text>
+  <path d="M763.1 323.2 A270 320 0 0 1 783.4 381.1 L706.8 408.7 A190 225 0 0 0 692.6 367.9 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="737.5" y="374.9" class="sector-number" text-anchor="middle">19</text>
+  <path d="M733.7 271 A270 320 0 0 1 763.1 323.2 L692.6 367.9 A190 225 0 0 0 671.9 331.3 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="716.2" y="327.9" class="sector-number" text-anchor="middle">20</text>
+  <path d="M696.3 226.6 A270 320 0 0 1 733.7 271 L671.9 331.3 A190 225 0 0 0 645.5 300.1 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="687.6" y="286.7" class="sector-number" text-anchor="middle">21</text>
+  <path d="M652.3 191.8 A270 320 0 0 1 696.3 226.6 L645.5 300.1 A190 225 0 0 0 614.6 275.6 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="652.8" y="252.8" class="sector-number" text-anchor="middle">22</text>
+  <path d="M603.4 167.8 A270 320 0 0 1 652.3 191.8 L614.6 275.6 A190 225 0 0 0 580.2 258.7 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="613" y="227.7" class="sector-number" text-anchor="middle">23</text>
+  <path d="M551.5 155.5 A270 320 0 0 1 603.4 167.8 L580.2 258.7 A190 225 0 0 0 543.6 250.1 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="569.9" y="212.2" class="sector-number" text-anchor="middle">24</text>
+  <path d="M498.5 155.5 A270 320 0 0 1 551.5 155.5 L543.6 250.1 A190 225 0 0 0 506.4 250.1 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="525" y="207" class="sector-number" text-anchor="middle">25</text>
+  <path d="M446.6 167.8 A270 320 0 0 1 498.5 155.5 L506.4 250.1 A190 225 0 0 0 469.8 258.7 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="480.1" y="212.2" class="sector-number" text-anchor="middle">26</text>
+  <path d="M397.7 191.8 A270 320 0 0 1 446.6 167.8 L469.8 258.7 A190 225 0 0 0 435.4 275.6 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="437" y="227.7" class="sector-number" text-anchor="middle">27</text>
+  <path d="M353.7 226.6 A270 320 0 0 1 397.7 191.8 L435.4 275.6 A190 225 0 0 0 404.5 300.1 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="397.2" y="252.8" class="sector-number" text-anchor="middle">28</text>
+  <path d="M316.3 271 A270 320 0 0 1 353.7 226.6 L404.5 300.1 A190 225 0 0 0 378.1 331.3 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="362.4" y="286.7" class="sector-number" text-anchor="middle">29</text>
+  <path d="M286.9 323.2 A270 320 0 0 1 316.3 271 L378.1 331.3 A190 225 0 0 0 357.4 367.9 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="333.8" y="327.9" class="sector-number" text-anchor="middle">30</text>
+  <path d="M266.6 381.1 A270 320 0 0 1 286.9 323.2 L357.4 367.9 A190 225 0 0 0 343.2 408.7 Z" fill="#f0f1ed" stroke="#ffffff" stroke-width="2"/>
+  <text x="312.5" y="374.9" class="sector-number" text-anchor="middle">31</text>
+  <path d="M256.3 442.6 A270 320 0 0 1 266.6 381.1 L343.2 408.7 A190 225 0 0 0 335.9 451.9 Z" fill="#e7ecea" stroke="#ffffff" stroke-width="2"/>
+  <text x="299.4" y="425.9" class="sector-number" text-anchor="middle">32</text>
+    </g>
+    <ellipse cx="525" cy="474" rx="270" ry="320" fill="none" stroke="#748286" stroke-width="2"/>
+    <ellipse cx="525" cy="474" rx="256" ry="304" fill="none" stroke="#c5ceca" stroke-width="1"/>
+    <ellipse cx="525" cy="474" rx="242" ry="288" fill="none" stroke="#d2d9d5" stroke-width="1"/>
+    <ellipse cx="525" cy="474" rx="228" ry="272" fill="none" stroke="#d2d9d5" stroke-width="1"/>
+    <ellipse cx="525" cy="474" rx="214" ry="256" fill="none" stroke="#d2d9d5" stroke-width="1"/>
+    <ellipse cx="525" cy="474" rx="200" ry="240" fill="none" stroke="#d2d9d5" stroke-width="1"/>
+    <ellipse cx="525" cy="474" rx="190" ry="225" fill="#fbfcf9" stroke="#77888a" stroke-width="2"/>
+    <ellipse cx="525" cy="474" rx="177" ry="210" fill="#e4eee8" stroke="#a3b4ae" stroke-width="2"/>
+    <path d="M234 429H183L158 450V498L183 519H234" fill="#e4ece8" stroke="#708084" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M234 449H188L175 461V487L188 499H234" fill="none" stroke="#c0cbc6" stroke-width="2"/>
+    <ellipse cx="525" cy="474" rx="147" ry="178" fill="#f2f5ee" stroke="#c4d0c7" stroke-width="2" stroke-dasharray="6 5"/>
+  </g>
+  <rect x="409" y="438" width="232" height="75" rx="15" fill="#f2f5ee" stroke="#dce5db" stroke-width="1.5"/>
+  <text x="525" y="455" class="section" text-anchor="middle">场芯 · 比赛 / 演出区</text>
+  <text x="525" y="479" class="tiny" text-anchor="middle">场内布置随活动调整</text>
+  <text x="525" y="502" class="tiny" text-anchor="middle">观众席开放范围以现场为准</text>
+  <g transform="translate(46 445)"><text x="0" y="0" class="section">主看台</text><text x="0" y="21" class="tiny">庆典广场侧</text><path d="M79 13h38m-10-7 10 7-10 7" fill="none" stroke="#718286" stroke-width="2"/></g>
+  <path d="M267.9 305.3 L222.4 278.6" class="stair-connector"/>
+  <g transform="translate(185.4 260.6)"><rect width="74" height="36" rx="11" class="stair-tag"/><text x="37" y="21" class="stair-index" text-anchor="middle">1 号扶梯</text></g>
+  <path d="M434.1 143 L418.1 90.7" class="stair-connector"/>
+  <g transform="translate(381.1 72.7)"><rect width="74" height="36" rx="11" class="stair-tag"/><text x="37" y="21" class="stair-index" text-anchor="middle">2 号扶梯</text></g>
+  <path d="M653.9 161.2 L676.7 111.8" class="stair-connector"/>
+  <g transform="translate(639.7 93.8)"><rect width="74" height="36" rx="11" class="stair-tag"/><text x="37" y="21" class="stair-index" text-anchor="middle">3 号扶梯</text></g>
+  <path d="M797.6 604.4 L845.8 625" class="stair-connector"/>
+  <g transform="translate(808.8 607)"><rect width="74" height="36" rx="11" class="stair-tag"/><text x="37" y="21" class="stair-index" text-anchor="middle">4 号扶梯</text></g>
+  <path d="M701.9 751.9 L733.2 795.9" class="stair-connector"/>
+  <g transform="translate(696.2 777.9)"><rect width="74" height="36" rx="11" class="stair-tag"/><text x="37" y="21" class="stair-index" text-anchor="middle">5 号扶梯</text></g>
+  <path d="M504.5 821.2 L436 829" class="stair-connector"/>
+  <g transform="translate(362 811)"><rect width="74" height="36" rx="11" class="stair-tag"/><text x="37" y="21" class="stair-index" text-anchor="middle">6 号扶梯</text></g>
+  <path d="M258.5 621.1 L211.4 644.3" class="stair-connector"/>
+  <g transform="translate(174.4 626.3)"><rect width="74" height="36" rx="11" class="stair-tag"/><text x="37" y="21" class="stair-index" text-anchor="middle">7 号扶梯</text></g>
+  <text x="46" y="850" class="section">扶梯分区参考 · 2025 观演导引</text>
+  <g transform="translate(46 870)">
+    <g><rect width="184" height="43" rx="12" class="route-chip"/><text x="14" y="18" class="route-text">01–05 看台</text><text x="14" y="34" class="route-detail">建议 6、7 号扶梯</text></g>
+    <g transform="translate(194)"><rect width="184" height="43" rx="12" class="route-chip"/><text x="14" y="18" class="route-text">06–13 看台</text><text x="14" y="34" class="route-detail">建议 5、6 号扶梯</text></g>
+    <g transform="translate(388)"><rect width="184" height="43" rx="12" class="route-chip"/><text x="14" y="18" class="route-text">14–18 看台</text><text x="14" y="34" class="route-detail">建议 4、5 号扶梯</text></g>
+    <g transform="translate(582)"><rect width="184" height="43" rx="12" class="route-chip"/><text x="14" y="18" class="route-text">19–27 看台</text><text x="14" y="34" class="route-detail">建议 1、2 号扶梯</text></g>
+    <g transform="translate(776)"><rect width="192" height="43" rx="12" class="route-chip"/><text x="14" y="18" class="route-text">28–32 看台</text><text x="14" y="34" class="route-detail">建议 1、7 号扶梯</text></g>
+  </g>
+  <text x="46" y="935" class="tiny">看台与扶梯位置依据徐汇区政府观演导引重绘；入场口、通道和开放安排按当日活动调整。</text>
+<style id="bantu-floorplan-standard-v3">
+svg{background:#f5f6f5}
+text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif!important}
+.bg,.canvas,.paper{fill:#f5f6f5!important}
+.cutout{fill:#f5f6f5!important;stroke:#fff!important;stroke-width:2px!important}
+linearGradient[id*="paper"] stop,linearGradient#page stop,linearGradient#background stop{stop-color:#f5f6f5!important}
+linearGradient#public stop{stop-color:#a0bfd2!important}linearGradient#closed stop{stop-color:#dfe4e8!important}
+#grid path{stroke:#d8e0e4!important}
+.shell,.outer,.plan-shell{fill:#d9edf0!important;stroke:#748aa8!important;stroke-width:2.208333333333333px!important;stroke-linejoin:round}
+.room,.room-dark,.zone,.gallery,.exhibit,.primary,.deep,.blue,.stage,.shop,.retail{fill:#809bc5!important;stroke:#fff!important;stroke-width:2.208333333333333px!important;stroke-linejoin:round}
+.service,.core,.wc,.zone.wc,.amenity rect{fill:#eaf1f3!important;stroke:#748aa8!important;stroke-width:1.1483333333333334px!important}
+.public,.lobby,.passage,.room-light,.stair,.hall,.open-hall{fill:#a0bfd2!important;stroke:#fff!important}
+.yellow,.warm,.craft,.pink,.orange,.food,.dining,.gallery2{fill:#b7c9dc!important;stroke:#fff!important}
+.green,.garden,.yard,.terrace,.courtyard{fill:#d7e6dd!important;stroke:#fff!important}
+.private,.void{fill:#dfe4e8!important;stroke:#a7b4bf!important}
+.zone.exit,.exit,.entry,.entry-marker rect{fill:#287c57!important}
+.wall,.partition,.shell-edge{stroke:#748aa8!important}
+text.label,text.label2,text.label-small,text.label-light,text.minor,text.public-label,text.room-title{fill:#223a50!important;font-weight:600!important;stroke:none!important}
+text.title,text.panel-title,text.panel-label,text.legend-title,text.zone-title,text.pt,text.info-heading{fill:#223a50!important;font-weight:650!important;stroke:none!important}
+text.note,text.subtitle,text.sub,text.small,text.copy,text.panel-text,text.zone-sub,text.eyebrow,text.index,text.legend-text,text.info-copy{fill:#637c92!important;stroke:none!important}
+.panel,.info-panel{fill:#fff!important;stroke:#d8e0e4!important;stroke-width:1.4px!important}.panel-head{fill:#eaf0f2!important}
+.tag:not(text){fill:#eaf0f2!important;stroke:#748aa8!important}
+.floor,.floor-badge{fill:#637fa5!important}.floor-text,.badge-text{fill:#fff!important}
+.label.exit,.exit text,.entry-marker text,.entrance-text{fill:#fff!important;stroke:none!important}
+.route{stroke:#d39a4e!important}.numdot,.num circle,.number circle,circle.badge{fill:#637fa5!important;stroke:#fff!important}
+.door{stroke:#287c57!important}
+.number text,.num text,text.number{fill:#fff!important;stroke:none!important}
+.hall-tiles{opacity:.15!important}
+.restroom-backplate{fill:#176c91!important;stroke:#fff!important;stroke-width:2px!important}
+.restroom-pictogram circle,.restroom-pictogram path{fill:#fff!important;stroke:none!important}
+.restroom-caption{font-size:13px!important;font-weight:600!important;fill:#fff!important;stroke:none!important;text-anchor:middle;dominant-baseline:central}
+</style>
+</svg>

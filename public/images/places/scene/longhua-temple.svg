@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">龙华寺 · 伴途原创寺院场景</title>
+  <desc id="desc">以已收录的龙华塔和寺院庭院照片为参考，组合层层塔檐、殿堂屋檐与铜色香炉。画面将不同视角合在一起，不表示真实方位、院落布局或参拜路线。</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#d1e6e7"/><stop offset=".54" stop-color="#f2e7c9"/><stop offset="1" stop-color="#e4b990"/></linearGradient>
+    <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#e4bf7f"/><stop offset="1" stop-color="#b57a4e"/></linearGradient>
+    <linearGradient id="wood" x2="1" y2="0"><stop stop-color="#513d3c"/><stop offset=".52" stop-color="#8e5543"/><stop offset="1" stop-color="#3c383b"/></linearGradient>
+    <linearGradient id="tile" x2="0" y2="1"><stop stop-color="#788078"/><stop offset=".54" stop-color="#4d5658"/><stop offset="1" stop-color="#333e41"/></linearGradient>
+    <linearGradient id="bronze" x2="1" y2="1"><stop stop-color="#8f7760"/><stop offset=".5" stop-color="#4b4c45"/><stop offset="1" stop-color="#272f32"/></linearGradient>
+    <radialGradient id="sun"><stop stop-color="#fff4d0" stop-opacity=".82"/><stop offset="1" stop-color="#fff4d0" stop-opacity="0"/></radialGradient>
+    <filter id="shade" x="-.2" y="-.2" width="1.4" height="1.5"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#423b31" flood-opacity=".23"/></filter>
+    <g id="pagodaTier">
+      <path d="M-67-30Q-102-24-118-42Q-111-15-88-9Q0-32 88-9Q112-15 118-42Q102-24 67-30Z" fill="url(#tile)" stroke="#303a3c" stroke-width="4"/>
+      <path d="M-103-27Q-55-23 0-34Q55-23 103-27M-84-9Q0-32 84-9" fill="none" stroke="#9d9d83" stroke-width="5" opacity=".65"/>
+      <path d="M-65-9v53h130V-9Q0-24-65-9Z" fill="url(#wood)" stroke="#443a36" stroke-width="4"/>
+      <path d="M-44-2v42M-15-7v47M15-7v47M44-2v42" stroke="#d2a469" stroke-width="6" opacity=".75"/>
+      <path d="M-67 27h134M-67 42h134" stroke="#473a37" stroke-width="8"/>
+    </g>
+    <g id="leafCluster"><ellipse cx="-45" cy="8" rx="73" ry="47" fill="#52795d"/><ellipse cx="35" cy="-11" rx="80" ry="58" fill="#426e59"/><ellipse cx="-5" cy="-43" rx="67" ry="50" fill="#6f8d66"/><path d="M-81-1q42-23 80-11M10-51q37-13 61 3" fill="none" stroke="#b2bd82" stroke-width="8" opacity=".27"/></g>
+  </defs>
+  <rect width="1200" height="720" fill="url(#sky)"/>
+  <circle cx="902" cy="124" r="243" fill="url(#sun)"/>
+  <path d="M0 430Q174 372 339 401Q483 351 644 400Q852 353 1200 396V616H0Z" fill="#b2bd93"/>
+  <path d="M0 502Q260 447 401 472Q627 424 801 465Q1011 423 1200 485V720H0Z" fill="#789576"/>
+  <!-- The tower and courtyard appear together as an artistic composition, not a site plan. -->
+  <g transform="translate(356 0)" filter="url(#shade)">
+    <path d="M-92 572h184l-18-105H-74Z" fill="#62453d"/>
+    <use href="#pagodaTier" transform="translate(0 188) scale(.48)"/>
+    <use href="#pagodaTier" transform="translate(0 248) scale(.62)"/>
+    <use href="#pagodaTier" transform="translate(0 315) scale(.75)"/>
+    <use href="#pagodaTier" transform="translate(0 389) scale(.89)"/>
+    <use href="#pagodaTier" transform="translate(0 472) scale(1.06)"/>
+    <path d="M-53 160Q-66 153-71 136Q0 160 71 136Q66 153 53 160Z" fill="#465052"/>
+    <path d="M-12 140Q0 93 12 140Z" fill="#7b6250"/>
+    <path d="M-7 95V70M-4 72l-5-9M5 72l5-9" stroke="#584f46" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="0" cy="66" r="9" fill="#ad8753"/>
+    <path d="M-78 544h156v31H-78Z" fill="#55443d"/>
+  </g>
+  <path d="M620 360Q901 304 1200 353V720H601Z" fill="url(#wall)"/>
+  <path d="M572 438Q776 376 965 386Q1122 383 1200 420v93Q879 456 591 505Z" fill="#a96d4c"/>
+  <g filter="url(#shade)">
+    <path d="M561 337Q740 353 902 302Q1062 295 1200 314V390Q1040 350 896 362Q706 406 561 379Q521 380 499 357Q529 368 561 337Z" fill="url(#tile)" stroke="#334044" stroke-width="8"/>
+    <path d="M547 341Q696 354 882 308Q1040 299 1200 318M523 359Q709 394 905 352Q1079 331 1200 356" fill="none" stroke="#a1a493" stroke-width="8" opacity=".82"/>
+    <path d="M505 349q16-5 25-29l15 28M1183 313q12-9 17-27" fill="none" stroke="#334044" stroke-width="11" stroke-linecap="round"/>
+    <path d="M599 378v184M759 387v177M928 362v200M1100 370v194" stroke="#6a433b" stroke-width="19"/>
+    <path d="M611 409h574M611 493h574" stroke="#4d3735" stroke-width="18"/>
+    <path d="M628 427h113v57H628ZM781 427h126v57H781ZM946 427h135v57H946Z" fill="#403f3b" opacity=".75"/>
+    <path d="M643 433v46M670 433v46M697 433v46M724 433v46M800 433v46M830 433v46M860 433v46M887 433v46M965 433v46M995 433v46M1025 433v46M1055 433v46" stroke="#bc9064" stroke-width="5"/>
+    <path d="M587 556h613v30H587Z" fill="#795a48"/>
+  </g>
+  <path d="M0 555Q355 516 608 542Q851 517 1200 558V720H0Z" fill="#c1b395"/>
+  <path d="M0 589Q370 561 604 590Q895 558 1200 599" fill="none" stroke="#e8d5ad" stroke-width="18" opacity=".62"/>
+  <path d="M0 693Q365 654 618 682Q877 649 1200 688" fill="none" stroke="#927e66" stroke-width="5" opacity=".25"/>
+  <!-- Bronze-toned incense vessel is from the courtyard photograph. -->
+  <g transform="translate(643 0)" filter="url(#shade)">
+    <path d="M-101 620h202l-17 26H-84Z" fill="#4d4b42"/>
+    <path d="M-72 591h144v31H-72Z" fill="url(#bronze)" stroke="#332f2e" stroke-width="5"/>
+    <path d="M-62 544Q-91 501-68 478Q-48 451-46 430H46Q48 451 68 478Q91 501 62 544Z" fill="url(#bronze)" stroke="#303533" stroke-width="7"/>
+    <path d="M-54 477Q0 500 54 477M-64 532Q0 548 64 532" fill="none" stroke="#9b8b6c" stroke-width="6" opacity=".65"/>
+    <path d="M-58 434h116l17-20H-75Z" fill="#3c403b" stroke="#2a3433" stroke-width="5"/>
+    <path d="M-61 411Q0 393 61 411" fill="none" stroke="#9c8c6d" stroke-width="8"/>
+    <path d="M-27 404q-8-32 27-48 35 16 27 48" fill="none" stroke="#333b38" stroke-width="15"/>
+    <path d="M-6 356V322M5 354v-32" stroke="#554b40" stroke-width="8"/>
+    <path d="M-31 390q-30-9-38 16M31 390q30-9 38 16" fill="none" stroke="#777461" stroke-width="9"/>
+    <path d="M-44 543v45M44 543v45" stroke="#323631" stroke-width="15"/>
+  </g>
+  <path d="M70 513q-21-79 27-143M1018 450q11-72 76-113" fill="none" stroke="#4c5f4e" stroke-width="18"/>
+  <use href="#leafCluster" transform="translate(121 325) scale(1.08)"/>
+  <use href="#leafCluster" transform="translate(1094 274) scale(1.26)"/>
+  <path d="M0 0q134 67 262 10 80-35 149 6v-16ZM983 0q105 46 217 8V0Z" fill="#4e745b" opacity=".73"/>
+  <path d="M0 0h1200v720H0Z" fill="#fff2db" opacity=".035"/>
+</svg>
