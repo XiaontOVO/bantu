@@ -1,10 +1,10 @@
 # 伴途 · 手机上的城市漫游伴侣
 
-**[▶ 观看跨界面 Agent 演示（约7分03秒）](https://github.com/XiaontOVO/bantu/releases/download/demo-2026-10-10/bantu-agent-demo.mp4)**
+**[▶ 观看跨界面 Agent 演示·中文旁白版（约7分03秒）](https://github.com/XiaontOVO/bantu/releases/download/demo-2026-10-10/bantu-agent-demo-zh.mp4)**
 
-1080p · 30fps · 57段中文字幕与BGM · 看见请求如何变成实际操作
+中文旁白 · 1080p · 30fps · 57段中文字幕与BGM · 看见请求如何变成实际操作
 
-[10分59秒详细演示](https://github.com/XiaontOVO/bantu/releases/download/submission-2026-10-05/bantu-complete-demo.mp4) · [8页产品介绍 PDF](https://github.com/XiaontOVO/bantu/releases/download/submission-2026-10-05/bantu-product-introduction.pdf) · [新版视频与字幕](https://github.com/XiaontOVO/bantu/releases/tag/demo-2026-10-10)
+[无旁白导演版](https://github.com/XiaontOVO/bantu/releases/download/demo-2026-10-10/bantu-agent-demo.mp4) · [10分59秒详细演示](https://github.com/XiaontOVO/bantu/releases/download/submission-2026-10-05/bantu-complete-demo.mp4) · [8页产品介绍 PDF](https://github.com/XiaontOVO/bantu/releases/download/submission-2026-10-05/bantu-product-introduction.pdf) · [视频与字幕](https://github.com/XiaontOVO/bantu/releases/tag/demo-2026-10-10)
 
 > **专心逛，随时问，随时改，走完留下自己的旅行。**
 
