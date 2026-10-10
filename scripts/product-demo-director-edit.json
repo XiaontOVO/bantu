@@ -1,0 +1,869 @@
+{
+  "version": 1,
+  "sources": {
+    "agent-context": "tmp/agent-context-demo-2026-10-10T10-01-12-808Z",
+    "agent-context-result": "tmp/agent-context-demo-2026-10-10T10-07-18-693Z"
+  },
+  "scopeNotes": [
+    "精选剪辑：保留片段原速，删去重复配置与部分等待；连续详细流程见原 10:59 完整演示。",
+    "原主线回顾补写曾出现实际 60.003 秒 MODEL_TIMEOUT。新版成功补写与私密发布为明确标注的独立样例。",
+    "移动网页、演示定位和时钟、真实道路服务；非实机现场导航验收。设备语音未录入。",
+    "主线红砖的 BGM 使用同一产品元素的独立实录采样，非同步原主线音轨。",
+    "地点与地图补录使用预置两站的独立日计划；不同于旧主线的三站文化半日。保留实际输入、工具状态与保存后原页。",
+    "地点请求实际历时35.13秒，删去30.5–48秒的17.5秒无触控等待。地图请求23.86秒，删去113.5–125.5秒的12秒无触控等待。",
+    "主线Agent创建请求实际28.10秒；111.5–132秒无触控等待剪短20.5秒。场景问答请求实际13.98秒；289–298.3秒无触控等待剪短9.3秒。",
+    "地图结果补镜仅从同一份已保存状态精确恢复并滚动第三站；没有新增模型请求或计划修改。"
+  ],
+  "segments": [
+    {
+      "id": "opening",
+      "start": 236,
+      "hold": true,
+      "duration": 7,
+      "layout": "hero",
+      "captions": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "伴途，让想法、眼前风景和下一步安排连在一起。"
+        }
+      ],
+      "disclosure": "精选剪辑保留片段原速；本幕是实际界面片段预览。"
+    },
+    {
+      "id": "discover",
+      "act": 1,
+      "start": 9.46,
+      "end": 41.08,
+      "layout": "phone",
+      "title": "找到想去的地方",
+      "body": "先看地点，\n再决定这一天怎么走。",
+      "context": "发现地点",
+      "preview": 17.54,
+      "captions": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "先搜索武康大楼，找到这次想去的地方。"
+        },
+        {
+          "start": 8,
+          "end": 16,
+          "text": "打开地点详情，查看介绍与参观资料。"
+        },
+        {
+          "start": 16,
+          "end": 24,
+          "text": "印象图负责感受，实拍照片帮助了解现场。"
+        },
+        {
+          "start": 24,
+          "end": 31.62,
+          "text": "看完照片，回到地点详情继续安排。"
+        }
+      ]
+    },
+    {
+      "id": "agent-plan-input",
+      "act": 2,
+      "start": 101.61,
+      "end": 111.5,
+      "layout": "phone",
+      "title": "说出这一天的想法",
+      "body": "伴途结合地点资料，\n把请求保存成可执行的计划。",
+      "context": "伴途 Agent · 行程",
+      "result": "一句话 → 实际保存的安排",
+      "preview": 4.5,
+      "shots": [
+        {
+          "start": 2,
+          "end": 7,
+          "layout": "focus",
+          "title": "说清地点、时长与日期",
+          "roi": [
+            0.025,
+            0.47,
+            0.975,
+            0.89
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "“今天十二点出发，逛三站，每站四十五分钟。”"
+        },
+        {
+          "start": 6,
+          "end": 9.89,
+          "text": "指定日期与交通，让 Agent 保存可执行的安排。"
+        }
+      ]
+    },
+    {
+      "id": "agent-plan-result",
+      "act": 2,
+      "start": 132,
+      "end": 160.9,
+      "layout": "phone",
+      "title": "说出这一天的想法",
+      "body": "伴途结合地点资料，\n把请求保存成可执行的计划。",
+      "context": "伴途 Agent · 行程",
+      "result": "一句话 → 实际保存的安排",
+      "preview": 12,
+      "shots": [
+        {
+          "start": 3.5,
+          "end": 9,
+          "layout": "focus",
+          "title": "已经保存，\n可以回到行程",
+          "roi": [
+            0.025,
+            0.38,
+            0.975,
+            0.8
+          ]
+        },
+        {
+          "start": 11,
+          "end": 17,
+          "layout": "focus",
+          "title": "计划已保存，\n可以出发",
+          "roi": [
+            0.025,
+            0.32,
+            0.975,
+            0.75
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "Agent 查询地点，调用工具完成计划保存。"
+        },
+        {
+          "start": 7,
+          "end": 15,
+          "text": "查看真实执行结果，再回到首页随行。"
+        },
+        {
+          "start": 15,
+          "end": 22,
+          "text": "地点、时段与顺序，都已写进今天的计划。"
+        },
+        {
+          "start": 22,
+          "end": 28.9,
+          "text": "这份安排，可以直接跟着游览进度执行。"
+        }
+      ],
+      "disclosure": "等待已剪短20.5秒；这次请求实际历时28.10秒。"
+    },
+    {
+      "id": "routes",
+      "act": 3,
+      "start": 201.74,
+      "end": 216.577661,
+      "layout": "phone",
+      "title": "看清下一步怎么走",
+      "body": "每一站的交通方式，\n对应实际道路与路线。",
+      "context": "地图与路线",
+      "preview": 5.26,
+      "captions": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "行程中的每一站，也能在地图上查看。"
+        },
+        {
+          "start": 7,
+          "end": 14.837661,
+          "text": "步行与驾车道路，来自实际路线服务。"
+        }
+      ]
+    },
+    {
+      "id": "detail-agent-input",
+      "act": 3,
+      "source": "agent-context",
+      "start": 10,
+      "end": 30.5,
+      "layout": "phone",
+      "title": "“这个地点”，\n不用再解释名称",
+      "body": "在眼前的地点详情中，\n直接提出下一步想法。",
+      "context": "地点详情 · 独立样例",
+      "preview": 15.6,
+      "disclosure": "独立样例：原计划已有两站，此处追加西岸美术馆。",
+      "shots": [
+        {
+          "start": 10,
+          "end": 13.5,
+          "layout": "focus",
+          "title": "当前地点，\n已经在对话上下文中",
+          "roi": [
+            0.02,
+            0.23,
+            0.98,
+            0.45
+          ]
+        },
+        {
+          "start": 13.5,
+          "end": 18,
+          "layout": "focus",
+          "title": "“这个地点”，\n直接安排到今天",
+          "roi": [
+            0.02,
+            0.43,
+            0.98,
+            0.82
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "在西岸美术馆详情页，打开可移动的小聊天窗。"
+        },
+        {
+          "start": 7,
+          "end": 14,
+          "text": "“把这个地点加到今天后面，停留四十五分钟。”"
+        },
+        {
+          "start": 14,
+          "end": 20.5,
+          "text": "不用再写地点名称，Agent 会结合当前页面理解。"
+        }
+      ]
+    },
+    {
+      "id": "detail-agent-result",
+      "act": 3,
+      "source": "agent-context",
+      "start": 48,
+      "end": 79.5,
+      "layout": "phone",
+      "title": "请求落到同一份计划",
+      "body": "新地点排在原来两站之后，\n页面仍留在当前地点。",
+      "context": "地点详情 · 独立样例",
+      "preview": 14.5,
+      "disclosure": "本段等待剪短17.5秒；这次请求实际历时35.13秒。",
+      "shots": [
+        {
+          "start": 12.8,
+          "end": 17.8,
+          "layout": "focus",
+          "title": "追加完成，\n当前页面保留",
+          "roi": [
+            0.02,
+            0.3,
+            0.98,
+            0.7
+          ]
+        },
+        {
+          "start": 25,
+          "end": 31.5,
+          "layout": "focus",
+          "title": "原来两站保留，\n新地点已追加",
+          "roi": [
+            0.025,
+            0.37,
+            0.975,
+            0.83
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "Agent 查询现有计划，再调用计划编辑与路线工具。"
+        },
+        {
+          "start": 8,
+          "end": 16,
+          "text": "这次工具参数被校正后，地点实际追加成功。"
+        },
+        {
+          "start": 16,
+          "end": 24,
+          "text": "收起聊天窗，眼前的地点页面仍可以操作。"
+        },
+        {
+          "start": 24,
+          "end": 31.5,
+          "text": "进入原计划，原来两站保留，西岸美术馆已经追加。"
+        }
+      ]
+    },
+    {
+      "id": "map-agent-input",
+      "act": 3,
+      "source": "agent-context",
+      "start": 87.2,
+      "end": 113.5,
+      "layout": "phone",
+      "title": "“这一段”，\n就按地图上的选择",
+      "body": "当前起点、终点与交通选择，\n成为请求的明确上下文。",
+      "context": "地图页 · 独立样例",
+      "preview": 22.25,
+      "disclosure": "接续上一独立日计划；此请求使用实际新建的空对话。",
+      "shots": [
+        {
+          "start": 17,
+          "end": 24,
+          "layout": "focus",
+          "title": "在当前地图，\n直接提出交通变化",
+          "roi": [
+            0.015,
+            0.43,
+            0.985,
+            0.85
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "选定公安博物馆到西岸美术馆这一段。"
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "text": "在地图上打开小窗，不用切到别的页面重说。"
+        },
+        {
+          "start": 17,
+          "end": 26.3,
+          "text": "“这一段改为驾车，计算并保存实际路线。”"
+        }
+      ]
+    },
+    {
+      "id": "map-agent-result",
+      "act": 3,
+      "source": "agent-context",
+      "start": 125.5,
+      "end": 151,
+      "layout": "phone",
+      "title": "道路与交通，\n已写回原计划",
+      "body": "收起小窗，地图继续可用。\n再核对实际保存的计划字段。",
+      "context": "地图页 · 独立样例",
+      "preview": 17.5,
+      "disclosure": "本段等待剪短12秒；这次请求实际历时23.86秒。",
+      "shots": [
+        {
+          "start": 7.7,
+          "end": 13,
+          "layout": "focus",
+          "title": "实际路线已保存",
+          "roi": [
+            0.015,
+            0.29,
+            0.985,
+            0.72
+          ]
+        },
+        {
+          "start": 15,
+          "end": 25.5,
+          "layout": "focus",
+          "title": "地图继续可用，\n道路可以展开查看",
+          "roi": [
+            0.025,
+            0.38,
+            0.975,
+            0.8
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "Agent 调用路段工具，保存真实驾车道路。"
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "text": "回复中的结束时刻有误，接着核对保存后的计划。"
+        },
+        {
+          "start": 14,
+          "end": 22,
+          "text": "收起小窗，展开实际道路继续查看。"
+        },
+        {
+          "start": 22,
+          "end": 25.5,
+          "text": "这段路约四点二公里、十六分钟，已保存到原计划。"
+        }
+      ]
+    },
+    {
+      "id": "map-saved-third-stop",
+      "act": 3,
+      "source": "agent-context-result",
+      "start": 2,
+      "end": 14,
+      "layout": "phone",
+      "title": "看保存的计划，\n核对真正完成的事",
+      "body": "交通、道路与游览时长，\n都在同一站点中可查看。",
+      "context": "原快照 · 第三站保存结果",
+      "preview": 6,
+      "disclosure": "仅滚动同一独立样例的已保存快照；0次新增模型请求，未修改计划。",
+      "shots": [
+        {
+          "start": 2,
+          "end": 12,
+          "layout": "focus",
+          "title": "以实际保存字段为准：\n驾车，游览四十五分钟",
+          "roi": [
+            0.025,
+            0.25,
+            0.975,
+            0.8
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "核对第三站的实际保存字段：驾车前往西岸美术馆。"
+        },
+        {
+          "start": 6,
+          "end": 12,
+          "text": "游览15:27–16:12，共45分钟。"
+        }
+      ]
+    },
+    {
+      "id": "scene-touch",
+      "act": 4,
+      "start": 218,
+      "end": 240,
+      "layout": "landscape",
+      "title": "让眼前的地点活起来",
+      "context": "回到参观主线 · 地点场景",
+      "preview": 18,
+      "disclosure": "主线场景音乐取自同一元素独立实录；艺术场景用于内容探索，地图负责路线。",
+      "captions": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "进入横屏场景，让图中的特征成为参观线索。"
+        },
+        {
+          "start": 7,
+          "end": 14,
+          "text": "直接点击红砖，文字讲解与场景音乐一起出现。"
+        },
+        {
+          "start": 14,
+          "end": 22,
+          "text": "不离开这个地点，就能继续了解眼前的细节。"
+        }
+      ]
+    },
+    {
+      "id": "scene-question-input",
+      "act": 4,
+      "start": 278.5,
+      "end": 289,
+      "layout": "phone",
+      "title": "刚点过的元素，\n一句就能问",
+      "body": "当前地点与交互元素，\n一起成为 Agent 的上下文。",
+      "context": "场景问答 · 独立补录",
+      "preview": 5,
+      "shots": [
+        {
+          "start": 1,
+          "end": 7.5,
+          "layout": "focus",
+          "title": "当前地点与刚点的红砖，\n一起进入对话",
+          "roi": [
+            0.025,
+            0.38,
+            0.975,
+            0.89
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 6,
+          "text": "“我刚点的红砖有什么特点？用两句话讲给我。”"
+        },
+        {
+          "start": 6,
+          "end": 10.5,
+          "text": "当前地点与刚触摸的元素，成为这句追问的上下文。"
+        }
+      ]
+    },
+    {
+      "id": "scene-question-result",
+      "act": 4,
+      "start": 298.3,
+      "end": 306.54,
+      "layout": "phone",
+      "title": "刚点过的元素，\n一句就能问",
+      "body": "当前地点与交互元素，\n一起成为 Agent 的上下文。",
+      "context": "场景问答 · 独立补录",
+      "preview": 4.7,
+      "shots": [
+        {
+          "start": 0,
+          "end": 8.24,
+          "layout": "focus",
+          "title": "参观时的疑问，\n就在当前页面回答",
+          "roi": [
+            0.025,
+            0.6,
+            0.975,
+            0.94
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 8.24,
+          "text": "它围绕眼前的红砖回答，保留当前行程。"
+        }
+      ],
+      "disclosure": "独立场景补录；等待剪短9.3秒，这次请求实际历时13.98秒。"
+    },
+    {
+      "id": "rest",
+      "act": 5,
+      "start": 306.5437859,
+      "end": 352.7562136,
+      "layout": "phone",
+      "title": "累了，就慢半小时",
+      "body": "已完成的进度保留，\n后面的安排一起顺延。",
+      "context": "首页 · 随行",
+      "preview": 28.46,
+      "result": "同一计划 · 进度保留 · 后续顺延",
+      "shots": [
+        {
+          "start": 23,
+          "end": 33,
+          "layout": "focus",
+          "title": "调整完成，\n还是今天这份计划",
+          "roi": [
+            0.025,
+            0.41,
+            0.975,
+            0.75
+          ]
+        },
+        {
+          "start": 37,
+          "end": 40.5,
+          "layout": "focus",
+          "title": "已完成的第一站，\n时间与进度保留",
+          "roi": [
+            0.025,
+            0.34,
+            0.975,
+            0.64
+          ]
+        },
+        {
+          "start": 42,
+          "end": 46.213,
+          "layout": "focus",
+          "title": "休息之后，\n下一站已顺延",
+          "roi": [
+            0.025,
+            0.49,
+            0.975,
+            0.765
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "第一站结束，临时想休息半小时。"
+        },
+        {
+          "start": 8,
+          "end": 16,
+          "text": "“后续顺延三十分钟，保留已完成进度。”"
+        },
+        {
+          "start": 16,
+          "end": 24,
+          "text": "Agent 理解变化，调用工具调整今天的同一计划。"
+        },
+        {
+          "start": 24,
+          "end": 33,
+          "text": "调整完成，已完成的第一站没有被重置。"
+        },
+        {
+          "start": 33,
+          "end": 40,
+          "text": "已经完成的第一站，时间与进度保留。"
+        },
+        {
+          "start": 40,
+          "end": 46.213,
+          "text": "后续两站顺延三十分钟，接着走原来的旅程。"
+        }
+      ]
+    },
+    {
+      "id": "floor",
+      "act": 5,
+      "start": 371,
+      "end": 394,
+      "layout": "phone",
+      "title": "把参观资料带在身边",
+      "body": "从地点全貌进入楼层，\n放大查看后，回到当前楼层。",
+      "context": "地点详情 · 室内示意图",
+      "preview": 10,
+      "shots": [
+        {
+          "start": 4,
+          "end": 15,
+          "layout": "focus",
+          "title": "楼梯、出入口与\n卫生间标注",
+          "roi": [
+            0.28,
+            0.67,
+            0.99,
+            0.92
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 7,
+          "text": "打开楼层资料，查看展区与卫生间标注。"
+        },
+        {
+          "start": 7,
+          "end": 15,
+          "text": "放大示意图，细节也能看清。"
+        },
+        {
+          "start": 15,
+          "end": 23,
+          "text": "关闭放大图，返回当前楼层继续查看。"
+        }
+      ]
+    },
+    {
+      "id": "continue",
+      "act": 5,
+      "start": 404,
+      "end": 420.2,
+      "layout": "phone",
+      "title": "接着走，留下足迹",
+      "body": "前往、到达、完成，\n逐站记录自己的实际进度。",
+      "context": "行程 · 计划与进度",
+      "preview": 12,
+      "captions": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "继续后面的站点，进度随每一步更新。"
+        },
+        {
+          "start": 8,
+          "end": 16.2,
+          "text": "当这一天走完，足迹自动留下私人回顾。"
+        }
+      ]
+    },
+    {
+      "id": "memory",
+      "act": 6,
+      "start": 478,
+      "end": 516.8,
+      "layout": "phone",
+      "title": "把自己的感受写进去",
+      "body": "说出原话，\n补进同一条私人回顾。",
+      "context": "旅行回顾 · 独立样例",
+      "preview": 34,
+      "result": "保留原话 · 写入原回顾",
+      "shots": [
+        {
+          "start": 27,
+          "end": 32,
+          "layout": "focus",
+          "title": "补写已完成",
+          "roi": [
+            0.025,
+            0.39,
+            0.975,
+            0.77
+          ]
+        },
+        {
+          "start": 32,
+          "end": 38.8,
+          "layout": "focus",
+          "title": "自己的原话，\n已写进原回顾",
+          "roi": [
+            0.025,
+            0.075,
+            0.975,
+            0.365
+          ]
+        }
+      ],
+      "disclosure": "此段为独立成功样例；原主线补写曾 60 秒超时，详见完整演示。",
+      "captions": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "独立样例：把这一天的感受，交给 Agent 补写。"
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "text": "说清当前回顾，并要求完整保留自己的原话。"
+        },
+        {
+          "start": 17,
+          "end": 27,
+          "text": "Agent 查询原回顾，调用回顾编辑工具。"
+        },
+        {
+          "start": 27,
+          "end": 33,
+          "text": "原话已经写入，仍是同一条私人回顾。"
+        },
+        {
+          "start": 33,
+          "end": 38.8,
+          "text": "打开保存结果，自己的感受没有被改写。"
+        }
+      ]
+    },
+    {
+      "id": "private-compose",
+      "act": 6,
+      "start": 529.5,
+      "end": 551,
+      "layout": "phone",
+      "title": "想分享，也可以只给自己",
+      "body": "帖子的标题、正文和可见性，\n都由自己决定。",
+      "context": "私密发布 · 独立样例",
+      "preview": 20.03,
+      "shots": [
+        {
+          "start": 19,
+          "end": 21.5,
+          "layout": "focus",
+          "title": "私密帖子，\n实际发布成功",
+          "roi": [
+            0.025,
+            0.15,
+            0.975,
+            0.56
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "start": 0,
+          "end": 8,
+          "text": "把回顾带入发布页，写好标题和正文。"
+        },
+        {
+          "start": 8,
+          "end": 16,
+          "text": "选择“仅自己可见”，再发布这篇帖子。"
+        },
+        {
+          "start": 16,
+          "end": 21.5,
+          "text": "私密帖子发布成功，自己的账号可以查看。"
+        }
+      ]
+    },
+    {
+      "id": "private-boundary",
+      "act": 6,
+      "start": 564,
+      "end": 571.3,
+      "layout": "phone",
+      "title": "私人记录，\n有自己的边界",
+      "body": "帖子的标题、正文和可见性，\n都由自己决定。",
+      "context": "私密发布 · 独立样例",
+      "preview": 3,
+      "shots": [],
+      "captions": [
+        {
+          "start": 0,
+          "end": 7.3,
+          "text": "核验：公开列表不出现，另一个账号也无法访问。"
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "act": 6,
+      "start": 574,
+      "end": 584,
+      "layout": "phone",
+      "title": "把到访，\n收成地点卡",
+      "body": "每一次实际记录，\n都成为旅程的一部分。",
+      "context": "旅行成就 · 独立样例",
+      "preview": 3,
+      "captions": [
+        {
+          "start": 0,
+          "end": 10,
+          "text": "地点卡上的到访次数，来自记录的游览进度。"
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "start": 577,
+      "hold": true,
+      "duration": 11,
+      "layout": "closing",
+      "captions": [
+        {
+          "start": 0,
+          "end": 11,
+          "text": "把临时变化交给伴途，把这一程留给自己。"
+        }
+      ],
+      "disclosure": "完整详细流程另见10:59原成片；本片为跨界面Agent精选演示。"
+    }
+  ],
+  "qualityIssues": [
+    {
+      "source": "agent-context",
+      "phase": "detail-agent",
+      "kind": "tool-argument-recovery",
+      "description": "First plans.edit add_place omitted durationMinutes; business validation rejected the call. The model retried with45 minutes and saved the same plan. The recording is retained; no first-try success claim."
+    },
+    {
+      "source": "agent-context",
+      "phase": "map-agent",
+      "kind": "model-reply-state-mismatch",
+      "description": "Final natural-language reply said15:27–16:22 while claiming45 minutes. Saved authoritative stop is15:27–16:12 (45 minutes). The real reply stays briefly visible and the edit explicitly flags the error before showing actual saved fields."
+    }
+  ]
+}

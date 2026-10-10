@@ -16,6 +16,7 @@ submission/*
 !submission/伴途-Android测试版.apk
 !submission/伴途完整产品演示.srt
 !submission/伴途作品演示-精华版.srt
+!submission/伴途产品演示-导演剪辑版.srt
 *.log
 logs/
 android/.gradle/

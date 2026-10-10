@@ -1,10 +1,10 @@
 # 伴途 · 手机上的城市漫游伴侣
 
-**[▶ 观看完整演示视频（约10分59秒）](https://github.com/XiaontOVO/bantu/releases/download/submission-2026-10-05/bantu-complete-demo.mp4)**
+**[▶ 观看跨界面 Agent 演示（约7分03秒）](https://github.com/XiaontOVO/bantu/releases/download/demo-2026-10-10/bantu-agent-demo.mp4)**
 
-1080p · 30fps · 12章实际操作 · 中文字幕与BGM
+1080p · 30fps · 57段中文字幕与BGM · 看见请求如何变成实际操作
 
-[8页产品介绍 PDF](https://github.com/XiaontOVO/bantu/releases/download/submission-2026-10-05/bantu-product-introduction.pdf) · [全部提交材料](https://github.com/XiaontOVO/bantu/releases/tag/submission-2026-10-05)
+[10分59秒详细演示](https://github.com/XiaontOVO/bantu/releases/download/submission-2026-10-05/bantu-complete-demo.mp4) · [8页产品介绍 PDF](https://github.com/XiaontOVO/bantu/releases/download/submission-2026-10-05/bantu-product-introduction.pdf) · [新版视频与字幕](https://github.com/XiaontOVO/bantu/releases/tag/demo-2026-10-10)
 
 > **专心逛，随时问，随时改，走完留下自己的旅行。**
 
@@ -18,11 +18,13 @@
 - **现场，边看边问。** 横屏艺术场景中点选元素，展开讲解文字与音乐；可移动的伴途小窗结合当前页面、地点和元素回答，原页面继续可操作。需要找路或查资料时，查看地图、场地及楼层图。
 - **旅后，留下自己的旅行。** 到访记录对应私人回顾，Agent可补写本人原话；旅行成就展示到访来源，公开或私密发布由本人选择。
 
-### 视频里的一次真实调整
+### Agent怎样接住当前界面的任务
 
-第一站已经逛完，旅者委托休息半小时。Agent在**同一份计划**中将后续两站的开始与结束各顺延30分钟；已完成站点和原有执行记录保持，旅者回到首页继续出发。
+新版视频依次展示：在地点详情说“把这个地点加入今天的计划”，在地图说“去这里改为驾车”，在场景追问眼前红砖，在首页委托休息半小时，再在私人回顾补写本人感受。小窗结合当前页面处理请求，结果回到计划、路线或记录里核对；收起小窗就能继续原页面。
 
-完整视频还展示搜索与方案编辑、真实模型建计划、道路路线、场景问答、楼层图放大返回、私人回顾和私密发布。录制中的模型超时、独立示例与模拟定位均有标注，具体覆盖见[作品说明与演示](docs/作品说明与演示.md#主演示的章节与实际覆盖)。
+例如，第一站已经逛完后委托休息半小时，Agent在**同一份计划**中将后续两站的开始与结束各顺延30分钟，已完成站点和原有执行记录保持，随后继续出发。地点和地图两段另用真实模型补录，展示实际保存的45分钟停留与驾车路段。
+
+请求、处理状态与结果同帧放大，保留操作原速；剪短的等待、独立示例及模型回复与字段不一致均有说明。详细版保留方案编辑等更完整流程，具体覆盖见[作品说明与演示](docs/作品说明与演示.md#导演剪辑版跨界面-agent-辅助)。
 
 ## 运行与体验
 
